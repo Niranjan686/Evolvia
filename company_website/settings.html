@@ -105,29 +105,29 @@
 
             <!-- Settings Layout: Sidebar Tabs + Content -->
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <!-- Navigation Tabs Sidebar -->
-                <div class="glass-card p-3 rounded-2xl border border-slate-200 space-y-1.5 h-fit">
-                    <button @click="activeTab = 'EMAIL'" :class="activeTab === 'EMAIL' ? 'bg-slate-900 text-white font-bold shadow' : 'text-slate-600 hover:bg-slate-100 font-semibold'" class="w-full text-left px-3.5 py-2.5 rounded-xl text-xs transition flex items-center gap-2.5">
+                <!-- Navigation Tabs Sidebar (Horizontal Swipe on Mobile, Sidebar on Desktop) -->
+                <div class="glass-card p-2 sm:p-3 rounded-2xl border border-slate-200 flex md:flex-col overflow-x-auto gap-1.5 md:gap-0 md:space-y-1.5 h-fit shrink-0">
+                    <button @click="activeTab = 'EMAIL'" :class="activeTab === 'EMAIL' ? 'bg-slate-900 text-white font-bold shadow' : 'text-slate-600 hover:bg-slate-100 font-semibold'" class="shrink-0 whitespace-nowrap md:w-full text-left px-3.5 py-2.5 rounded-xl text-xs transition flex items-center gap-2">
                         <span>✉️</span>
                         <span>Cold Email & SMTP</span>
                     </button>
 
-                    <button @click="activeTab = 'WHATSAPP'" :class="activeTab === 'WHATSAPP' ? 'bg-slate-900 text-white font-bold shadow' : 'text-slate-600 hover:bg-slate-100 font-semibold'" class="w-full text-left px-3.5 py-2.5 rounded-xl text-xs transition flex items-center gap-2.5">
+                    <button @click="activeTab = 'WHATSAPP'" :class="activeTab === 'WHATSAPP' ? 'bg-slate-900 text-white font-bold shadow' : 'text-slate-600 hover:bg-slate-100 font-semibold'" class="shrink-0 whitespace-nowrap md:w-full text-left px-3.5 py-2.5 rounded-xl text-xs transition flex items-center gap-2">
                         <span>💬</span>
                         <span>WhatsApp Outreach</span>
                     </button>
 
-                    <button @click="activeTab = 'BRAND'" :class="activeTab === 'BRAND' ? 'bg-slate-900 text-white font-bold shadow' : 'text-slate-600 hover:bg-slate-100 font-semibold'" class="w-full text-left px-3.5 py-2.5 rounded-xl text-xs transition flex items-center gap-2.5">
+                    <button @click="activeTab = 'BRAND'" :class="activeTab === 'BRAND' ? 'bg-slate-900 text-white font-bold shadow' : 'text-slate-600 hover:bg-slate-100 font-semibold'" class="shrink-0 whitespace-nowrap md:w-full text-left px-3.5 py-2.5 rounded-xl text-xs transition flex items-center gap-2">
                         <span>🏢</span>
                         <span>Company & Brand</span>
                     </button>
 
-                    <button @click="activeTab = 'HUNTER'" :class="activeTab === 'HUNTER' ? 'bg-slate-900 text-white font-bold shadow' : 'text-slate-600 hover:bg-slate-100 font-semibold'" class="w-full text-left px-3.5 py-2.5 rounded-xl text-xs transition flex items-center gap-2.5">
+                    <button @click="activeTab = 'HUNTER'" :class="activeTab === 'HUNTER' ? 'bg-slate-900 text-white font-bold shadow' : 'text-slate-600 hover:bg-slate-100 font-semibold'" class="shrink-0 whitespace-nowrap md:w-full text-left px-3.5 py-2.5 rounded-xl text-xs transition flex items-center gap-2">
                         <span>🎯</span>
                         <span>Lead Hunter Defaults</span>
                     </button>
 
-                    <button @click="activeTab = 'SECURITY'" :class="activeTab === 'SECURITY' ? 'bg-slate-900 text-white font-bold shadow' : 'text-slate-600 hover:bg-slate-100 font-semibold'" class="w-full text-left px-3.5 py-2.5 rounded-xl text-xs transition flex items-center gap-2.5">
+                    <button @click="activeTab = 'SECURITY'" :class="activeTab === 'SECURITY' ? 'bg-slate-900 text-white font-bold shadow' : 'text-slate-600 hover:bg-slate-100 font-semibold'" class="shrink-0 whitespace-nowrap md:w-full text-left px-3.5 py-2.5 rounded-xl text-xs transition flex items-center gap-2">
                         <span>🔒</span>
                         <span>Admin Security</span>
                     </button>

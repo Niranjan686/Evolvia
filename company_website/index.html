@@ -285,17 +285,17 @@
         <!-- THREE.JS 3D CANVAS (PARTICLE MORPHING ENGINE FOR WHITE THEME) -->
         <canvas id="three-canvas"></canvas>
 
-        <!-- NAVIGATION (WHITE GLASS) -->
-        <nav class="fixed top-0 w-full z-50 glass-card border-b border-slate-200/80 bg-white/85">
-            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-                <a href="#" class="flex items-center space-x-3.5">
-                    <img src="evolvia_logo.png" alt="EVOLVIA" class="h-10 w-auto rounded-xl object-contain bg-slate-950 px-2 py-1 shadow-md border border-slate-200">
+        <!-- NAVIGATION (WHITE GLASS WITH MOBILE RESPONSIVE HAMBURGER) -->
+        <nav class="fixed top-0 w-full z-50 glass-card border-b border-slate-200/80 bg-white/90 backdrop-blur-xl">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+                <a href="#" class="flex items-center space-x-2.5 sm:space-x-3.5">
+                    <img src="evolvia_logo.png" alt="EVOLVIA" class="h-9 sm:h-10 w-auto rounded-xl object-contain bg-slate-950 px-2 py-1 shadow-md border border-slate-200">
                     <div>
-                        <span class="text-2xl font-black tracking-tight text-slate-900 block leading-tight">EVOL<span class="text-cyan-500">VIA</span></span>
-                        <span class="text-[9px] font-bold tracking-widest text-slate-400 uppercase block">Smart Software • Built On Logic</span>
+                        <span class="text-xl sm:text-2xl font-black tracking-tight text-slate-900 block leading-tight">EVOL<span class="text-cyan-500">VIA</span></span>
+                        <span class="text-[8px] sm:text-[9px] font-bold tracking-widest text-slate-400 uppercase block">Smart Software • Built On Logic</span>
                     </div>
                 </a>
-                <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                <div class="hidden lg:flex items-center space-x-7 text-sm font-semibold text-slate-600">
                     <a href="#pipeline" class="hover:text-brand-600 transition flex items-center gap-1.5">
                         <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
                         Live Pipeline Flow
@@ -305,14 +305,35 @@
                     <a href="#products" class="hover:text-brand-600 transition">Product Suite</a>
                     <a href="#voice-ai" class="hover:text-brand-600 transition">Voice AI</a>
                 </div>
-                <div class="flex items-center gap-3">
+                <div class="hidden sm:flex items-center gap-2.5">
                     <a href="admin.html" class="px-3.5 py-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200 text-xs font-bold border border-slate-200 transition flex items-center gap-1.5">
                         <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
                         Admin CRM ↗
                     </a>
-                    <a href="#contact" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-600 to-brand-accent text-white font-semibold text-sm shadow-lg shadow-brand-500/20 hover:opacity-90 transition">
+                    <a href="#contact" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-brand-600 to-brand-accent text-white font-semibold text-xs shadow-md shadow-brand-500/20 hover:opacity-90 transition">
                         Deploy System
                     </a>
+                </div>
+                <!-- MOBILE HAMBURGER TOGGLE BUTTON -->
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 border border-slate-200 transition" aria-label="Toggle Navigation Menu">
+                    <svg v-if="!mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    <svg v-else class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <!-- MOBILE DRAWER DROPDOWN -->
+            <div v-show="mobileMenuOpen" class="lg:hidden border-t border-slate-200 bg-white/95 backdrop-blur-xl px-5 py-4 space-y-2 shadow-2xl transition-all">
+                <a @click="mobileMenuOpen = false" href="#pipeline" class="block px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-brand-600">⚡ Live Pipeline Flow</a>
+                <a @click="mobileMenuOpen = false" href="#stats" class="block px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-brand-600">📊 Track Record</a>
+                <a @click="mobileMenuOpen = false" href="#portfolio" class="block px-3 py-2 rounded-lg text-sm font-bold text-brand-600 hover:bg-brand-50">💼 Delivered Work</a>
+                <a @click="mobileMenuOpen = false" href="#products" class="block px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-brand-600">⚙️ Product Suite</a>
+                <a @click="mobileMenuOpen = false" href="#voice-ai" class="block px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-brand-600">🎙️ Voice AI</a>
+                <div class="pt-3 border-t border-slate-200 flex flex-col sm:hidden gap-2">
+                    <a href="admin.html" class="w-full py-2.5 rounded-xl bg-slate-100 text-slate-800 text-center text-xs font-bold border border-slate-200">Admin CRM ↗</a>
+                    <a @click="mobileMenuOpen = false" href="#contact" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-brand-600 to-brand-accent text-white text-center text-xs font-bold shadow-md">Deploy System</a>
                 </div>
             </div>
         </nav>
@@ -399,11 +420,11 @@
                             <span class="text-xs font-mono text-emerald-700 font-semibold uppercase tracking-wider">PIPELINE ENGINE: ACTIVE</span>
                             <span class="text-xs font-mono text-slate-400">| LATENCY: {{ currentLatency }}ms</span>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <button @click="triggerPipeline('inbound_lead')" :disabled="isSimulating" class="px-4 py-2 rounded-xl bg-gradient-to-r from-brand-600 to-brand-accent text-white font-semibold text-xs shadow-md shadow-brand-500/20 hover:opacity-95 transition disabled:opacity-50">
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 w-full sm:w-auto">
+                            <button @click="triggerPipeline('inbound_lead')" :disabled="isSimulating" class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-gradient-to-r from-brand-600 to-brand-accent text-white font-semibold text-xs shadow-md shadow-brand-500/20 hover:opacity-95 transition disabled:opacity-50 text-center">
                                 🚀 Trigger Inbound Lead Webhook
                             </button>
-                            <button @click="triggerPipeline('voice_call')" :disabled="isSimulating" class="px-4 py-2 rounded-xl bg-slate-100 text-slate-700 border border-slate-300 font-semibold text-xs hover:bg-slate-200 transition disabled:opacity-50">
+                            <button @click="triggerPipeline('voice_call')" :disabled="isSimulating" class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-slate-100 text-slate-700 border border-slate-300 font-semibold text-xs hover:bg-slate-200 transition disabled:opacity-50 text-center">
                                 🎙️ Trigger AI Voice Agent
                             </button>
                         </div>
@@ -1146,6 +1167,7 @@
         createApp({
             data() {
                 return {
+                    mobileMenuOpen: false,
                     activeStep: 0,
                     isSimulating: false,
                     currentLatency: 42,
