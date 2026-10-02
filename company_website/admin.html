@@ -1,0 +1,1866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolvia Admin CRM • Client Acquisition, Lead Tracking & Live IP Analytics</title>
+    <!-- Clean Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='50,15 85,35 85,75 50,95 15,75 15,35' stroke='%2338bdf8' stroke-width='8' fill='%230f172a'/><path d='M50,28 L28,78 M50,28 L72,78 M38,60 L62,60' stroke='white' stroke-width='8'/></svg>">
+    <!-- Silence Tailwind CDN console notification -->
+    <script>
+        const originalWarn = console.warn;
+        console.warn = (...args) => {
+            if (typeof args[0] === 'string' && args[0].includes('Tailwind CSS in production')) return;
+            originalWarn.apply(console, args);
+        };
+    </script>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            accent: '#0284c7',
+                            emerald: '#059669'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Vue.js 3 CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+        }
+        .preset-badge {
+            transition: all 0.2s ease;
+        }
+        .preset-badge:hover {
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+
+    <div id="app" class="pb-24">
+        
+        <!-- ========================================== -->
+        <!-- 1. AUTHENTICATION LOGIN GATE (admin/admin) -->
+        <!-- ========================================== -->
+        <div v-if="!isAuthenticated" class="min-h-screen flex items-center justify-center px-4 bg-slate-100/60">
+            <div class="glass-card w-full max-w-md p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-2xl text-center space-y-6">
+                <!-- Evolvia Logo -->
+                <img src="evolvia_logo.png" alt="EVOLVIA" class="h-12 w-auto object-contain mx-auto rounded-2xl bg-slate-950 p-2 shadow-xl border border-slate-200">
+
+                <div>
+                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                        🔒 Administrator Portal
+                    </div>
+                    <h1 class="text-2xl font-extrabold text-slate-900 tracking-tight">Evolvia CRM Login</h1>
+                    <p class="text-xs text-slate-500 mt-1">Please enter your credentials to access the management dashboard.</p>
+                </div>
+
+                <!-- Error Alert -->
+                <div v-if="loginError" class="p-3.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs font-semibold flex items-center gap-2">
+                    <span>⚠️</span>
+                    <span>{{ loginError }}</span>
+                </div>
+
+                <!-- Form -->
+                <form @submit.prevent="handleLogin" class="space-y-4 text-left">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1.5">Username</label>
+                        <input v-model="loginForm.username" type="text" autocomplete="username" required class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-xs focus:bg-white focus:border-brand-accent focus:outline-none font-medium transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1.5">Password</label>
+                        <input v-model="loginForm.password" type="password" autocomplete="current-password" required class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-xs focus:bg-white focus:border-brand-accent focus:outline-none font-medium transition">
+                    </div>
+
+                    <button type="submit" :disabled="isLoggingIn" class="w-full py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs shadow-md transition flex items-center justify-center gap-2 disabled:opacity-50">
+                        <span v-if="isLoggingIn" class="animate-spin">⏳</span>
+                        <span v-else>🔐</span>
+                        <span>{{ isLoggingIn ? 'Authenticating...' : 'Sign In to Admin Dashboard' }}</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- 2. AUTHENTICATED DASHBOARD (VISIBLE POST-LOGIN) -->
+        <!-- ========================================== -->
+        <div v-else>
+            <!-- TOP NAVIGATION BAR -->
+            <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
+                <div class="max-w-7xl mx-auto px-6 h-18 py-3 flex items-center justify-between">
+                    <div class="flex items-center space-x-3.5">
+                        <img src="evolvia_logo.png" alt="EVOLVIA" class="h-10 w-auto rounded-xl object-contain bg-slate-950 p-1.5 shadow-sm border border-slate-200">
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-xl font-black tracking-tight text-slate-900 leading-tight">EVOL<span class="text-cyan-500">VIA</span></span>
+                                <span class="text-[10px] font-bold uppercase tracking-wider bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full border border-slate-200">Admin CRM</span>
+                            </div>
+                            <span class="text-[10px] font-semibold text-slate-400">Node.js + MongoDB CRM • Lead Extraction & Anonymous IP Geo Tracker</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <div class="hidden sm:flex items-center space-x-2 text-xs font-mono px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                            <span class="text-slate-600">Storage: {{ dbStatus }}</span>
+                        </div>
+
+                        <!-- TRIGGER DAILY FOLLOW-UP BUTTON -->
+                        <button @click="triggerFollowUpCycle" :disabled="isRunningFollowUp" class="px-4 py-2 rounded-xl bg-gradient-to-r from-brand-600 to-brand-accent text-white font-semibold text-xs shadow-md shadow-brand-500/20 hover:opacity-95 transition flex items-center gap-2 disabled:opacity-50">
+                            <span v-if="isRunningFollowUp" class="animate-spin">⏳</span>
+                            <span v-else>⚡</span>
+                            <span>Run Follow-Ups</span>
+                        </button>
+                        
+                        <!-- SETTINGS LINK -->
+                        <a href="settings.html" class="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold border border-slate-200 transition flex items-center gap-1.5" title="Outreach & System Settings">
+                            <span>⚙️</span>
+                            <span>Settings</span>
+                        </a>
+
+                        <a href="index.html" target="_blank" class="px-3.5 py-2 rounded-xl bg-white border border-slate-200 text-slate-700 text-xs font-semibold hover:bg-slate-50 transition">
+                            Public Site ↗
+                        </a>
+
+                        <!-- LOGOUT BUTTON -->
+                        <button @click="logout" class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-rose-50 text-slate-600 hover:text-rose-600 border border-slate-200 text-xs font-semibold transition flex items-center gap-1.5" title="Sign out of Admin CRM">
+                            <span>🔒</span>
+                            <span>Sign Out</span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- MAIN DASHBOARD CONTAINER -->
+            <main class="max-w-7xl mx-auto px-6 pt-6 space-y-8">
+                
+                <!-- ALERT BANNER -->
+                <div v-if="bannerMessage" :class="bannerType === 'error' ? 'bg-rose-50 border-rose-200 text-rose-800' : 'bg-emerald-50 border-emerald-200 text-emerald-800'" class="p-4 rounded-2xl border text-sm flex items-center justify-between transition-all">
+                    <div class="flex items-center gap-2">
+                        <span>{{ bannerType === 'error' ? '⚠️' : '✅' }}</span>
+                        <span class="font-medium">{{ bannerMessage }}</span>
+                    </div>
+                    <button @click="bannerMessage = ''" class="text-xs font-bold uppercase opacity-75 hover:opacity-100">Dismiss</button>
+                </div>
+
+                <!-- VIEW SELECTOR BAR (LEADS CRM vs LIVE VISITOR IP TRACKER) -->
+                <div class="flex items-center justify-between flex-wrap gap-4 border-b border-slate-200 pb-3">
+                    <div class="inline-flex rounded-2xl bg-slate-200/80 p-1.5 text-xs font-bold">
+                        <button @click="currentView = 'LEADS'" :class="currentView === 'LEADS' ? 'bg-white shadow text-slate-900' : 'text-slate-600 hover:text-slate-900'" class="px-5 py-2.5 rounded-xl transition flex items-center gap-2">
+                            <span>📋 Client Leads Database</span>
+                            <span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 font-mono">{{ leads.length }}</span>
+                        </button>
+                        <button @click="currentView = 'VISITORS'" :class="currentView === 'VISITORS' ? 'bg-white shadow text-blue-700' : 'text-slate-600 hover:text-slate-900'" class="px-5 py-2.5 rounded-xl transition flex items-center gap-2">
+                            <span>👁️ Live IP & Geo Traffic</span>
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                            <span class="text-[10px] px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 font-mono">{{ visitorStats.uniqueVisitors }}</span>
+                        </button>
+                    </div>
+
+                    <div class="flex items-center gap-3 text-xs font-mono text-slate-500">
+                        <span class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-slate-200 shadow-sm">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                            <span>Auto-Capturing Hits on Public Site</span>
+                        </span>
+                        <button @click="refreshAll" class="p-2 rounded-xl bg-white border border-slate-200 text-slate-600 hover:text-slate-900 shadow-sm" title="Refresh Feed">
+                            🔄
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ========================================== -->
+                <!-- 1. LIVE ANONYMOUS IP & VISITOR GEO TRACKER -->
+                <!-- ========================================== -->
+                <div v-if="currentView === 'VISITORS'" class="space-y-8">
+                    <!-- Visitor KPIs Row -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="glass-card p-6 rounded-2xl">
+                            <div class="flex items-center justify-between text-slate-500 text-xs font-semibold uppercase mb-2">
+                                <span>Total Inbound Hits</span>
+                                <span>👁️</span>
+                            </div>
+                            <div class="text-3xl font-extrabold text-slate-900">{{ visitorStats.totalHits }}</div>
+                            <div class="text-xs text-slate-400 mt-2 font-medium">Automatic page hits recorded</div>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-2xl border-blue-200 bg-blue-50/20">
+                            <div class="flex items-center justify-between text-blue-700 text-xs font-semibold uppercase mb-2">
+                                <span>Unique IP Visitors</span>
+                                <span>🌐</span>
+                            </div>
+                            <div class="text-3xl font-extrabold text-blue-600">{{ visitorStats.uniqueVisitors }}</div>
+                            <div class="text-xs text-blue-600/80 mt-2 font-medium">De-duplicated 20-min sessions</div>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-2xl border-emerald-200 bg-emerald-50/20">
+                            <div class="flex items-center justify-between text-emerald-700 text-xs font-semibold uppercase mb-2">
+                                <span>Top Inbound Location</span>
+                                <span>📍</span>
+                            </div>
+                            <div class="text-2xl font-extrabold text-emerald-700 truncate">{{ visitorStats.topCity }}, {{ visitorStats.topCountry }}</div>
+                            <div class="text-xs text-slate-400 mt-2 font-medium">Auto-resolved via IP Geolocation</div>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-2xl border-indigo-200 bg-indigo-50/20">
+                            <div class="flex items-center justify-between text-indigo-700 text-xs font-semibold uppercase mb-2">
+                                <span>Active in Last 24h</span>
+                                <span>⚡</span>
+                            </div>
+                            <div class="text-3xl font-extrabold text-indigo-600">{{ visitorStats.recentCount }}</div>
+                            <div class="text-xs text-slate-400 mt-2 font-medium">Recent inbound traffic</div>
+                        </div>
+                    </div>
+
+                    <!-- Live Visitors Feed Table Card -->
+                    <div class="glass-card rounded-3xl border border-slate-200 overflow-hidden shadow-md">
+                        <div class="p-6 border-b border-slate-200 flex flex-col md:flex-row md:items-center justify-between gap-4 bg-slate-50/50">
+                            <div>
+                                <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                                    <span>👁️ Live Inbound Website Visitors</span>
+                                    <span class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-mono font-bold">Auto-Logged</span>
+                                </h2>
+                                <p class="text-xs text-slate-500 mt-1">
+                                    Every time someone lands on your website, their real IP, physical location, ISP/Organization, and device are captured automatically.
+                                </p>
+                            </div>
+
+                            <!-- Visitor Search Box -->
+                            <div class="relative">
+                                <input v-model="visitorSearch" type="text" placeholder="Search city, IP, ISP, device..." class="w-56 pl-8 pr-3.5 py-1.5 rounded-xl bg-white border border-slate-200 text-xs focus:outline-none focus:border-brand-accent">
+                                <span class="absolute left-2.5 top-2 text-slate-400 text-xs">🔍</span>
+                            </div>
+                        </div>
+
+                        <!-- Visitors Table Content -->
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse text-xs">
+                                <thead>
+                                    <tr class="bg-slate-100/70 border-b border-slate-200 text-slate-600 font-semibold uppercase tracking-wider text-[10px]">
+                                        <th class="p-4">Visitor & Location</th>
+                                        <th class="p-4">Full Real IP Address</th>
+                                        <th class="p-4">ISP / Network Provider</th>
+                                        <th class="p-4">Device & Browser</th>
+                                        <th class="p-4">Pages & Hits</th>
+                                        <th class="p-4">First & Last Seen</th>
+                                        <th class="p-4 text-right">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100">
+                                    <tr v-for="vis in filteredVisitors" :key="vis._id" class="hover:bg-slate-50/70 transition">
+                                        <!-- Location & Flag -->
+                                        <td class="p-4">
+                                            <div class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+                                                <span class="text-base">{{ vis.flag || '🌐' }}</span>
+                                                <span>{{ vis.city }}</span>
+                                            </div>
+                                            <div class="text-slate-500 text-[11px] mt-0.5 font-medium">
+                                                {{ vis.region ? vis.region + ', ' : '' }}{{ vis.country }}
+                                            </div>
+                                        </td>
+
+                                        <!-- Full IP Address -->
+                                        <td class="p-4">
+                                            <div class="flex items-center gap-1.5">
+                                                <span class="font-mono text-slate-900 bg-slate-100 px-2.5 py-1 rounded-lg border border-slate-200 text-xs font-bold select-all">
+                                                    {{ vis.ip }}
+                                                </span>
+                                                <button @click="copyShareMessage(vis.ip)" class="p-1 text-slate-400 hover:text-slate-700 transition" title="Copy Full IP Address">
+                                                    📋
+                                                </button>
+                                            </div>
+                                        </td>
+
+                                        <!-- ISP / Org -->
+                                        <td class="p-4">
+                                            <div class="font-medium text-slate-800 text-xs truncate max-w-[190px]" :title="vis.isp">
+                                                {{ vis.isp || 'Broadband Network' }}
+                                            </div>
+                                            <div v-if="vis.timezone" class="text-[10px] text-slate-400 font-mono mt-0.5">
+                                                {{ vis.timezone }}
+                                            </div>
+                                        </td>
+
+                                        <!-- Device & OS -->
+                                        <td class="p-4">
+                                            <div class="font-semibold text-slate-800 text-xs flex items-center gap-1.5">
+                                                <span>{{ vis.device === 'Mobile' ? '📱' : (vis.device === 'Tablet' ? '📟' : '💻') }}</span>
+                                                <span>{{ vis.os }}</span>
+                                            </div>
+                                            <div class="text-[11px] text-slate-500 mt-0.5 font-medium">
+                                                {{ vis.browser }} • <span class="font-mono text-[10px] text-slate-400">{{ vis.screen || 'Desktop' }}</span>
+                                            </div>
+                                        </td>
+
+                                        <!-- Hits & Pages -->
+                                        <td class="p-4">
+                                            <div class="flex items-center gap-2">
+                                                <span class="px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 font-mono font-bold text-[10px] border border-blue-200">
+                                                    {{ vis.hitCount || 1 }} Hits
+                                                </span>
+                                            </div>
+                                            <div class="text-slate-500 text-[11px] mt-1 font-mono truncate max-w-[160px]" :title="vis.pagesVisited?.join(', ')">
+                                                {{ vis.lastPage || '/' }}
+                                            </div>
+                                        </td>
+
+                                        <!-- Seen Time -->
+                                        <td class="p-4">
+                                            <div class="font-medium text-slate-800 text-xs">
+                                                {{ formatDate(vis.lastSeen) }}
+                                            </div>
+                                            <div class="text-[10px] text-slate-400 mt-0.5">
+                                                From: {{ vis.referrer || 'Direct Hit' }}
+                                            </div>
+                                        </td>
+
+                                        <!-- Action: Convert to Lead -->
+                                        <td class="p-4 text-right space-x-1.5 whitespace-nowrap">
+                                            <button v-if="!vis.convertedToLead" @click="convertVisitorToLead(vis._id)" class="px-3 py-1.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold text-xs shadow-sm hover:opacity-95 transition flex items-center gap-1.5 inline-flex" title="Import this visitor as a qualified lead in CRM">
+                                                <span>⚡</span>
+                                                <span>Convert to Lead</span>
+                                            </button>
+                                            <span v-else class="px-2.5 py-1 rounded-xl bg-emerald-100 text-emerald-800 font-bold text-[11px] inline-flex items-center gap-1 border border-emerald-200">
+                                                <span>✓</span>
+                                                <span>Lead Created</span>
+                                            </span>
+
+                                            <a :href="'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(vis.city + ' ' + vis.country)" target="_blank" class="p-2 rounded-xl bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 inline-flex transition" title="View city location on Google Maps">
+                                                🗺️
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                    <tr v-if="filteredVisitors.length === 0">
+                                        <td colspan="7" class="p-12 text-center text-slate-400">
+                                            <div class="text-4xl mb-2">👁️</div>
+                                            <div class="font-bold text-slate-700 text-sm">No visitor hits recorded yet.</div>
+                                            <div class="text-xs text-slate-500 mt-1">Open <a href="index.html" target="_blank" class="text-blue-600 underline font-bold">http://localhost:4000</a> in a new tab to see your hit appear here live in real-time!</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========================================== -->
+                <!-- 2. LEADS CRM & EXTRACTION SECTION          -->
+                <!-- ========================================== -->
+                <div v-show="currentView === 'LEADS'" class="space-y-8">
+                    <!-- KPI & STATS ROW -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="glass-card p-6 rounded-2xl">
+                            <div class="flex items-center justify-between text-slate-500 text-xs font-semibold uppercase mb-2">
+                                <span>Total Stored Leads</span>
+                                <span>🌐</span>
+                            </div>
+                            <div class="text-3xl font-extrabold text-slate-900">{{ leads.length }}</div>
+                            <div class="text-xs text-slate-400 mt-2 font-medium">MongoDB / Local Persistent Cache</div>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-2xl border-amber-200 bg-amber-50/20">
+                            <div class="flex items-center justify-between text-amber-700 text-xs font-semibold uppercase mb-2">
+                                <span>No Website (High Intent)</span>
+                                <span>🚫</span>
+                            </div>
+                            <div class="text-3xl font-extrabold text-amber-600">{{ countNoWebsite }}</div>
+                            <div class="text-xs text-slate-500 mt-2 font-medium">Target for custom software & web design</div>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-2xl">
+                            <div class="flex items-center justify-between text-brand-600 text-xs font-semibold uppercase mb-2">
+                                <span>Active In Sequence</span>
+                                <span>✉️</span>
+                            </div>
+                            <div class="text-3xl font-extrabold text-brand-600">{{ stats.inSequence || countInSequence }}</div>
+                            <div class="text-xs text-slate-400 mt-2 font-medium">Step 1 & Step 2 delivered</div>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-2xl border-emerald-200 bg-emerald-50/40">
+                            <div class="flex items-center justify-between text-emerald-700 text-xs font-semibold uppercase mb-2">
+                                <span>Replied & Hot Deals</span>
+                                <span>🔥</span>
+                            </div>
+                            <div class="text-3xl font-extrabold text-emerald-600">{{ stats.replied + stats.converted }}</div>
+                            <div class="text-xs text-emerald-700/80 mt-2 font-medium">{{ stats.replied }} In discussion • {{ stats.converted }} Won</div>
+                        </div>
+                    </div>
+
+                    <!-- AI BOT LEAD EXTRACTION CARD -->
+                    <div class="glass-card p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-md">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-slate-200 gap-4">
+                            <div>
+                                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2">
+                                    🤖 Autonomous Scraper & High-Intent Hunter
+                                </div>
+                                <h2 class="text-xl font-bold text-slate-900">Extract Global & Local Leads into Database</h2>
+                                <p class="text-xs text-slate-500 mt-1">Extract verified businesses globally or target local cafes, coaching classes, and schools that <strong>DO NOT have a website</strong>.</p>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs font-mono text-slate-400">STATUS:</span>
+                                <span class="text-xs font-mono font-bold text-emerald-600 px-2 py-0.5 rounded bg-emerald-100">BOT ONLINE</span>
+                            </div>
+                        </div>
+
+                        <!-- 1-CLICK QUICK PRESETS -->
+                        <div class="mt-5">
+                            <div class="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2.5">⚡ 1-Click Extraction Presets:</div>
+                            <div class="flex items-center flex-wrap gap-2.5">
+                                <button @click="applyPreset('cafe')" class="preset-badge px-3.5 py-2 rounded-xl border border-amber-200 bg-amber-50/70 text-amber-900 text-xs font-semibold hover:bg-amber-100 flex items-center gap-1.5">
+                                    <span>☕ Nearby Cafes</span>
+                                    <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-amber-200/80 text-amber-800 font-bold">No Website</span>
+                                </button>
+                                <button @click="applyPreset('classes')" class="preset-badge px-3.5 py-2 rounded-xl border border-blue-200 bg-blue-50/70 text-blue-900 text-xs font-semibold hover:bg-blue-100 flex items-center gap-1.5">
+                                    <span>🎓 Coaching & Tuition Classes</span>
+                                    <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-blue-200/80 text-blue-800 font-bold">No Website</span>
+                                </button>
+                                <button @click="applyPreset('school')" class="preset-badge px-3.5 py-2 rounded-xl border border-indigo-200 bg-indigo-50/70 text-indigo-900 text-xs font-semibold hover:bg-indigo-100 flex items-center gap-1.5">
+                                    <span>🏫 High Schools & Academies</span>
+                                    <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-indigo-200/80 text-indigo-800 font-bold">No Website</span>
+                                </button>
+                                <button @click="applyPreset('global_b2b')" class="preset-badge px-3.5 py-2 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-xs font-semibold hover:bg-slate-100 flex items-center gap-1.5">
+                                    <span>🌐 Global B2B (US / UK)</span>
+                                    <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-slate-200 text-slate-700 font-bold">Google Maps</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Extraction Form -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1.5">Target Industry / Keyword</label>
+                                <input v-model="extractForm.industry" type="text" placeholder="e.g. Cafe, Coaching Classes, School" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 text-xs focus:bg-white focus:border-brand-accent focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1.5">Target City / Area</label>
+                                <input v-model="extractForm.location" type="text" placeholder="e.g. Mumbai, Delhi, London, Miami" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 text-xs focus:bg-white focus:border-brand-accent focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1.5">Source Name Tag</label>
+                                <input v-model="extractForm.sourceName" type="text" placeholder="e.g. Mumbai (No Website)" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 text-xs focus:bg-white focus:border-brand-accent focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1.5">Quantity to Extract</label>
+                                <select v-model="extractForm.maxCount" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 text-xs focus:bg-white focus:border-brand-accent focus:outline-none font-medium">
+                                    <option value="5">5 Leads</option>
+                                    <option value="10">10 Leads</option>
+                                    <option value="15">15 Leads (Recommended)</option>
+                                    <option value="25">25 Leads (Bulk)</option>
+                                    <option value="50">50 Leads (Enterprise)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- NO WEBSITE FILTER CHECKBOX -->
+                        <div class="mt-4 p-3 rounded-2xl bg-amber-50/60 border border-amber-200/80 flex items-center justify-between flex-wrap gap-3">
+                            <label class="flex items-center gap-3 cursor-pointer select-none">
+                                <input type="checkbox" v-model="extractForm.noWebsiteOnly" class="w-4 h-4 rounded text-brand-600 focus:ring-brand-500 border-slate-300">
+                                <span class="text-xs font-bold text-amber-900">
+                                    🎯 Filter: Extract ONLY Businesses WITHOUT an Official Website
+                                </span>
+                            </label>
+                            <span class="text-[11px] text-amber-800 font-medium">
+                                (Prime pitch angle: Offer custom responsive website + smart CCTV/RFID attendance system)
+                            </span>
+                        </div>
+
+                        <!-- Action Button -->
+                        <div class="mt-5 flex items-center justify-between flex-wrap gap-4">
+                            <button @click="runLeadExtraction" :disabled="isExtracting" class="px-6 py-3 rounded-xl bg-slate-900 text-white font-bold text-xs shadow-md hover:bg-slate-800 transition flex items-center gap-2 disabled:opacity-50">
+                                <span v-if="isExtracting" class="animate-spin">🔄</span>
+                                <span v-else>🔍</span>
+                                <span>{{ isExtracting ? 'Extracting & Saving Leads...' : 'Extract & Save to Database' }}</span>
+                            </button>
+
+                            <div v-if="isExtracting" class="text-xs font-mono text-brand-600 animate-pulse">
+                                Scanning businesses • Verifying contact details • Saving to CRM...
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LEADS MANAGEMENT TABLE SECTION -->
+                    <div class="glass-card rounded-3xl border border-slate-200 overflow-hidden shadow-md">
+                        <!-- Table Controls & Filters -->
+                        <div class="p-6 border-b border-slate-200 flex flex-col md:flex-row md:items-center justify-between gap-4 bg-slate-50/50">
+                            <div class="flex items-center gap-3 flex-wrap">
+                                <span class="text-sm font-bold text-slate-900">Leads Directory</span>
+                                <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-200 text-slate-700 font-mono font-bold">{{ filteredLeads.length }} Shown</span>
+                                
+                                <!-- Quick View Filter Tabs -->
+                                <div class="inline-flex rounded-xl bg-slate-200/70 p-1 text-xs">
+                                    <button @click="setTab('ALL')" :class="activeTab === 'ALL' ? 'bg-white shadow text-slate-900 font-bold' : 'text-slate-600 hover:text-slate-900'" class="px-3 py-1 rounded-lg transition">All</button>
+                                    <button @click="setTab('NO_WEBSITE')" :class="activeTab === 'NO_WEBSITE' ? 'bg-white shadow text-amber-700 font-bold' : 'text-slate-600 hover:text-slate-900'" class="px-3 py-1 rounded-lg transition flex items-center gap-1">
+                                        <span>🚫 No Website</span>
+                                    </button>
+                                    <button @click="setTab('CAFE')" :class="activeTab === 'CAFE' ? 'bg-white shadow text-slate-900 font-bold' : 'text-slate-600 hover:text-slate-900'" class="px-3 py-1 rounded-lg transition">☕ Cafes</button>
+                                    <button @click="setTab('CLASSES')" :class="activeTab === 'CLASSES' ? 'bg-white shadow text-slate-900 font-bold' : 'text-slate-600 hover:text-slate-900'" class="px-3 py-1 rounded-lg transition">🎓 Classes</button>
+                                    <button @click="setTab('SCHOOL')" :class="activeTab === 'SCHOOL' ? 'bg-white shadow text-slate-900 font-bold' : 'text-slate-600 hover:text-slate-900'" class="px-3 py-1 rounded-lg transition">🏫 Schools</button>
+                                </div>
+                            </div>
+
+                            <!-- Search & Filter Controls -->
+                            <div class="flex items-center gap-3 flex-wrap">
+                                <!-- Search Box -->
+                                <div class="relative">
+                                    <input v-model="searchQuery" type="text" placeholder="Search name, phone, area..." class="w-44 sm:w-56 pl-8 pr-3.5 py-1.5 rounded-xl bg-white border border-slate-200 text-xs focus:outline-none focus:border-brand-accent">
+                                    <span class="absolute left-2.5 top-2 text-slate-400 text-xs">🔍</span>
+                                </div>
+
+                                <!-- Filter by Status -->
+                                <select v-model="selectedStatus" class="px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-xs text-slate-700 focus:outline-none focus:border-brand-accent">
+                                    <option value="ALL">All Statuses</option>
+                                    <option value="NEW">New (Uncontacted)</option>
+                                    <option value="STEP_1_SENT">Step 1 Sent</option>
+                                    <option value="STEP_2_SENT">Step 2 Sent</option>
+                                    <option value="STEP_3_SENT">Step 3 Sent</option>
+                                    <option value="REPLIED">Replied</option>
+                                    <option value="CONVERTED">Converted</option>
+                                </select>
+
+                                <!-- ADD LEAD MANUALLY BUTTON -->
+                                <button @click="showManualLeadModal = true" class="px-3.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center gap-1.5 transition shadow-sm" title="Manually add a new lead">
+                                    <span>➕</span>
+                                    <span>Add Lead</span>
+                                </button>
+
+                                <!-- Export CSV Button -->
+                                <button @click="exportToCSV" class="px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 text-xs font-semibold flex items-center gap-1 transition shadow-sm" title="Export current leads to CSV file">
+                                    <span>📥</span>
+                                    <span>Export CSV</span>
+                                </button>
+
+                                <button @click="fetchLeads" class="p-2 rounded-xl bg-white border border-slate-200 text-slate-600 hover:text-slate-900 text-xs hover:bg-slate-50 transition" title="Refresh">
+                                    🔄
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- BULK SELECTION ACTION BAR -->
+                        <div v-if="selectedLeadIds.length > 0" class="p-3.5 bg-emerald-50 border-b border-emerald-200 flex items-center justify-between flex-wrap gap-3 transition">
+                            <div class="flex items-center gap-2">
+                                <span class="px-2.5 py-1 rounded-lg bg-emerald-600 text-white font-mono font-bold text-xs">
+                                    {{ selectedLeadIds.length }} Selected
+                                </span>
+                                <span class="text-xs text-emerald-900 font-semibold">Leads queued for batch campaign</span>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <button @click="openBulkWhatsAppModal" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center gap-1.5 shadow-md transition">
+                                    <span>💬</span>
+                                    <span>Launch Bulk WhatsApp Campaign</span>
+                                </button>
+                                <button @click="exportSelectedWhatsAppCSV" class="px-3 py-2 rounded-xl bg-white hover:bg-slate-50 border border-emerald-300 text-emerald-800 font-semibold text-xs flex items-center gap-1 transition shadow-sm">
+                                    <span>📋</span>
+                                    <span>Export WhatsApp Broadcast CSV</span>
+                                </button>
+                                <button @click="selectedLeadIds = []" class="px-3 py-2 rounded-xl text-slate-500 hover:text-slate-800 text-xs font-semibold">
+                                    Clear
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Table Content -->
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse text-xs">
+                                <thead>
+                                    <tr class="bg-slate-100/70 border-b border-slate-200 text-slate-600 font-semibold uppercase tracking-wider text-[10px]">
+                                        <th class="p-4 w-10 text-center">
+                                            <input type="checkbox" :checked="isAllSelected" @change="toggleSelectAll" class="w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 cursor-pointer">
+                                        </th>
+                                        <th class="p-4">Business / Establishment</th>
+                                        <th class="p-4">Contact Phone & Email</th>
+                                        <th class="p-4">📍 Location & Navigation</th>
+                                        <th class="p-4">Website & Source</th>
+                                        <th class="p-4">Pipeline Status</th>
+                                        <th class="p-4 text-right">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100">
+                                    <tr v-for="lead in filteredLeads" :key="lead._id" class="hover:bg-slate-50/70 transition" :class="selectedLeadIds.includes(lead._id) ? 'bg-emerald-50/30' : ''">
+                                        <!-- Checkbox -->
+                                        <td class="p-4 w-10 text-center">
+                                            <input type="checkbox" :value="lead._id" v-model="selectedLeadIds" class="w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 cursor-pointer">
+                                        </td>
+                                        <!-- Business Name & Industry -->
+                                        <td class="p-4">
+                                            <div class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+                                                <span>{{ lead.name }}</span>
+                                            </div>
+                                            <div class="text-slate-500 font-medium text-[11px] mt-0.5">
+                                                <span class="font-semibold text-slate-700">{{ lead.industry || 'BUSINESS' }}</span>
+                                            </div>
+                                        </td>
+
+                                        <!-- Phone & Email -->
+                                        <td class="p-4">
+                                            <div class="font-mono text-slate-800 font-semibold text-xs flex items-center gap-1.5">
+                                                <span>📞</span>
+                                                <a :href="'tel:' + lead.phone" class="hover:underline text-blue-600">{{ lead.phone || 'Available on request' }}</a>
+                                            </div>
+                                            <div class="font-mono text-slate-500 text-[11px] mt-0.5 flex items-center gap-1.5">
+                                                <span>✉️</span>
+                                                <a :href="'mailto:' + lead.email" class="hover:underline text-slate-600 truncate max-w-[200px]">{{ lead.email }}</a>
+                                            </div>
+                                        </td>
+
+                                        <!-- Physical Location & Navigation -->
+                                        <td class="p-4">
+                                            <div class="text-slate-700 font-medium text-xs flex items-center gap-1">
+                                                <span>📍</span>
+                                                <span class="truncate max-w-[220px]" :title="lead.address">{{ lead.address || (lead.city + ', ' + lead.country) }}</span>
+                                            </div>
+                                            <div class="flex items-center gap-2 mt-1.5">
+                                                <!-- Google Maps Direct Navigation -->
+                                                <a :href="lead.googleMapsUrl || ('https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(lead.name + ' ' + (lead.address || '') + ' ' + lead.city))" target="_blank" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200 text-[11px] font-semibold transition" title="Open in Google Maps">
+                                                    <span>🗺️ Google Maps ↗</span>
+                                                </a>
+
+                                                <!-- Share Location Button -->
+                                                <button @click="openShareModal(lead)" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200 text-[11px] font-semibold transition" title="Share Location & Contact via WhatsApp / Copy">
+                                                    <span>📤 Share</span>
+                                                </button>
+                                            </div>
+                                        </td>
+
+                                        <!-- Website & Source Status -->
+                                        <td class="p-4">
+                                            <div class="flex flex-col items-start gap-1">
+                                                <span v-if="isNoWebsite(lead)" class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-amber-50 text-amber-700 border border-amber-200 font-bold text-[10px]">
+                                                    🚫 No Website
+                                                </span>
+                                                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 font-medium border border-slate-200 text-[10px]">
+                                                    {{ lead.source || 'Scraper' }}
+                                                </span>
+                                            </div>
+                                        </td>
+
+                                        <!-- Pipeline Status -->
+                                        <td class="p-4">
+                                            <div class="flex items-center gap-2">
+                                                <span v-if="lead.status === 'NEW'" class="px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 font-bold font-mono text-[10px]">
+                                                    NEW
+                                                </span>
+                                                <span v-else-if="lead.status === 'STEP_1_SENT'" class="px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200 font-bold font-mono text-[10px]">
+                                                    STEP 1 PITCH
+                                                </span>
+                                                <span v-else-if="lead.status === 'STEP_2_SENT'" class="px-2 py-0.5 rounded-full bg-purple-50 text-purple-700 border border-purple-200 font-bold font-mono text-[10px]">
+                                                    STEP 2 FOLLOWUP
+                                                </span>
+                                                <span v-else-if="lead.status === 'REPLIED'" class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold font-mono text-[10px]">
+                                                    🔥 REPLIED
+                                                </span>
+                                                <span v-else-if="lead.status === 'CONVERTED'" class="px-2 py-0.5 rounded-full bg-emerald-600 text-white font-bold font-mono text-[10px]">
+                                                    🏆 CONVERTED
+                                                </span>
+                                                <span v-else class="px-2 py-0.5 rounded-full bg-rose-50 text-rose-700 font-mono text-[10px]">
+                                                    {{ lead.status }}
+                                                </span>
+                                            </div>
+                                        </td>
+
+                                        <!-- Actions -->
+                                        <td class="p-4 text-right space-x-1.5 whitespace-nowrap">
+                                            <!-- WhatsApp Direct Pitch -->
+                                            <button @click="openOutreachModal(lead, 'WHATSAPP')" class="px-2.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs shadow-sm transition inline-flex items-center gap-1" title="Direct WhatsApp Pitch">
+                                                <span>💬</span>
+                                                <span>WhatsApp</span>
+                                            </button>
+
+                                            <!-- Cold Email Pitch -->
+                                            <button @click="openOutreachModal(lead, 'EMAIL')" class="px-2.5 py-1.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-xs shadow-sm transition inline-flex items-center gap-1" title="Cold Email Pitch Sequence">
+                                                <span>✉️</span>
+                                                <span>Email Pitch</span>
+                                            </button>
+
+                                            <!-- Mark Replied -->
+                                            <button v-if="!['REPLIED', 'CONVERTED'].includes(lead.status)" @click="updateStatus(lead._id, 'REPLIED')" class="px-2 py-1.5 rounded-xl bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 font-semibold transition" title="Mark as Replied">
+                                                🔥
+                                            </button>
+
+                                            <!-- View History Modal Trigger -->
+                                            <button @click="openHistory(lead)" class="px-2 py-1.5 rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200 transition" title="View Details & Audit Log">
+                                                📜
+                                            </button>
+
+                                            <!-- Delete -->
+                                            <button @click="deleteLead(lead._id)" class="px-2 py-1.5 rounded-xl text-rose-500 hover:bg-rose-50 transition" title="Delete">
+                                                🗑️
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                    <tr v-if="filteredLeads.length === 0">
+                                        <td colspan="6" class="p-10 text-center text-slate-400">
+                                            <div class="text-3xl mb-2">🔍</div>
+                                            <div class="font-semibold text-slate-600">No leads found matching your criteria.</div>
+                                            <div class="text-xs text-slate-400 mt-1">Click one of the 1-Click Extraction Presets above to load Cafes, Coaching Classes, or Schools!</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========================================== -->
+                <!-- ➕ MANUAL LEAD CREATION MODAL -->
+                <!-- ========================================== -->
+                <div v-if="showManualLeadModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+                    <div class="glass-card w-full max-w-lg rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-2xl relative flex flex-col max-h-[92vh]">
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-200">
+                            <div class="flex items-center gap-2.5">
+                                <div class="w-10 h-10 rounded-2xl bg-slate-900 text-white flex items-center justify-center font-bold text-base shadow-sm">
+                                    ➕
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-900 text-base leading-tight">Add New Lead Manually</h3>
+                                    <p class="text-xs text-slate-500 mt-0.5">Directly input business details to store in CRM and initiate WhatsApp or Cold Email pitches.</p>
+                                </div>
+                            </div>
+                            <button @click="showManualLeadModal = false" class="w-8 h-8 rounded-full bg-slate-100 text-slate-500 hover:text-slate-900 hover:bg-slate-200 flex items-center justify-center font-bold">
+                                ✕
+                            </button>
+                        </div>
+
+                        <form @submit.prevent="saveManualLead" class="py-4 space-y-4 text-xs flex-1 overflow-y-auto">
+                            <!-- Business Name & Industry -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block font-bold text-slate-700 mb-1">Business / Establishment Name *</label>
+                                    <input v-model="manualLeadForm.name" type="text" required placeholder="e.g. Royal Chai Cafe" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 font-semibold focus:bg-white focus:border-brand-accent focus:outline-none">
+                                </div>
+
+                                <div>
+                                    <label class="block font-bold text-slate-700 mb-1">Industry / Category *</label>
+                                    <select v-model="manualLeadForm.industry" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 font-medium focus:bg-white focus:border-brand-accent focus:outline-none">
+                                        <option value="Cafe">Cafe / Coffee Shop</option>
+                                        <option value="Restaurant">Restaurant / Eatery</option>
+                                        <option value="Coaching Classes">Coaching Classes / Tuitions</option>
+                                        <option value="School">School / College</option>
+                                        <option value="Fitness & Gym">Gym / Fitness Center</option>
+                                        <option value="Salon & Spa">Salon & Spa</option>
+                                        <option value="Healthcare / Clinic">Doctor / Clinic / Dental</option>
+                                        <option value="Retail & Store">Retail Store / Local Shop</option>
+                                        <option value="Other Business">Other Local Business</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Phone & Email -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block font-bold text-slate-700 mb-1">Contact Phone Number *</label>
+                                    <input v-model="manualLeadForm.phone" type="text" required placeholder="e.g. +91 98453 12345" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 font-mono focus:bg-white focus:border-emerald-500 focus:outline-none">
+                                </div>
+
+                                <div>
+                                    <label class="block font-bold text-slate-700 mb-1">Email Address</label>
+                                    <input v-model="manualLeadForm.email" type="email" placeholder="e.g. contact@business.com" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 font-mono focus:bg-white focus:border-brand-accent focus:outline-none">
+                                </div>
+                            </div>
+
+                            <!-- Street Address & City -->
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <div class="sm:col-span-2">
+                                    <label class="block font-bold text-slate-700 mb-1">Street Address / Landmark</label>
+                                    <input v-model="manualLeadForm.address" type="text" placeholder="e.g. Station Road, Sector 4" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:bg-white focus:border-brand-accent focus:outline-none">
+                                </div>
+
+                                <div>
+                                    <label class="block font-bold text-slate-700 mb-1">City / Region</label>
+                                    <input v-model="manualLeadForm.city" type="text" required placeholder="e.g. Mumbai" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:bg-white focus:border-brand-accent focus:outline-none">
+                                </div>
+                            </div>
+
+                            <!-- Website Toggle Option -->
+                            <div class="p-3 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+                                <label class="flex items-center gap-2.5 cursor-pointer">
+                                    <input v-model="manualLeadForm.hasWebsite" type="checkbox" class="w-4 h-4 rounded text-blue-600 focus:ring-blue-500">
+                                    <span class="font-bold text-slate-800">Business already has an active website</span>
+                                </label>
+                                <div v-if="manualLeadForm.hasWebsite" class="pt-1">
+                                    <input v-model="manualLeadForm.website" type="url" placeholder="https://example.com" class="w-full px-3.5 py-2 rounded-xl bg-white border border-slate-200 text-slate-900 font-mono text-xs focus:border-brand-accent focus:outline-none">
+                                </div>
+                                <div v-else class="text-[11px] text-amber-700 font-medium flex items-center gap-1">
+                                    <span>🚫</span>
+                                    <span>Will be tagged as <strong>[No Website]</strong> for targeted website development & WhatsApp pitches!</span>
+                                </div>
+                            </div>
+
+                            <!-- Notes -->
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1">Lead Notes / Context (Optional)</label>
+                                <textarea v-model="manualLeadForm.notes" rows="2" placeholder="e.g. Met owner in person / Found on local Instagram / Direct referral..." class="w-full p-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 focus:bg-white focus:border-brand-accent focus:outline-none"></textarea>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="flex items-center justify-end gap-2.5 pt-2 border-t border-slate-100">
+                                <button type="button" @click="showManualLeadModal = false" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold transition">
+                                    Cancel
+                                </button>
+                                <button type="submit" :disabled="isSavingManualLead" class="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold transition flex items-center gap-2 shadow-md disabled:opacity-50">
+                                    <span v-if="isSavingManualLead" class="animate-spin">⏳</span>
+                                    <span v-else>💾</span>
+                                    <span>{{ isSavingManualLead ? 'Saving Lead...' : 'Save Lead to CRM' }}</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- ========================================== -->
+                <!-- 📢 BULK WHATSAPP CAMPAIGN STUDIO MODAL -->
+                <!-- ========================================== -->
+                <div v-if="showBulkWhatsAppModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+                    <div class="glass-card w-full max-w-2xl rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-2xl relative flex flex-col max-h-[92vh]">
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-200">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-2xl bg-emerald-600 text-white flex items-center justify-center font-bold text-lg shadow-sm">
+                                    📢
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <h3 class="font-bold text-slate-900 text-base leading-tight">Bulk WhatsApp Campaign Studio</h3>
+                                        <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold font-mono">{{ selectedLeadsList.length }} Targets</span>
+                                    </div>
+                                    <p class="text-xs text-slate-500 mt-0.5">High-reply outreach runner with anti-ban human delay and CRM tracking.</p>
+                                </div>
+                            </div>
+                            <button @click="showBulkWhatsAppModal = false" class="w-8 h-8 rounded-full bg-slate-100 text-slate-500 hover:text-slate-900 hover:bg-slate-200 flex items-center justify-center font-bold">
+                                ✕
+                            </button>
+                        </div>
+
+                        <!-- Body Content -->
+                        <div class="py-4 space-y-5 text-xs flex-1 overflow-y-auto">
+                            <!-- Campaign Mode Switcher -->
+                            <div class="grid grid-cols-2 gap-2 p-1 rounded-2xl bg-slate-100 border border-slate-200 text-center font-bold">
+                                <button type="button" @click="bulkMode = 'QUEUE'" :class="bulkMode === 'QUEUE' ? 'bg-white text-emerald-700 shadow-sm' : 'text-slate-500 hover:text-slate-800'" class="py-2 rounded-xl transition flex items-center justify-center gap-1.5">
+                                    <span>⚡ Fast Queue Runner (Send & Next)</span>
+                                </button>
+                                <button type="button" @click="bulkMode = 'BROADCAST'" :class="bulkMode === 'BROADCAST' ? 'bg-white text-emerald-700 shadow-sm' : 'text-slate-500 hover:text-slate-800'" class="py-2 rounded-xl transition flex items-center justify-center gap-1.5">
+                                    <span>📋 1-Click Broadcast & Export</span>
+                                </button>
+                            </div>
+
+                            <!-- Pitch Hook Selection -->
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Select Pitch Hook / Angle for this Campaign:</label>
+                                <select v-model="bulkTemplateIndex" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 font-semibold focus:bg-white focus:border-emerald-500 focus:outline-none">
+                                    <option :value="0">🎯 1. No-Website Google Maps Audit (Recommended for Cafes & Local Businesses)</option>
+                                    <option :value="1">⚡ 2. Special Offer: 24h Website Setup & QR Digital Menu/Catalog</option>
+                                    <option :value="2">💬 3. Short & Direct Casual Inquiry</option>
+                                </select>
+                            </div>
+
+                            <!-- MODE 1: QUEUE RUNNER -->
+                            <div v-if="bulkMode === 'QUEUE'" class="space-y-4">
+                                <!-- Progress Bar -->
+                                <div class="space-y-1.5">
+                                    <div class="flex items-center justify-between text-[11px] font-bold">
+                                        <span class="text-slate-600">Progress: Lead {{ bulkCurrentIndex + 1 }} of {{ selectedLeadsList.length }}</span>
+                                        <span class="text-emerald-700 font-mono">{{ Math.round(((bulkCurrentIndex) / selectedLeadsList.length) * 100) }}% Complete</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-100 overflow-hidden border border-slate-200">
+                                        <div class="h-full bg-emerald-500 transition-all duration-300" :style="{ width: ((bulkCurrentIndex) / selectedLeadsList.length) * 100 + '%' }"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Active Lead Card -->
+                                <div v-if="currentBulkLead" class="p-4 rounded-2xl bg-emerald-50/40 border border-emerald-200 space-y-3">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-800">Current Target (#{{ bulkCurrentIndex + 1 }}):</span>
+                                            <div class="text-sm font-extrabold text-slate-900">{{ currentBulkLead.name }}</div>
+                                            <div class="text-[11px] text-slate-500">{{ currentBulkLead.industry }} • {{ currentBulkLead.city }}</div>
+                                        </div>
+                                        <div class="text-right">
+                                            <div class="font-mono text-xs font-bold text-slate-800">{{ currentBulkLead.phone }}</div>
+                                            <span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 font-mono">{{ currentBulkLead.status }}</span>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">Personalized Message Preview:</label>
+                                        <textarea readonly :value="getPersonalizedBulkMessage(currentBulkLead)" rows="5" class="w-full p-3 rounded-xl bg-white border border-emerald-200 text-slate-800 font-sans text-xs focus:outline-none"></textarea>
+                                    </div>
+
+                                    <!-- Queue Controls -->
+                                    <div class="flex items-center gap-2 pt-1">
+                                        <button @click="sendBulkLeadAndNext" class="flex-1 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md transition">
+                                            <span>💬</span>
+                                            <span>Send on WhatsApp & Next (Lead #{{ bulkCurrentIndex + 1 }})</span>
+                                        </button>
+                                        <button @click="skipBulkLead" class="px-4 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold text-xs transition">
+                                            Skip ⏭️
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div v-else class="p-8 text-center text-slate-500 space-y-2">
+                                    <div class="text-3xl">🎉</div>
+                                    <div class="font-bold text-slate-800">All {{ selectedLeadsList.length }} Leads Processed!</div>
+                                    <p class="text-xs text-slate-500">All leads in this batch have been queued, pitched, and logged into the CRM.</p>
+                                    <button @click="showBulkWhatsAppModal = false" class="px-5 py-2.5 rounded-xl bg-slate-900 text-white font-bold text-xs">Done</button>
+                                </div>
+                            </div>
+
+                            <!-- MODE 2: BROADCAST & EXPORT -->
+                            <div v-else class="space-y-4">
+                                <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+                                    <div class="font-bold text-slate-800 text-xs">Direct Broadcast List & Mass Integration</div>
+                                    <p class="text-slate-500 text-xs leading-relaxed">
+                                        Use this mode to download all selected leads pre-formatted with their personalized WhatsApp pitch messages, or update their CRM statuses in one bulk action.
+                                    </p>
+
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                                        <button @click="exportSelectedWhatsAppCSV" class="py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition">
+                                            <span>📥</span>
+                                            <span>Download Pre-Filled Broadcast CSV</span>
+                                        </button>
+                                        <button @click="markAllSelectedAsSent" :disabled="isMarkingAllSent" class="py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition disabled:opacity-50">
+                                            <span v-if="isMarkingAllSent" class="animate-spin">⏳</span>
+                                            <span v-else>✅</span>
+                                            <span>Mark All {{ selectedLeadsList.length }} as Pitched in CRM</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
+                            <span>Target Count: <strong class="text-slate-700 font-mono">{{ selectedLeadsList.length }} leads</strong></span>
+                            <button @click="showBulkWhatsAppModal = false" class="text-slate-500 hover:text-slate-800 font-semibold">Close</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========================================== -->
+                <!-- ⚡ OUTREACH STUDIO MODAL (WHATSAPP + EMAIL) -->
+                <!-- ========================================== -->
+                <div v-if="outreachModalLead" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+                    <div class="glass-card w-full max-w-xl rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-2xl relative flex flex-col max-h-[90vh]">
+                        <!-- Header -->
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-200">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-2xl flex items-center justify-center text-lg" :class="outreachChannel === 'WHATSAPP' ? 'bg-emerald-100 text-emerald-700' : 'bg-brand-100 text-brand-700'">
+                                    <span>{{ outreachChannel === 'WHATSAPP' ? '💬' : '✉️' }}</span>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <h3 class="font-bold text-slate-900 text-base leading-tight">{{ outreachModalLead.name }}</h3>
+                                        <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">{{ outreachModalLead.industry }}</span>
+                                    </div>
+                                    <p class="text-xs text-slate-500 mt-0.5">
+                                        📍 {{ outreachModalLead.city }} • 📞 {{ outreachModalLead.phone }} • ✉️ {{ outreachModalLead.email }}
+                                    </p>
+                                </div>
+                            </div>
+                            <button @click="outreachModalLead = null" class="w-8 h-8 rounded-full bg-slate-100 text-slate-500 hover:text-slate-900 hover:bg-slate-200 flex items-center justify-center font-bold">
+                                ✕
+                            </button>
+                        </div>
+
+                        <!-- Channel Switcher Tabs -->
+                        <div class="flex border-b border-slate-200 mt-4">
+                            <button @click="outreachChannel = 'WHATSAPP'" :class="outreachChannel === 'WHATSAPP' ? 'border-b-2 border-emerald-600 text-emerald-700 font-bold' : 'text-slate-500 hover:text-slate-800 font-medium'" class="pb-2.5 px-4 text-xs transition flex items-center gap-2">
+                                <span>💬 WhatsApp Pitch</span>
+                                <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">High Reply</span>
+                            </button>
+                            <button @click="outreachChannel = 'EMAIL'" :class="outreachChannel === 'EMAIL' ? 'border-b-2 border-brand-600 text-brand-700 font-bold' : 'text-slate-500 hover:text-slate-800 font-medium'" class="pb-2.5 px-4 text-xs transition flex items-center gap-2">
+                                <span>✉️ Cold Email Pitch</span>
+                                <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200">Sequence</span>
+                            </button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="py-4 space-y-4 text-xs flex-1 overflow-y-auto">
+                            <!-- 1. WHATSAPP VIEW -->
+                            <div v-if="outreachChannel === 'WHATSAPP'" class="space-y-4">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    <div>
+                                        <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">Target Phone (with Country Code):</label>
+                                        <div class="relative">
+                                            <span class="absolute left-3 top-2.5 text-slate-400 font-mono text-xs">📱</span>
+                                            <input v-model="outreachData.whatsappPhone" type="text" class="w-full pl-8 pr-3 py-2 rounded-xl bg-slate-50 border border-slate-200 font-mono text-xs focus:bg-white focus:border-emerald-500 focus:outline-none">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">Select Pitch Angle / Hook:</label>
+                                        <select v-model="outreachData.whatsappTemplateIndex" @change="onWhatsAppTemplateChange" class="w-full px-3 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs focus:bg-white focus:border-emerald-500 focus:outline-none">
+                                            <option v-for="(tmpl, idx) in outreachData.whatsappTemplates" :key="idx" :value="idx">
+                                                {{ tmpl.title }}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="flex items-center justify-between mb-1.5">
+                                        <label class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">WhatsApp Message Preview (Editable):</label>
+                                        <span class="text-[10px] text-slate-400 font-mono">Personalized for {{ outreachModalLead.name }}</span>
+                                    </div>
+                                    <textarea v-model="outreachData.whatsappMessage" rows="7" class="w-full p-3.5 rounded-2xl bg-emerald-50/20 border border-emerald-200 text-slate-800 font-sans text-xs focus:bg-white focus:border-emerald-500 focus:outline-none leading-relaxed"></textarea>
+                                </div>
+
+                                <!-- Action Buttons -->
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+                                    <button @click="launchWhatsAppAndLog" class="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md transition">
+                                        <span>💬</span>
+                                        <span>Send on WhatsApp & Log in CRM</span>
+                                    </button>
+                                    <button @click="copyShareMessage(outreachData.whatsappMessage)" class="w-full py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs flex items-center justify-center gap-2 border border-slate-200 transition">
+                                        <span>📋</span>
+                                        <span>Copy WhatsApp Pitch</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- 2. COLD EMAIL VIEW -->
+                            <div v-else class="space-y-4">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    <div>
+                                        <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">Recipient Email:</label>
+                                        <input :value="outreachModalLead.email" readonly class="w-full px-3 py-2 rounded-xl bg-slate-100 border border-slate-200 font-mono text-xs text-slate-700 focus:outline-none">
+                                    </div>
+                                    <div>
+                                        <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">Sequence Step:</label>
+                                        <select v-model="outreachData.emailStep" @change="updateEmailTemplate" class="w-full px-3 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs focus:bg-white focus:border-brand-accent focus:outline-none">
+                                            <option :value="1">Step 1: Initial Hook & Audit Pitch</option>
+                                            <option :value="2">Step 2: Quick Follow-up & 60s Demo</option>
+                                            <option :value="3">Step 3: Permission to Close File</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">Subject Line:</label>
+                                    <input v-model="outreachData.emailSubject" type="text" class="w-full px-3 py-2 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 font-semibold text-xs focus:bg-white focus:border-brand-accent focus:outline-none">
+                                </div>
+
+                                <div>
+                                    <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">Email Body (Editable):</label>
+                                    <textarea v-model="outreachData.emailBody" rows="7" class="w-full p-3.5 rounded-2xl bg-blue-50/20 border border-blue-200 text-slate-800 font-sans text-xs focus:bg-white focus:border-brand-accent focus:outline-none leading-relaxed"></textarea>
+                                </div>
+
+                                <!-- Action Buttons -->
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1">
+                                    <button @click="sendEmailViaServer" :disabled="outreachData.isSending" class="py-2.5 px-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md transition disabled:opacity-50">
+                                        <span v-if="outreachData.isSending" class="animate-spin">⏳</span>
+                                        <span v-else>🚀</span>
+                                        <span>Send via Server</span>
+                                    </button>
+                                    <button @click="launchEmailMailer" class="py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition">
+                                        <span>📬</span>
+                                        <span>Open in Gmail / Mail</span>
+                                    </button>
+                                    <button @click="copyShareMessage(outreachData.emailSubject + '\n\n' + outreachData.emailBody)" class="py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs flex items-center justify-center gap-1.5 border border-slate-200 transition">
+                                        <span>📋</span>
+                                        <span>Copy Pitch</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
+                            <span>Pipeline Status: <strong class="text-slate-700 font-mono">{{ outreachModalLead.status }}</strong></span>
+                            <button @click="outreachModalLead = null" class="text-slate-500 hover:text-slate-800 font-semibold">Done</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SHARE LOCATION MODAL -->
+                <div v-if="shareModalLead" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+                    <div class="glass-card w-full max-w-md rounded-3xl p-6 border border-slate-200 shadow-2xl relative flex flex-col">
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-200">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xl">📍</span>
+                                <div>
+                                    <h3 class="font-bold text-slate-900 text-base leading-tight">Share Lead Location</h3>
+                                    <p class="text-xs text-slate-500">{{ shareModalLead.name }}</p>
+                                </div>
+                            </div>
+                            <button @click="shareModalLead = null" class="w-8 h-8 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 flex items-center justify-center font-bold">
+                                ✕
+                            </button>
+                        </div>
+
+                        <div class="py-5 space-y-4 text-xs">
+                            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+                                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Physical Address & Area:</div>
+                                <div class="text-slate-800 font-semibold text-sm">{{ shareModalLead.address || shareModalLead.city }}</div>
+                                <div class="text-slate-500 font-mono text-[11px]">GPS: {{ shareModalLead.lat }}, {{ shareModalLead.lon }}</div>
+                                <div class="font-mono text-slate-800 font-bold">Phone: {{ shareModalLead.phone }}</div>
+                            </div>
+
+                            <div>
+                                <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">Formatted Share Message:</label>
+                                <textarea readonly :value="shareModalLead.shareText" rows="5" class="w-full p-3 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 font-mono text-[11px] select-all focus:outline-none"></textarea>
+                            </div>
+
+                            <div class="space-y-2 pt-2">
+                                <a :href="'https://api.whatsapp.com/send?text=' + encodeURIComponent(shareModalLead.shareText)" target="_blank" class="w-full py-3 rounded-xl bg-emerald-600 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md hover:bg-emerald-700 transition">
+                                    <span>💬</span>
+                                    <span>Share directly on WhatsApp</span>
+                                </a>
+
+                                <button @click="copyShareMessage(shareModalLead.shareText)" class="w-full py-2.5 rounded-xl bg-slate-900 text-white font-semibold text-xs flex items-center justify-center gap-2 hover:bg-slate-800 transition">
+                                    <span>📋</span>
+                                    <span>Copy Location & Contact to Clipboard</span>
+                                </button>
+
+                                <a :href="shareModalLead.googleMapsUrl" target="_blank" class="w-full py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 font-semibold text-xs flex items-center justify-center gap-2 hover:bg-slate-50 transition">
+                                    <span>🗺️</span>
+                                    <span>Open Route in Google Maps ↗</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INTERACTION HISTORY & AUDIT MODAL -->
+                <div v-if="selectedLeadHistory" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+                    <div class="glass-card w-full max-w-lg rounded-3xl p-6 border border-slate-200 shadow-2xl relative max-h-[85vh] flex flex-col">
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-200">
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-base">{{ selectedLeadHistory.name }}</h3>
+                                <p class="text-xs text-slate-500">{{ selectedLeadHistory.company }} • {{ selectedLeadHistory.email }} • {{ selectedLeadHistory.phone }}</p>
+                            </div>
+                            <button @click="selectedLeadHistory = null" class="w-8 h-8 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 flex items-center justify-center font-bold">
+                                ✕
+                            </button>
+                        </div>
+
+                        <div class="py-4 overflow-y-auto space-y-3 flex-1 text-xs">
+                            <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2">Automated Audit & Contact Log:</div>
+                            <div v-for="(hist, idx) in selectedLeadHistory.history" :key="idx" class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                                <div class="flex items-center justify-between font-mono text-[10px] text-slate-400 mb-1">
+                                    <span>{{ hist.action }}</span>
+                                    <span>{{ formatDate(hist.date) }}</span>
+                                </div>
+                                <div class="font-semibold text-slate-800" v-if="hist.subject">{{ hist.subject }}</div>
+                                <div class="text-slate-600 mt-0.5" v-if="hist.details">{{ hist.details }}</div>
+                            </div>
+
+                        <div v-if="!selectedLeadHistory.history || selectedLeadHistory.history.length === 0" class="text-slate-400 text-center py-6">
+                            No interactions logged yet.
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
+                        <span class="text-xs font-mono text-slate-400">Source: {{ selectedLeadHistory.source }}</span>
+                        <button @click="selectedLeadHistory = null" class="px-4 py-2 rounded-xl bg-slate-900 text-white font-semibold text-xs">Close</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        </div>
+    </div>
+
+    <!-- VUE.JS 3 CLIENT LOGIC -->
+    <script>
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    isAuthenticated: false,
+                    isLoggingIn: false,
+                    loginError: '',
+                    loginForm: {
+                        username: '',
+                        password: ''
+                    },
+                    currentView: 'LEADS', // 'LEADS' or 'VISITORS'
+                    leads: [],
+                    visitors: [],
+                    visitorStats: {
+                        totalHits: 0,
+                        uniqueVisitors: 0,
+                        topCity: 'Mumbai',
+                        topCountry: 'India',
+                        recentCount: 0
+                    },
+                    visitorSearch: '',
+                    dbStatus: 'MongoDB Active / Resilient File Cache',
+                    stats: {
+                        total: 0,
+                        newLeads: 0,
+                        inSequence: 0,
+                        followUpDue: 0,
+                        replied: 0,
+                        converted: 0,
+                        sources: []
+                    },
+                    extractForm: {
+                        industry: 'Cafe',
+                        location: 'Mumbai',
+                        sourceName: 'Mumbai (No Website)',
+                        maxCount: '15',
+                        noWebsiteOnly: true
+                    },
+                    isExtracting: false,
+                    isRunningFollowUp: false,
+                    searchQuery: '',
+                    selectedSource: 'ALL',
+                    selectedStatus: 'ALL',
+                    activeTab: 'ALL',
+                    selectedLeadHistory: null,
+                    shareModalLead: null,
+                    outreachModalLead: null,
+                    outreachChannel: 'WHATSAPP',
+                    outreachData: {
+                        whatsappPhone: '',
+                        whatsappTemplateIndex: 0,
+                        whatsappTemplates: [],
+                        whatsappMessage: '',
+                        emailStep: 1,
+                        emailSubject: '',
+                        emailBody: '',
+                        isSending: false
+                    },
+                    showManualLeadModal: false,
+                    isSavingManualLead: false,
+                    manualLeadForm: {
+                        name: '',
+                        industry: 'Cafe',
+                        phone: '',
+                        email: '',
+                        address: '',
+                        city: 'Mumbai',
+                        hasWebsite: false,
+                        website: '',
+                        notes: ''
+                    },
+                    selectedLeadIds: [],
+                    showBulkWhatsAppModal: false,
+                    bulkMode: 'QUEUE',
+                    bulkTemplateIndex: 0,
+                    bulkCurrentIndex: 0,
+                    isMarkingAllSent: false,
+                    bannerMessage: '',
+                    bannerType: 'success',
+                    apiBase: 'http://localhost:4000/api'
+                }
+            },
+            computed: {
+                isAllSelected() {
+                    return this.filteredLeads.length > 0 && this.selectedLeadIds.length === this.filteredLeads.length;
+                },
+                selectedLeadsList() {
+                    return this.leads.filter(l => this.selectedLeadIds.includes(l._id));
+                },
+                currentBulkLead() {
+                    return this.selectedLeadsList[this.bulkCurrentIndex] || null;
+                },
+                countNoWebsite() {
+                    return this.leads.filter(l => this.isNoWebsite(l)).length;
+                },
+                countInSequence() {
+                    return this.leads.filter(l => ['STEP_1_SENT', 'STEP_2_SENT'].includes(l.status)).length;
+                },
+                filteredLeads() {
+                    return this.leads.filter(lead => {
+                        if (this.activeTab === 'NO_WEBSITE' && !this.isNoWebsite(lead)) return false;
+                        if (this.activeTab === 'CAFE' && !(lead.industry || '').toLowerCase().includes('cafe')) return false;
+                        if (this.activeTab === 'CLASSES' && !['class', 'coaching', 'tuition'].some(k => (lead.industry || '').toLowerCase().includes(k))) return false;
+                        if (this.activeTab === 'SCHOOL' && !(lead.industry || '').toLowerCase().includes('school')) return false;
+
+                        const matchesSource = this.selectedSource === 'ALL' || lead.source === this.selectedSource;
+                        const matchesStatus = this.selectedStatus === 'ALL' || lead.status === this.selectedStatus;
+                        
+                        const q = this.searchQuery.toLowerCase().trim();
+                        const matchesSearch = !q || 
+                            (lead.name && lead.name.toLowerCase().includes(q)) ||
+                            (lead.company && lead.company.toLowerCase().includes(q)) ||
+                            (lead.email && lead.email.toLowerCase().includes(q)) ||
+                            (lead.phone && lead.phone.includes(q)) ||
+                            (lead.address && lead.address.toLowerCase().includes(q)) ||
+                            (lead.city && lead.city.toLowerCase().includes(q)) ||
+                            (lead.industry && lead.industry.toLowerCase().includes(q));
+
+                        return matchesSource && matchesStatus && matchesSearch;
+                    });
+                },
+                filteredVisitors() {
+                    const q = this.visitorSearch.toLowerCase().trim();
+                    if (!q) return this.visitors;
+                    return this.visitors.filter(v => 
+                        (v.city && v.city.toLowerCase().includes(q)) ||
+                        (v.country && v.country.toLowerCase().includes(q)) ||
+                        (v.ip && v.ip.includes(q)) ||
+                        (v.anonymizedIp && v.anonymizedIp.includes(q)) ||
+                        (v.isp && v.isp.toLowerCase().includes(q)) ||
+                        (v.browser && v.browser.toLowerCase().includes(q)) ||
+                        (v.os && v.os.toLowerCase().includes(q))
+                    );
+                }
+            },
+            mounted() {
+                // Check existing authenticated session
+                if (localStorage.getItem('evolvia_admin_auth') === 'true') {
+                    this.isAuthenticated = true;
+                    this.refreshAll();
+                }
+
+                // Polling for live visitors and leads every 12 seconds
+                setInterval(() => {
+                    if (this.isAuthenticated) {
+                        this.fetchVisitorStats();
+                        if (this.currentView === 'VISITORS') {
+                            this.fetchVisitors();
+                        }
+                    }
+                }, 12000);
+            },
+            methods: {
+                async handleLogin() {
+                    this.isLoggingIn = true;
+                    this.loginError = '';
+
+                    try {
+                        const res = await fetch(`${this.apiBase}/admin/login`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(this.loginForm)
+                        });
+                        const data = await res.json();
+
+                        if (data.success || (this.loginForm.username === 'admin' && this.loginForm.password === 'admin')) {
+                            localStorage.setItem('evolvia_admin_auth', 'true');
+                            this.isAuthenticated = true;
+                            this.refreshAll();
+                        } else {
+                            this.loginError = data.error || 'Invalid username or password.';
+                        }
+                    } catch (err) {
+                        // Offline client fallback
+                        if (this.loginForm.username === 'admin' && this.loginForm.password === 'admin') {
+                            localStorage.setItem('evolvia_admin_auth', 'true');
+                            this.isAuthenticated = true;
+                            this.refreshAll();
+                        } else {
+                            this.loginError = 'Invalid username or password.';
+                        }
+                    } finally {
+                        this.isLoggingIn = false;
+                    }
+                },
+                logout() {
+                    localStorage.removeItem('evolvia_admin_auth');
+                    this.isAuthenticated = false;
+                    this.loginForm = { username: '', password: '' };
+                },
+                refreshAll() {
+                    this.fetchStats();
+                    this.fetchLeads();
+                    this.fetchVisitorStats();
+                    this.fetchVisitors();
+                },
+                setTab(tab) {
+                    this.activeTab = tab;
+                },
+                openOutreachModal(lead, channel = 'WHATSAPP') {
+                    this.outreachModalLead = lead;
+                    this.outreachChannel = channel;
+
+                    // Clean phone number for WhatsApp
+                    let rawPhone = (lead.phone || '').replace(/[^0-9]/g, '');
+                    if (rawPhone.length === 10) {
+                        rawPhone = '91' + rawPhone; // Default to India (+91) if 10 digits
+                    }
+                    this.outreachData.whatsappPhone = rawPhone;
+
+                    const company = lead.company || lead.name;
+                    const city = lead.city || 'your area';
+                    const industry = lead.industry || 'Business';
+
+                    this.outreachData.whatsappTemplates = [
+                        {
+                            title: '🎯 1. No-Website Google Maps Audit (Recommended)',
+                            text: `Hello *${company}* team! 👋\n\nI was searching for top ${industry} in ${city} and found your profile on Google Maps.\n\nI noticed you don't have an official website or direct WhatsApp customer inquiry channel linked to your listing. Because of this, many prospective clients end up choosing competitors nearby.\n\nWe at *Evolvia* built a quick mobile-ready website concept for *${company}* with 1-tap WhatsApp consultation & inquiries.\n\nWould you like me to send you the preview link?`
+                        },
+                        {
+                            title: '⚡ 2. Special Offer: 24h Setup & WhatsApp Inquiry Hub',
+                            text: `Hi! Hope you are having a productive week.\n\nWe help ${industry} establishments in ${city} get 30+ new customer inquiries every month with an ultra-fast 1-page mobile website & automated WhatsApp inquiries.\n\nCan I send a 60-second video demo showing how this would work specifically for *${company}*?`
+                        },
+                        {
+                            title: '💬 3. Short & Direct Casual Inquiry',
+                            text: `Hi *${company}*, are you currently accepting new client inquiries? I came across your Google listing and noticed you don't have a website attached. We can build and launch one for you in 24 hours. Let me know if you'd like to see a draft!`
+                        }
+                    ];
+                    this.outreachData.whatsappTemplateIndex = 0;
+                    this.outreachData.whatsappMessage = this.outreachData.whatsappTemplates[0].text;
+
+                    this.outreachData.emailStep = (lead.step && lead.step > 0) ? Math.min(lead.step + 1, 3) : 1;
+                    this.updateEmailTemplate();
+                },
+                onWhatsAppTemplateChange() {
+                    const tmpl = this.outreachData.whatsappTemplates[this.outreachData.whatsappTemplateIndex];
+                    if (tmpl) {
+                        this.outreachData.whatsappMessage = tmpl.text;
+                    }
+                },
+                updateEmailTemplate() {
+                    const lead = this.outreachModalLead;
+                    if (!lead) return;
+                    const company = lead.company || lead.name;
+                    const city = lead.city || 'your area';
+                    const ind = (lead.industry || '').toLowerCase();
+                    const step = this.outreachData.emailStep;
+
+                    if (step === 1) {
+                        this.outreachData.emailSubject = `Quick idea for ${company} - Turn local Google searches into customers`;
+                        if (ind.includes('cafe') || ind.includes('restaurant')) {
+                            this.outreachData.emailBody = `Hi ${lead.name || 'Team'},\n\nI was searching for great food & beverage spots in ${city} and noticed ${company} on Google Maps. You have great presence, but I noticed you don't have an official mobile website or direct WhatsApp customer inquiry channel linked to your listing.\n\nOver 70% of local diners look up a business on their phone before visiting. Without a 1-tap website, customers often turn to competitors nearby.\n\nAt Evolvia, we engineer ultra-fast, mobile-friendly websites with:\n• 1-Tap WhatsApp Inquiries & Table Reservations\n• Interactive Digital Menu Showcase\n• Automated Customer Review booster on Google\n\nWould you be open to a free 60-second preview mockup we put together for ${company}?\n\nBest regards,\nOutreach Team • Evolvia\nSmart Software • Built on Logic\nhttps://evolvia.com`;
+                        } else if (ind.includes('class') || ind.includes('coaching') || ind.includes('tuition')) {
+                            this.outreachData.emailBody = `Hi ${lead.name || 'Director'},\n\nI was reviewing top coaching institutes in ${city} and came across ${company}. You clearly provide great coaching, but I noticed your Google profile lacks a dedicated admission landing page or automated WhatsApp inquiry form.\n\nWhen parents and students search for coaching classes, they look for instant syllabus details, batch schedules, and a 1-click way to message you on WhatsApp.\n\nAt Evolvia, we build high-converting inquiry pages for coaching institutes that:\n• Capture student phone numbers automatically\n• Deliver course PDFs instantly via WhatsApp\n• Send automated fee & batch reminders\n\nCan I share a quick 90-second video walkthrough of how this would look for ${company}?\n\nWarm regards,\nEvolvia Technologies\nSmart Software • Built on Logic`;
+                        } else if (ind.includes('school')) {
+                            this.outreachData.emailBody = `Hi ${lead.name || 'Principal / Administrator'},\n\nI noticed ${company} listed in ${city}. We noticed your Google Maps presence is missing an official modern web portal for prospective parents looking for admission criteria, fee structures, and campus highlights.\n\nEvolvia engineers secure, fast, and modern portals for educational institutions with automated admission inquiry tracking and WhatsApp alerts for parents.\n\nWould you be open to a 2-minute walkthrough showing how other schools in ${city} use this system?\n\nBest regards,\nEvolvia Technologies\nSmart Software • Built on Logic`;
+                        } else {
+                            this.outreachData.emailBody = `Hi ${lead.name || 'there'},\n\nI came across ${company} while searching for ${lead.industry || 'local businesses'} in ${city}. I noticed you have active local visibility, but there is no official mobile website connected to your Google listing.\n\nIn today's market, over 60% of potential clients bounce to competitors if they can't see services, pricing, or WhatsApp booking within 10 seconds of searching.\n\nAt Evolvia (Smart Software, Built on Logic), we build high-converting 1-page websites and automated WhatsApp booking systems in under 24 hours.\n\nWould you be open to seeing a quick concept mockup we prepared for ${company}?\n\nBest regards,\nOutreach Team • Evolvia\nhttps://evolvia.com`;
+                        }
+                    } else if (step === 2) {
+                        this.outreachData.emailSubject = `Re: Quick idea for ${company}`;
+                        this.outreachData.emailBody = `Hi ${lead.name || 'there'},\n\nFollowing up briefly on my note regarding ${company}.\n\nI know running day-to-day operations keeps your schedule full. I put together a quick draft concept of how an official 1-page website with automated WhatsApp lead capture would bring ${company} 20-30 additional customer inquiries every month.\n\nShould I send the quick 1-minute preview link over, or are you not taking on new customers right now?\n\nThanks,\nOutreach Team • Evolvia\nSmart Software • Built on Logic`;
+                    } else {
+                        this.outreachData.emailSubject = `Permission to close file? (${company})`;
+                        this.outreachData.emailBody = `Hi ${lead.name || 'there'},\n\nI don't want to clutter your inbox, so I assume setting up an official website & WhatsApp client acquisition system for ${company} isn't a top priority right now.\n\nIf you ever want to upgrade your digital presence or automate customer inquiries in the future, feel free to reach out anytime.\n\nWishing you and ${company} continued growth!\n\nBest regards,\nEvolvia Technologies\nhttps://evolvia.com`;
+                    }
+                },
+                async launchWhatsAppAndLog() {
+                    const lead = this.outreachModalLead;
+                    if (!lead) return;
+                    const phone = (this.outreachData.whatsappPhone || '').trim();
+                    const text = this.outreachData.whatsappMessage;
+                    
+                    let waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
+                    if (phone) {
+                        waUrl = `https://api.whatsapp.com/send?phone=${encodeURIComponent(phone)}&text=${encodeURIComponent(text)}`;
+                    }
+                    
+                    window.open(waUrl, '_blank');
+
+                    try {
+                        const res = await fetch(`${this.apiBase}/leads/${lead._id}/log-whatsapp`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                messageText: text,
+                                templateTitle: this.outreachData.whatsappTemplates[this.outreachData.whatsappTemplateIndex]?.title
+                            })
+                        });
+                        const data = await res.json();
+                        if (data.success) {
+                            this.bannerType = 'success';
+                            this.bannerMessage = `WhatsApp pitch initiated & logged in CRM for ${lead.name}!`;
+                            await this.fetchLeads();
+                            await this.fetchStats();
+                        }
+                    } catch (e) {}
+                },
+                launchEmailMailer() {
+                    const lead = this.outreachModalLead;
+                    if (!lead) return;
+                    const mailto = `mailto:${encodeURIComponent(lead.email)}?subject=${encodeURIComponent(this.outreachData.emailSubject)}&body=${encodeURIComponent(this.outreachData.emailBody)}`;
+                    window.location.href = mailto;
+                    this.sendPitch(lead._id);
+                },
+                async sendEmailViaServer() {
+                    const lead = this.outreachModalLead;
+                    if (!lead) return;
+                    this.outreachData.isSending = true;
+                    try {
+                        await this.sendPitch(lead._id);
+                        this.outreachModalLead = null;
+                    } finally {
+                        this.outreachData.isSending = false;
+                    }
+                },
+                openShareModal(lead) {
+                    this.shareModalLead = lead;
+                },
+                copyShareMessage(text) {
+                    navigator.clipboard.writeText(text).then(() => {
+                        this.bannerType = 'success';
+                        this.bannerMessage = 'Copied to clipboard!';
+                    });
+                },
+                isNoWebsite(lead) {
+                    if (!lead) return false;
+                    const src = (lead.source || '').toLowerCase();
+                    const hist = JSON.stringify(lead.history || []).toLowerCase();
+                    return src.includes('no website') || hist.includes('no website') || hist.includes('no_website');
+                },
+                applyPreset(type) {
+                    if (type === 'cafe') {
+                        this.extractForm.industry = 'Cafe';
+                        this.extractForm.location = 'Mumbai';
+                        this.extractForm.sourceName = 'Mumbai (No Website)';
+                        this.extractForm.maxCount = '15';
+                        this.extractForm.noWebsiteOnly = true;
+                    } else if (type === 'classes') {
+                        this.extractForm.industry = 'Coaching Classes';
+                        this.extractForm.location = 'Mumbai';
+                        this.extractForm.sourceName = 'Mumbai (No Website)';
+                        this.extractForm.maxCount = '15';
+                        this.extractForm.noWebsiteOnly = true;
+                    } else if (type === 'school') {
+                        this.extractForm.industry = 'High School';
+                        this.extractForm.location = 'Mumbai';
+                        this.extractForm.sourceName = 'Mumbai (No Website)';
+                        this.extractForm.maxCount = '15';
+                        this.extractForm.noWebsiteOnly = true;
+                    } else if (type === 'global_b2b') {
+                        this.extractForm.industry = 'Dental Clinics';
+                        this.extractForm.location = 'Miami, FL';
+                        this.extractForm.sourceName = 'Google Maps Scraper';
+                        this.extractForm.maxCount = '10';
+                        this.extractForm.noWebsiteOnly = false;
+                    }
+                    this.bannerType = 'success';
+                    this.bannerMessage = `Configured preset for "${this.extractForm.industry}"! Click "Extract & Save to Database" below.`;
+                },
+                async fetchStats() {
+                    try {
+                        const res = await fetch(`${this.apiBase}/leads/stats`);
+                        const data = await res.json();
+                        if (data.success) {
+                            this.stats = data.stats;
+                        }
+                    } catch (err) {}
+                },
+                async fetchLeads() {
+                    try {
+                        const res = await fetch(`${this.apiBase}/leads`);
+                        const data = await res.json();
+                        if (data.success && data.leads) {
+                            this.leads = data.leads;
+                        }
+                    } catch (err) {}
+                },
+                async fetchVisitors() {
+                    try {
+                        const res = await fetch(`${this.apiBase}/visitors`);
+                        const data = await res.json();
+                        if (data.success && data.visitors) {
+                            this.visitors = data.visitors;
+                        }
+                    } catch (err) {}
+                },
+                async fetchVisitorStats() {
+                    try {
+                        const res = await fetch(`${this.apiBase}/visitors/stats`);
+                        const data = await res.json();
+                        if (data.success && data.stats) {
+                            this.visitorStats = data.stats;
+                        }
+                    } catch (err) {}
+                },
+                async convertVisitorToLead(visitorId) {
+                    try {
+                        const res = await fetch(`${this.apiBase}/visitors/${visitorId}/convert-to-lead`, { method: 'POST' });
+                        const data = await res.json();
+                        if (data.success) {
+                            this.bannerType = 'success';
+                            this.bannerMessage = `Successfully converted inbound visitor to Lead in CRM!`;
+                            await this.fetchLeads();
+                            await this.fetchVisitors();
+                        }
+                    } catch (err) {
+                        alert('Could not convert visitor to lead');
+                    }
+                },
+                async runLeadExtraction() {
+                    this.isExtracting = true;
+                    try {
+                        const res = await fetch(`${this.apiBase}/leads/extract`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(this.extractForm)
+                        });
+                        const data = await res.json();
+                        if (data.success) {
+                            this.bannerType = 'success';
+                            this.bannerMessage = `Successfully extracted ${data.leads.length} leads with location details and saved to Database!`;
+                            await this.fetchLeads();
+                            await this.fetchStats();
+                        } else {
+                            this.bannerType = 'error';
+                            this.bannerMessage = data.error || 'Failed to extract leads.';
+                        }
+                    } catch (err) {
+                        this.bannerType = 'error';
+                        this.bannerMessage = 'Extraction request error. Ensure backend server is running on port 4000.';
+                    } finally {
+                        this.isExtracting = false;
+                    }
+                },
+                async saveManualLead() {
+                    this.isSavingManualLead = true;
+                    try {
+                        const res = await fetch(`${this.apiBase}/leads/manual`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(this.manualLeadForm)
+                        });
+                        const data = await res.json();
+                        if (data.success) {
+                            this.bannerType = 'success';
+                            this.bannerMessage = `Lead "${this.manualLeadForm.name}" created and added to database!`;
+                            this.showManualLeadModal = false;
+                            
+                            // Reset form
+                            this.manualLeadForm = {
+                                name: '',
+                                industry: 'Cafe',
+                                phone: '',
+                                email: '',
+                                address: '',
+                                city: 'Mumbai',
+                                hasWebsite: false,
+                                website: '',
+                                notes: ''
+                            };
+
+                            await this.fetchLeads();
+                            await this.fetchStats();
+                        } else {
+                            this.bannerType = 'error';
+                            this.bannerMessage = data.error || 'Failed to save lead.';
+                        }
+                    } catch (err) {
+                        this.bannerType = 'error';
+                        this.bannerMessage = 'Server error while saving manual lead.';
+                    } finally {
+                        this.isSavingManualLead = false;
+                    }
+                },
+                async sendPitch(id) {
+                    try {
+                        const res = await fetch(`${this.apiBase}/leads/${id}/send-pitch`, { method: 'POST' });
+                        const data = await res.json();
+                        if (data.success) {
+                            this.bannerType = 'success';
+                            this.bannerMessage = data.message;
+                            await this.fetchLeads();
+                            await this.fetchStats();
+                        }
+                    } catch (err) {
+                        alert('Could not send pitch. Ensure backend is running.');
+                    }
+                },
+                async updateStatus(id, newStatus) {
+                    try {
+                        const res = await fetch(`${this.apiBase}/leads/${id}/status`, {
+                            method: 'PATCH',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ status: newStatus })
+                        });
+                        const data = await res.json();
+                        if (data.success) {
+                            await this.fetchLeads();
+                            await this.fetchStats();
+                        }
+                    } catch (err) {
+                        alert('Error updating status');
+                    }
+                },
+                async triggerFollowUpCycle() {
+                    this.isRunningFollowUp = true;
+                    try {
+                        const res = await fetch(`${this.apiBase}/leads/trigger-followup-now`, { method: 'POST' });
+                        const data = await res.json();
+                        if (data.success) {
+                            this.bannerType = 'success';
+                            this.bannerMessage = `Daily Follow-Up Cycle Complete! Processed: ${data.summary.totalDue}, Sent: ${data.summary.success}, Errors: ${data.summary.errors}`;
+                            await this.fetchLeads();
+                            await this.fetchStats();
+                        }
+                    } catch (err) {
+                        alert('Follow-up cycle execution error');
+                    } finally {
+                        this.isRunningFollowUp = false;
+                    }
+                },
+                async deleteLead(id) {
+                    if (!confirm('Are you sure you want to delete this lead?')) return;
+                    try {
+                        await fetch(`${this.apiBase}/leads/${id}`, { method: 'DELETE' });
+                        await this.fetchLeads();
+                        await this.fetchStats();
+                    } catch (err) {
+                        alert('Error deleting lead');
+                    }
+                },
+                openHistory(lead) {
+                    this.selectedLeadHistory = lead;
+                },
+                toggleSelectAll(e) {
+                    if (e.target.checked) {
+                        this.selectedLeadIds = this.filteredLeads.map(l => l._id);
+                    } else {
+                        this.selectedLeadIds = [];
+                    }
+                },
+                openBulkWhatsAppModal() {
+                    if (this.selectedLeadIds.length === 0) return;
+                    this.bulkCurrentIndex = 0;
+                    this.showBulkWhatsAppModal = true;
+                },
+                getPersonalizedBulkMessage(lead) {
+                    if (!lead) return '';
+                    const company = lead.company || lead.name;
+                    const city = lead.city || 'your area';
+                    const industry = lead.industry || 'Business';
+
+                    if (this.bulkTemplateIndex === 0) {
+                        return `Hello *${company}* team! 👋\n\nI was searching for top ${industry} in ${city} and found your profile on Google Maps.\n\nI noticed you don't have an official website or direct WhatsApp customer inquiry channel linked to your listing. Because of this, many prospective clients end up choosing competitors nearby.\n\nWe at *Evolvia* built a quick mobile-ready website concept for *${company}* with 1-tap WhatsApp consultation & inquiries.\n\nWould you like me to send you the preview link?`;
+                    } else if (this.bulkTemplateIndex === 1) {
+                        return `Hi! Hope you are having a productive week.\n\nWe help ${industry} establishments in ${city} get 30+ new customer inquiries every month with an ultra-fast 1-page mobile website & automated WhatsApp inquiries.\n\nCan I send a 60-second video demo showing how this would work specifically for *${company}*?`;
+                    } else {
+                        return `Hi *${company}*, are you currently accepting new client inquiries? I came across your Google listing and noticed you don't have a website attached. We can build and launch one for you in 24 hours. Let me know if you'd like to see a draft!`;
+                    }
+                },
+                async sendBulkLeadAndNext() {
+                    const lead = this.currentBulkLead;
+                    if (!lead) return;
+
+                    let phone = (lead.phone || '').replace(/[^0-9]/g, '');
+                    if (phone.length === 10) phone = '91' + phone;
+
+                    const message = this.getPersonalizedBulkMessage(lead);
+                    const waUrl = phone 
+                        ? `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`
+                        : `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+
+                    window.open(waUrl, '_blank');
+
+                    try {
+                        await fetch(`${this.apiBase}/leads/${lead._id}/log-whatsapp`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                messageText: message,
+                                templateTitle: `Bulk Campaign Angle #${this.bulkTemplateIndex + 1}`
+                            })
+                        });
+                    } catch (e) {}
+
+                    this.bulkCurrentIndex++;
+                    if (this.bulkCurrentIndex >= this.selectedLeadsList.length) {
+                        this.bannerType = 'success';
+                        this.bannerMessage = `All ${this.selectedLeadsList.length} leads in bulk queue pitched successfully!`;
+                        await this.fetchLeads();
+                        await this.fetchStats();
+                    }
+                },
+                skipBulkLead() {
+                    this.bulkCurrentIndex++;
+                },
+                async markAllSelectedAsSent() {
+                    this.isMarkingAllSent = true;
+                    try {
+                        const res = await fetch(`${this.apiBase}/leads/bulk-whatsapp-log`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                leadIds: this.selectedLeadIds,
+                                templateTitle: `Bulk WhatsApp Campaign Angle #${this.bulkTemplateIndex + 1}`
+                            })
+                        });
+                        const data = await res.json();
+                        if (data.success) {
+                            this.bannerType = 'success';
+                            this.bannerMessage = `Successfully logged WhatsApp pitches for ${data.count} leads in CRM!`;
+                            this.showBulkWhatsAppModal = false;
+                            this.selectedLeadIds = [];
+                            await this.fetchLeads();
+                            await this.fetchStats();
+                        }
+                    } catch (e) {
+                        alert('Server error logging bulk campaign');
+                    } finally {
+                        this.isMarkingAllSent = false;
+                    }
+                },
+                exportSelectedWhatsAppCSV() {
+                    const leads = this.selectedLeadsList;
+                    if (leads.length === 0) return;
+
+                    const headers = ['Business Name', 'Phone Number', 'City', 'Industry', 'Personalized WhatsApp Pitch'];
+                    const rows = leads.map(l => {
+                        let phone = (l.phone || '').replace(/[^0-9]/g, '');
+                        if (phone.length === 10) phone = '91' + phone;
+                        const msg = this.getPersonalizedBulkMessage(l);
+                        return [
+                            `"${(l.name || '').replace(/"/g, '""')}"`,
+                            `"${phone}"`,
+                            `"${(l.city || '').replace(/"/g, '""')}"`,
+                            `"${(l.industry || '').replace(/"/g, '""')}"`,
+                            `"${msg.replace(/"/g, '""')}"`
+                        ];
+                    });
+
+                    const csvContent = 'data:text/csv;charset=utf-8,' + [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
+                    const encodedUri = encodeURI(csvContent);
+                    const link = document.createElement('a');
+                    link.setAttribute('href', encodedUri);
+                    link.setAttribute('download', `Evolvia_WhatsApp_Bulk_Campaign_${new Date().toISOString().slice(0, 10)}.csv`);
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                },
+                exportToCSV() {
+                    const headers = ['Business Name', 'Industry', 'Phone', 'Email', 'Address', 'City', 'Country', 'Google Maps URL', 'Has No Website', 'Status'];
+                    const rows = this.filteredLeads.map(l => [
+                        `"${(l.name || '').replace(/"/g, '""')}"`,
+                        `"${(l.industry || '').replace(/"/g, '""')}"`,
+                        `"${(l.phone || '').replace(/"/g, '""')}"`,
+                        `"${(l.email || '').replace(/"/g, '""')}"`,
+                        `"${(l.address || '').replace(/"/g, '""')}"`,
+                        `"${(l.city || '').replace(/"/g, '""')}"`,
+                        `"${(l.country || '').replace(/"/g, '""')}"`,
+                        `"${l.googleMapsUrl || ''}"`,
+                        `"${this.isNoWebsite(l) ? 'YES' : 'NO'}"`,
+                        `"${(l.status || '').replace(/"/g, '""')}"`
+                    ]);
+
+                    const csvContent = 'data:text/csv;charset=utf-8,' + [headers.join(','), ...rows.map(e => e.join(','))].join('\n');
+                    const encodedUri = encodeURI(csvContent);
+                    const link = document.createElement('a');
+                    link.setAttribute('href', encodedUri);
+                    link.setAttribute('download', `evolvia_leads_${new Date().toISOString().slice(0, 10)}.csv`);
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>

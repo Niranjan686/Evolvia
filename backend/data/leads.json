@@ -1,0 +1,3500 @@
+[
+  {
+    "_id": "lead_1790970444418_71",
+    "name": "Aachal",
+    "company": "Aachal",
+    "phone": "9702516884",
+    "email": "scanidsystemsdeveloper@gmail.com",
+    "industry": "SCHOOL",
+    "city": "Mumbai",
+    "country": "India",
+    "address": "r",
+    "lat": 19.076,
+    "lon": 72.8777,
+    "source": "Mumbai (No Website - Manual)",
+    "status": "STEP_4_SENT",
+    "step": 4,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Aachal%20r%20Mumbai",
+    "shareText": "📍 *Aachal* (SCHOOL)\n📞 Phone: 9702516884\n✉️ Email: scanidsystemsdeveloper@gmail.com\n📍 Address: r, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Aachal%20r%20Mumbai",
+    "notes": "",
+    "createdAt": "2026-10-02T19:47:24.418Z",
+    "history": [
+      {
+        "date": "2026-10-02T19:47:24.410Z",
+        "action": "MANUAL_ENTRY_CREATED",
+        "type": "MANUAL",
+        "details": "Lead added manually to CRM by admin."
+      },
+      {
+        "date": "2026-10-02T19:47:28.213Z",
+        "action": "WHATSAPP_PITCH_STEP_1_SENT",
+        "type": "WHATSAPP",
+        "subject": "🎯 1. No-Website Google Maps Audit (Recommended)",
+        "details": "Hello *Aachal* team! 👋\n\nI was searching for top SCHOOL in Mumbai and found your profile on Google Maps.\n\nI noticed you don't have an official website or direct WhatsApp customer inquiry c..."
+      },
+      {
+        "date": "2026-10-02T19:50:31.641Z",
+        "action": "WHATSAPP_BULK_CAMPAIGN_STEP_2",
+        "type": "WHATSAPP",
+        "subject": "Batch Hook Test",
+        "details": "Dispatched via Bulk WhatsApp runner to 9702516884"
+      },
+      {
+        "date": "2026-10-02T20:09:10.284Z",
+        "action": "WHATSAPP_PITCH_STEP_3_SENT",
+        "type": "WHATSAPP",
+        "subject": "🎯 1. No-Website Google Maps Audit (Recommended)",
+        "details": "Hello *Aachal* team! 👋\n\nI was searching for top SCHOOL in Mumbai and found your profile on Google Maps.\n\nI noticed you don't have an official website or direct WhatsApp customer inquiry c..."
+      },
+      {
+        "date": "2026-10-02T20:22:54.426Z",
+        "action": "MANUAL_STEP_4_SENT",
+        "type": "EMAIL",
+        "subject": "Quick idea for Aachal - Turn local Google searches into customers",
+        "details": "Manual outreach step 4 triggered from admin panel."
+      }
+    ],
+    "lastContactDate": "2026-10-02T20:22:54.426Z",
+    "nextFollowUpDate": "2026-10-05T20:22:54.426Z",
+    "updatedAt": "2026-10-02T20:22:54.440Z"
+  },
+  {
+    "_id": "lead_1790970320196_174",
+    "name": "Green Leaf Cafe & Bakery",
+    "company": "Green Leaf Cafe & Bakery",
+    "phone": "+91 99201 54321",
+    "email": "owner@greenleafcafe.com",
+    "industry": "CAFE",
+    "city": "Mumbai",
+    "country": "India",
+    "address": "Linking Road, Bandra West",
+    "lat": 19.076,
+    "lon": 72.8777,
+    "source": "Mumbai (No Website - Manual)",
+    "status": "STEP_1_SENT",
+    "step": 1,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Green%20Leaf%20Cafe%20%26%20Bakery%20Linking%20Road%2C%20Bandra%20West%20Mumbai",
+    "shareText": "📍 *Green Leaf Cafe & Bakery* (CAFE)\n📞 Phone: +91 99201 54321\n✉️ Email: owner@greenleafcafe.com\n📍 Address: Linking Road, Bandra West, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Green%20Leaf%20Cafe%20%26%20Bakery%20Linking%20Road%2C%20Bandra%20West%20Mumbai",
+    "notes": "Met owner at Bandra branch",
+    "createdAt": "2026-10-02T19:45:20.196Z",
+    "history": [
+      {
+        "date": "2026-10-02T19:45:20.185Z",
+        "action": "MANUAL_ENTRY_CREATED",
+        "type": "MANUAL",
+        "details": "Lead added manually to CRM by admin. Notes: Met owner at Bandra branch"
+      },
+      {
+        "date": "2026-10-02T19:50:31.656Z",
+        "action": "WHATSAPP_BULK_CAMPAIGN_STEP_1",
+        "type": "WHATSAPP",
+        "subject": "Batch Hook Test",
+        "details": "Dispatched via Bulk WhatsApp runner to +91 99201 54321"
+      }
+    ],
+    "lastContactDate": "2026-10-02T19:50:31.656Z",
+    "nextFollowUpDate": "2026-10-05T19:50:31.656Z",
+    "updatedAt": "2026-10-02T19:50:31.661Z"
+  },
+  {
+    "name": "Ideal Shishu Niketan",
+    "company": "Ideal Shishu Niketan",
+    "email": "contact@idealshishuniketan.in",
+    "phone": "+91 98453 87889",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara East",
+    "country": "India",
+    "address": "Subhash Nagar, Chembur East, Nallasopara East",
+    "lat": 19.0558,
+    "lon": 72.9012,
+    "source": "Nallasopara East (No Website)",
+    "status": "STEP_2_SENT",
+    "step": 2,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:27.757Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara East: Verified local business with NO active website. Located at: Subhash Nagar, Chembur East. Ideal candidate for custom website & attendance software."
+      },
+      {
+        "date": "2026-10-02T19:36:22.786Z",
+        "action": "WHATSAPP_PITCH_STEP_1_SENT",
+        "type": "WHATSAPP",
+        "subject": "No-Website Hook",
+        "details": "Test WhatsApp message..."
+      },
+      {
+        "date": "2026-10-02T19:50:31.670Z",
+        "action": "WHATSAPP_BULK_CAMPAIGN_STEP_2",
+        "type": "WHATSAPP",
+        "subject": "Batch Hook Test",
+        "details": "Dispatched via Bulk WhatsApp runner to +91 98453 87889"
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ideal%20Shishu%20Niketan%20Subhash%20Nagar%2C%20Chembur%20East%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "shareText": "📍 *Ideal Shishu Niketan* (SCHOOLS)\n📞 Phone: +91 98453 87889\n✉️ Email: contact@idealshishuniketan.in\n📍 Address: Subhash Nagar, Chembur East, Nallasopara East, Nallasopara East\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Ideal%20Shishu%20Niketan%20Subhash%20Nagar%2C%20Chembur%20East%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "_id": "lead_1790968647766_980",
+    "createdAt": "2026-10-02T19:17:27.766Z",
+    "lastContactDate": "2026-10-02T19:50:31.670Z",
+    "nextFollowUpDate": "2026-10-05T19:50:31.670Z",
+    "updatedAt": "2026-10-02T19:50:31.677Z"
+  },
+  {
+    "name": "Oxford English Medium School",
+    "company": "Oxford English Medium School",
+    "email": "contact@oxfordenglishmediumschool.in",
+    "phone": "+91 98194 76778",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara East",
+    "country": "India",
+    "address": "Gandhi Chowk, Kalyan West, Nallasopara East",
+    "lat": 19.2432,
+    "lon": 73.1345,
+    "source": "Nallasopara East (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:27.749Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara East: Verified local business with NO active website. Located at: Gandhi Chowk, Kalyan West. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Oxford%20English%20Medium%20School%20Gandhi%20Chowk%2C%20Kalyan%20West%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "shareText": "📍 *Oxford English Medium School* (SCHOOLS)\n📞 Phone: +91 98194 76778\n✉️ Email: contact@oxfordenglishmediumschool.in\n📍 Address: Gandhi Chowk, Kalyan West, Nallasopara East, Nallasopara East\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Oxford%20English%20Medium%20School%20Gandhi%20Chowk%2C%20Kalyan%20West%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "_id": "lead_1790968647754_736",
+    "createdAt": "2026-10-02T19:17:27.754Z"
+  },
+  {
+    "name": "St. Jude Pre-Primary School",
+    "company": "St. Jude Pre-Primary School",
+    "email": "contact@stjudepreprimaryschool.in",
+    "phone": "+91 98930 65667",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara East",
+    "country": "India",
+    "address": "Navpada Lane, Thane West, Nallasopara East",
+    "lat": 19.1963,
+    "lon": 72.9734,
+    "source": "Nallasopara East (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:27.741Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara East: Verified local business with NO active website. Located at: Navpada Lane, Thane West. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=St.%20Jude%20Pre-Primary%20School%20Navpada%20Lane%2C%20Thane%20West%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "shareText": "📍 *St. Jude Pre-Primary School* (SCHOOLS)\n📞 Phone: +91 98930 65667\n✉️ Email: contact@stjudepreprimaryschool.in\n📍 Address: Navpada Lane, Thane West, Nallasopara East, Nallasopara East\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=St.%20Jude%20Pre-Primary%20School%20Navpada%20Lane%2C%20Thane%20West%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "_id": "lead_1790968647747_256",
+    "createdAt": "2026-10-02T19:17:27.747Z"
+  },
+  {
+    "name": "Dr. Radhakrishnan Memorial School",
+    "company": "Dr. Radhakrishnan Memorial School",
+    "email": "contact@drradhakrishnanmemorialschool.in",
+    "phone": "+91 98209 54556",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara East",
+    "country": "India",
+    "address": "Teachers Colony, Santacruz East, Nallasopara East",
+    "lat": 19.0812,
+    "lon": 72.8465,
+    "source": "Nallasopara East (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:27.734Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara East: Verified local business with NO active website. Located at: Teachers Colony, Santacruz East. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Dr.%20Radhakrishnan%20Memorial%20School%20Teachers%20Colony%2C%20Santacruz%20East%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "shareText": "📍 *Dr. Radhakrishnan Memorial School* (SCHOOLS)\n📞 Phone: +91 98209 54556\n✉️ Email: contact@drradhakrishnanmemorialschool.in\n📍 Address: Teachers Colony, Santacruz East, Nallasopara East, Nallasopara East\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Dr.%20Radhakrishnan%20Memorial%20School%20Teachers%20Colony%2C%20Santacruz%20East%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "_id": "lead_1790968647739_149",
+    "createdAt": "2026-10-02T19:17:27.739Z"
+  },
+  {
+    "name": "Sunrise Model English School",
+    "company": "Sunrise Model English School",
+    "email": "contact@sunrisemodelenglishschool.in",
+    "phone": "+91 97692 43445",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara East",
+    "country": "India",
+    "address": "Station Road, Kandivali West, Nallasopara East",
+    "lat": 19.2081,
+    "lon": 72.8491,
+    "source": "Nallasopara East (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:27.728Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara East: Verified local business with NO active website. Located at: Station Road, Kandivali West. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sunrise%20Model%20English%20School%20Station%20Road%2C%20Kandivali%20West%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "shareText": "📍 *Sunrise Model English School* (SCHOOLS)\n📞 Phone: +91 97692 43445\n✉️ Email: contact@sunrisemodelenglishschool.in\n📍 Address: Station Road, Kandivali West, Nallasopara East, Nallasopara East\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Sunrise%20Model%20English%20School%20Station%20Road%2C%20Kandivali%20West%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "_id": "lead_1790968647731_891",
+    "createdAt": "2026-10-02T19:17:27.731Z"
+  },
+  {
+    "name": "Blooming Buds Elementary School",
+    "company": "Blooming Buds Elementary School",
+    "email": "contact@bloomingbudselementaryschool.in",
+    "phone": "+91 98340 32334",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara East",
+    "country": "India",
+    "address": "Lokhandwala, Andheri West, Nallasopara East",
+    "lat": 19.1392,
+    "lon": 72.8258,
+    "source": "Nallasopara East (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:27.720Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara East: Verified local business with NO active website. Located at: Lokhandwala, Andheri West. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Blooming%20Buds%20Elementary%20School%20Lokhandwala%2C%20Andheri%20West%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "shareText": "📍 *Blooming Buds Elementary School* (SCHOOLS)\n📞 Phone: +91 98340 32334\n✉️ Email: contact@bloomingbudselementaryschool.in\n📍 Address: Lokhandwala, Andheri West, Nallasopara East, Nallasopara East\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Blooming%20Buds%20Elementary%20School%20Lokhandwala%2C%20Andheri%20West%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "_id": "lead_1790968647723_805",
+    "createdAt": "2026-10-02T19:17:27.723Z"
+  },
+  {
+    "name": "Noble Mission Secondary School",
+    "company": "Noble Mission Secondary School",
+    "email": "contact@noblemissionsecondaryschool.in",
+    "phone": "+91 98116 21223",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara East",
+    "country": "India",
+    "address": "Link Road, Goregaon West, Nallasopara East",
+    "lat": 19.1648,
+    "lon": 72.8412,
+    "source": "Nallasopara East (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:27.713Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara East: Verified local business with NO active website. Located at: Link Road, Goregaon West. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Noble%20Mission%20Secondary%20School%20Link%20Road%2C%20Goregaon%20West%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "shareText": "📍 *Noble Mission Secondary School* (SCHOOLS)\n📞 Phone: +91 98116 21223\n✉️ Email: contact@noblemissionsecondaryschool.in\n📍 Address: Link Road, Goregaon West, Nallasopara East, Nallasopara East\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Noble%20Mission%20Secondary%20School%20Link%20Road%2C%20Goregaon%20West%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "_id": "lead_1790968647716_957",
+    "createdAt": "2026-10-02T19:17:27.716Z"
+  },
+  {
+    "name": "Little Angels Day School",
+    "company": "Little Angels Day School",
+    "email": "contact@littleangelsdayschool.in",
+    "phone": "+91 98704 10112",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara East",
+    "country": "India",
+    "address": "Pali Hill, Bandra West, Nallasopara East",
+    "lat": 19.0641,
+    "lon": 72.8272,
+    "source": "Nallasopara East (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:27.706Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara East: Verified local business with NO active website. Located at: Pali Hill, Bandra West. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Little%20Angels%20Day%20School%20Pali%20Hill%2C%20Bandra%20West%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "shareText": "📍 *Little Angels Day School* (SCHOOLS)\n📞 Phone: +91 98704 10112\n✉️ Email: contact@littleangelsdayschool.in\n📍 Address: Pali Hill, Bandra West, Nallasopara East, Nallasopara East\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Little%20Angels%20Day%20School%20Pali%20Hill%2C%20Bandra%20West%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "_id": "lead_1790968647710_117",
+    "createdAt": "2026-10-02T19:17:27.710Z"
+  },
+  {
+    "name": "Bright Horizons Public School",
+    "company": "Bright Horizons Public School",
+    "email": "contact@brighthorizonspublicschool.in",
+    "phone": "+91 99203 99001",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara East",
+    "country": "India",
+    "address": "Nehru Nagar, Kurla East, Nallasopara East",
+    "lat": 19.0629,
+    "lon": 72.8834,
+    "source": "Nallasopara East (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:27.699Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara East: Verified local business with NO active website. Located at: Nehru Nagar, Kurla East. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bright%20Horizons%20Public%20School%20Nehru%20Nagar%2C%20Kurla%20East%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "shareText": "📍 *Bright Horizons Public School* (SCHOOLS)\n📞 Phone: +91 99203 99001\n✉️ Email: contact@brighthorizonspublicschool.in\n📍 Address: Nehru Nagar, Kurla East, Nallasopara East, Nallasopara East\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Bright%20Horizons%20Public%20School%20Nehru%20Nagar%2C%20Kurla%20East%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "_id": "lead_1790968647704_253",
+    "createdAt": "2026-10-02T19:17:27.704Z"
+  },
+  {
+    "name": "Holy Trinity Nursery & Primary",
+    "company": "Holy Trinity Nursery & Primary",
+    "email": "contact@holytrinitynurseryprimary.in",
+    "phone": "+91 98672 88990",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara East",
+    "country": "India",
+    "address": "Mission Compound, Byculla, Nallasopara East",
+    "lat": 18.9772,
+    "lon": 72.8339,
+    "source": "Nallasopara East (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:27.692Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara East: Verified local business with NO active website. Located at: Mission Compound, Byculla. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Holy%20Trinity%20Nursery%20%26%20Primary%20Mission%20Compound%2C%20Byculla%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "shareText": "📍 *Holy Trinity Nursery & Primary* (SCHOOLS)\n📞 Phone: +91 98672 88990\n✉️ Email: contact@holytrinitynurseryprimary.in\n📍 Address: Mission Compound, Byculla, Nallasopara East, Nallasopara East\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Holy%20Trinity%20Nursery%20%26%20Primary%20Mission%20Compound%2C%20Byculla%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "_id": "lead_1790968647697_751",
+    "createdAt": "2026-10-02T19:17:27.697Z"
+  },
+  {
+    "name": "Saraswati Shishu Mandir",
+    "company": "Saraswati Shishu Mandir",
+    "email": "contact@saraswatishishumandir.in",
+    "phone": "+91 98451 77889",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara East",
+    "country": "India",
+    "address": "Ram Krishna Colony, Ghatkopar, Nallasopara East",
+    "lat": 19.0864,
+    "lon": 72.9081,
+    "source": "Nallasopara East (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:27.685Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara East: Verified local business with NO active website. Located at: Ram Krishna Colony, Ghatkopar. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Saraswati%20Shishu%20Mandir%20Ram%20Krishna%20Colony%2C%20Ghatkopar%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "shareText": "📍 *Saraswati Shishu Mandir* (SCHOOLS)\n📞 Phone: +91 98451 77889\n✉️ Email: contact@saraswatishishumandir.in\n📍 Address: Ram Krishna Colony, Ghatkopar, Nallasopara East, Nallasopara East\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Saraswati%20Shishu%20Mandir%20Ram%20Krishna%20Colony%2C%20Ghatkopar%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "_id": "lead_1790968647689_710",
+    "createdAt": "2026-10-02T19:17:27.689Z"
+  },
+  {
+    "name": "Vidya Mandir Secondary School",
+    "company": "Vidya Mandir Secondary School",
+    "email": "contact@vidyamandirsecondaryschool.in",
+    "phone": "+91 98205 66778",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara East",
+    "country": "India",
+    "address": "Shivaji Nagar, Dadar East, Nallasopara East",
+    "lat": 19.0221,
+    "lon": 72.8492,
+    "source": "Nallasopara East (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:27.679Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara East: Verified local business with NO active website. Located at: Shivaji Nagar, Dadar East. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Vidya%20Mandir%20Secondary%20School%20Shivaji%20Nagar%2C%20Dadar%20East%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "shareText": "📍 *Vidya Mandir Secondary School* (SCHOOLS)\n📞 Phone: +91 98205 66778\n✉️ Email: contact@vidyamandirsecondaryschool.in\n📍 Address: Shivaji Nagar, Dadar East, Nallasopara East, Nallasopara East\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Vidya%20Mandir%20Secondary%20School%20Shivaji%20Nagar%2C%20Dadar%20East%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "_id": "lead_1790968647682_355",
+    "createdAt": "2026-10-02T19:17:27.682Z"
+  },
+  {
+    "name": "Modern Montessori & Kindergarten",
+    "company": "Modern Montessori & Kindergarten",
+    "email": "contact@modernmontessorikindergarten.in",
+    "phone": "+91 98199 55667",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara East",
+    "country": "India",
+    "address": "Sector 4, Vashi, Navi Mumbai, Nallasopara East",
+    "lat": 19.0768,
+    "lon": 72.9972,
+    "source": "Nallasopara East (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:27.671Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara East: Verified local business with NO active website. Located at: Sector 4, Vashi, Navi Mumbai. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Modern%20Montessori%20%26%20Kindergarten%20Sector%204%2C%20Vashi%2C%20Navi%20Mumbai%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "shareText": "📍 *Modern Montessori & Kindergarten* (SCHOOLS)\n📞 Phone: +91 98199 55667\n✉️ Email: contact@modernmontessorikindergarten.in\n📍 Address: Sector 4, Vashi, Navi Mumbai, Nallasopara East, Nallasopara East\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Modern%20Montessori%20%26%20Kindergarten%20Sector%204%2C%20Vashi%2C%20Navi%20Mumbai%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "_id": "lead_1790968647676_485",
+    "createdAt": "2026-10-02T19:17:27.676Z"
+  },
+  {
+    "name": "St. Xavier Junior Academy",
+    "company": "St. Xavier Junior Academy",
+    "email": "contact@stxavierjunioracademy.in",
+    "phone": "+91 99200 45678",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara East",
+    "country": "India",
+    "address": "Church Road, Bandra West, Nallasopara East",
+    "lat": 19.0543,
+    "lon": 72.8329,
+    "source": "Nallasopara East (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:27.662Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara East: Verified local business with NO active website. Located at: Church Road, Bandra West. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=St.%20Xavier%20Junior%20Academy%20Church%20Road%2C%20Bandra%20West%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "shareText": "📍 *St. Xavier Junior Academy* (SCHOOLS)\n📞 Phone: +91 99200 45678\n✉️ Email: contact@stxavierjunioracademy.in\n📍 Address: Church Road, Bandra West, Nallasopara East, Nallasopara East\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=St.%20Xavier%20Junior%20Academy%20Church%20Road%2C%20Bandra%20West%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "_id": "lead_1790968647666_74",
+    "createdAt": "2026-10-02T19:17:27.666Z"
+  },
+  {
+    "name": "Greenwood Valley English High School",
+    "company": "Greenwood Valley English High School",
+    "email": "contact@greenwoodvalleyenglishhighschool.in",
+    "phone": "+91 98112 87654",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara East",
+    "country": "India",
+    "address": "Model Town, Andheri East, Nallasopara East",
+    "lat": 19.1172,
+    "lon": 72.8643,
+    "source": "Nallasopara East (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:27.654Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara East: Verified local business with NO active website. Located at: Model Town, Andheri East. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Greenwood%20Valley%20English%20High%20School%20Model%20Town%2C%20Andheri%20East%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "shareText": "📍 *Greenwood Valley English High School* (SCHOOLS)\n📞 Phone: +91 98112 87654\n✉️ Email: contact@greenwoodvalleyenglishhighschool.in\n📍 Address: Model Town, Andheri East, Nallasopara East, Nallasopara East\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Greenwood%20Valley%20English%20High%20School%20Model%20Town%2C%20Andheri%20East%2C%20Nallasopara%20East%20Nallasopara%20East",
+    "_id": "lead_1790968647658_965",
+    "createdAt": "2026-10-02T19:17:27.658Z"
+  },
+  {
+    "name": "Ideal Shishu Niketan",
+    "company": "Ideal Shishu Niketan",
+    "email": "contact@idealshishuniketan.in",
+    "phone": "+91 98453 87889",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Subhash Nagar, Chembur East, Nallasopara",
+    "lat": 19.0558,
+    "lon": 72.9012,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:07.378Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Subhash Nagar, Chembur East. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ideal%20Shishu%20Niketan%20Subhash%20Nagar%2C%20Chembur%20East%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Ideal Shishu Niketan* (SCHOOLS)\n📞 Phone: +91 98453 87889\n✉️ Email: contact@idealshishuniketan.in\n📍 Address: Subhash Nagar, Chembur East, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Ideal%20Shishu%20Niketan%20Subhash%20Nagar%2C%20Chembur%20East%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790968627380_985",
+    "createdAt": "2026-10-02T19:17:07.380Z"
+  },
+  {
+    "name": "Oxford English Medium School",
+    "company": "Oxford English Medium School",
+    "email": "contact@oxfordenglishmediumschool.in",
+    "phone": "+91 98194 76778",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Gandhi Chowk, Kalyan West, Nallasopara",
+    "lat": 19.2432,
+    "lon": 73.1345,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:07.370Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Gandhi Chowk, Kalyan West. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Oxford%20English%20Medium%20School%20Gandhi%20Chowk%2C%20Kalyan%20West%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Oxford English Medium School* (SCHOOLS)\n📞 Phone: +91 98194 76778\n✉️ Email: contact@oxfordenglishmediumschool.in\n📍 Address: Gandhi Chowk, Kalyan West, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Oxford%20English%20Medium%20School%20Gandhi%20Chowk%2C%20Kalyan%20West%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790968627374_15",
+    "createdAt": "2026-10-02T19:17:07.374Z"
+  },
+  {
+    "name": "St. Jude Pre-Primary School",
+    "company": "St. Jude Pre-Primary School",
+    "email": "contact@stjudepreprimaryschool.in",
+    "phone": "+91 98930 65667",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Navpada Lane, Thane West, Nallasopara",
+    "lat": 19.1963,
+    "lon": 72.9734,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:07.358Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Navpada Lane, Thane West. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=St.%20Jude%20Pre-Primary%20School%20Navpada%20Lane%2C%20Thane%20West%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *St. Jude Pre-Primary School* (SCHOOLS)\n📞 Phone: +91 98930 65667\n✉️ Email: contact@stjudepreprimaryschool.in\n📍 Address: Navpada Lane, Thane West, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=St.%20Jude%20Pre-Primary%20School%20Navpada%20Lane%2C%20Thane%20West%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790968627368_700",
+    "createdAt": "2026-10-02T19:17:07.368Z"
+  },
+  {
+    "name": "Dr. Radhakrishnan Memorial School",
+    "company": "Dr. Radhakrishnan Memorial School",
+    "email": "contact@drradhakrishnanmemorialschool.in",
+    "phone": "+91 98209 54556",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Teachers Colony, Santacruz East, Nallasopara",
+    "lat": 19.0812,
+    "lon": 72.8465,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:07.346Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Teachers Colony, Santacruz East. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Dr.%20Radhakrishnan%20Memorial%20School%20Teachers%20Colony%2C%20Santacruz%20East%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Dr. Radhakrishnan Memorial School* (SCHOOLS)\n📞 Phone: +91 98209 54556\n✉️ Email: contact@drradhakrishnanmemorialschool.in\n📍 Address: Teachers Colony, Santacruz East, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Dr.%20Radhakrishnan%20Memorial%20School%20Teachers%20Colony%2C%20Santacruz%20East%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790968627354_96",
+    "createdAt": "2026-10-02T19:17:07.354Z"
+  },
+  {
+    "name": "Sunrise Model English School",
+    "company": "Sunrise Model English School",
+    "email": "contact@sunrisemodelenglishschool.in",
+    "phone": "+91 97692 43445",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Station Road, Kandivali West, Nallasopara",
+    "lat": 19.2081,
+    "lon": 72.8491,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:07.335Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Station Road, Kandivali West. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sunrise%20Model%20English%20School%20Station%20Road%2C%20Kandivali%20West%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Sunrise Model English School* (SCHOOLS)\n📞 Phone: +91 97692 43445\n✉️ Email: contact@sunrisemodelenglishschool.in\n📍 Address: Station Road, Kandivali West, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Sunrise%20Model%20English%20School%20Station%20Road%2C%20Kandivali%20West%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790968627340_952",
+    "createdAt": "2026-10-02T19:17:07.340Z"
+  },
+  {
+    "name": "Blooming Buds Elementary School",
+    "company": "Blooming Buds Elementary School",
+    "email": "contact@bloomingbudselementaryschool.in",
+    "phone": "+91 98340 32334",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Lokhandwala, Andheri West, Nallasopara",
+    "lat": 19.1392,
+    "lon": 72.8258,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:07.328Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Lokhandwala, Andheri West. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Blooming%20Buds%20Elementary%20School%20Lokhandwala%2C%20Andheri%20West%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Blooming Buds Elementary School* (SCHOOLS)\n📞 Phone: +91 98340 32334\n✉️ Email: contact@bloomingbudselementaryschool.in\n📍 Address: Lokhandwala, Andheri West, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Blooming%20Buds%20Elementary%20School%20Lokhandwala%2C%20Andheri%20West%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790968627331_709",
+    "createdAt": "2026-10-02T19:17:07.331Z"
+  },
+  {
+    "name": "Noble Mission Secondary School",
+    "company": "Noble Mission Secondary School",
+    "email": "contact@noblemissionsecondaryschool.in",
+    "phone": "+91 98116 21223",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Link Road, Goregaon West, Nallasopara",
+    "lat": 19.1648,
+    "lon": 72.8412,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:07.320Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Link Road, Goregaon West. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Noble%20Mission%20Secondary%20School%20Link%20Road%2C%20Goregaon%20West%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Noble Mission Secondary School* (SCHOOLS)\n📞 Phone: +91 98116 21223\n✉️ Email: contact@noblemissionsecondaryschool.in\n📍 Address: Link Road, Goregaon West, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Noble%20Mission%20Secondary%20School%20Link%20Road%2C%20Goregaon%20West%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790968627325_294",
+    "createdAt": "2026-10-02T19:17:07.325Z"
+  },
+  {
+    "name": "Little Angels Day School",
+    "company": "Little Angels Day School",
+    "email": "contact@littleangelsdayschool.in",
+    "phone": "+91 98704 10112",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Pali Hill, Bandra West, Nallasopara",
+    "lat": 19.0641,
+    "lon": 72.8272,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:07.302Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Pali Hill, Bandra West. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Little%20Angels%20Day%20School%20Pali%20Hill%2C%20Bandra%20West%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Little Angels Day School* (SCHOOLS)\n📞 Phone: +91 98704 10112\n✉️ Email: contact@littleangelsdayschool.in\n📍 Address: Pali Hill, Bandra West, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Little%20Angels%20Day%20School%20Pali%20Hill%2C%20Bandra%20West%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790968627309_273",
+    "createdAt": "2026-10-02T19:17:07.309Z"
+  },
+  {
+    "name": "Bright Horizons Public School",
+    "company": "Bright Horizons Public School",
+    "email": "contact@brighthorizonspublicschool.in",
+    "phone": "+91 99203 99001",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Nehru Nagar, Kurla East, Nallasopara",
+    "lat": 19.0629,
+    "lon": 72.8834,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:07.294Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Nehru Nagar, Kurla East. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bright%20Horizons%20Public%20School%20Nehru%20Nagar%2C%20Kurla%20East%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Bright Horizons Public School* (SCHOOLS)\n📞 Phone: +91 99203 99001\n✉️ Email: contact@brighthorizonspublicschool.in\n📍 Address: Nehru Nagar, Kurla East, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Bright%20Horizons%20Public%20School%20Nehru%20Nagar%2C%20Kurla%20East%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790968627297_333",
+    "createdAt": "2026-10-02T19:17:07.297Z"
+  },
+  {
+    "name": "Holy Trinity Nursery & Primary",
+    "company": "Holy Trinity Nursery & Primary",
+    "email": "contact@holytrinitynurseryprimary.in",
+    "phone": "+91 98672 88990",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Mission Compound, Byculla, Nallasopara",
+    "lat": 18.9772,
+    "lon": 72.8339,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:07.286Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Mission Compound, Byculla. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Holy%20Trinity%20Nursery%20%26%20Primary%20Mission%20Compound%2C%20Byculla%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Holy Trinity Nursery & Primary* (SCHOOLS)\n📞 Phone: +91 98672 88990\n✉️ Email: contact@holytrinitynurseryprimary.in\n📍 Address: Mission Compound, Byculla, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Holy%20Trinity%20Nursery%20%26%20Primary%20Mission%20Compound%2C%20Byculla%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790968627291_571",
+    "createdAt": "2026-10-02T19:17:07.291Z"
+  },
+  {
+    "name": "Saraswati Shishu Mandir",
+    "company": "Saraswati Shishu Mandir",
+    "email": "contact@saraswatishishumandir.in",
+    "phone": "+91 98451 77889",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Ram Krishna Colony, Ghatkopar, Nallasopara",
+    "lat": 19.0864,
+    "lon": 72.9081,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:07.273Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Ram Krishna Colony, Ghatkopar. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Saraswati%20Shishu%20Mandir%20Ram%20Krishna%20Colony%2C%20Ghatkopar%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Saraswati Shishu Mandir* (SCHOOLS)\n📞 Phone: +91 98451 77889\n✉️ Email: contact@saraswatishishumandir.in\n📍 Address: Ram Krishna Colony, Ghatkopar, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Saraswati%20Shishu%20Mandir%20Ram%20Krishna%20Colony%2C%20Ghatkopar%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790968627279_480",
+    "createdAt": "2026-10-02T19:17:07.279Z"
+  },
+  {
+    "name": "Vidya Mandir Secondary School",
+    "company": "Vidya Mandir Secondary School",
+    "email": "contact@vidyamandirsecondaryschool.in",
+    "phone": "+91 98205 66778",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Shivaji Nagar, Dadar East, Nallasopara",
+    "lat": 19.0221,
+    "lon": 72.8492,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:07.263Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Shivaji Nagar, Dadar East. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Vidya%20Mandir%20Secondary%20School%20Shivaji%20Nagar%2C%20Dadar%20East%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Vidya Mandir Secondary School* (SCHOOLS)\n📞 Phone: +91 98205 66778\n✉️ Email: contact@vidyamandirsecondaryschool.in\n📍 Address: Shivaji Nagar, Dadar East, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Vidya%20Mandir%20Secondary%20School%20Shivaji%20Nagar%2C%20Dadar%20East%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790968627266_22",
+    "createdAt": "2026-10-02T19:17:07.266Z"
+  },
+  {
+    "name": "Modern Montessori & Kindergarten",
+    "company": "Modern Montessori & Kindergarten",
+    "email": "contact@modernmontessorikindergarten.in",
+    "phone": "+91 98199 55667",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Sector 4, Vashi, Navi Mumbai, Nallasopara",
+    "lat": 19.0768,
+    "lon": 72.9972,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:07.256Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Sector 4, Vashi, Navi Mumbai. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Modern%20Montessori%20%26%20Kindergarten%20Sector%204%2C%20Vashi%2C%20Navi%20Mumbai%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Modern Montessori & Kindergarten* (SCHOOLS)\n📞 Phone: +91 98199 55667\n✉️ Email: contact@modernmontessorikindergarten.in\n📍 Address: Sector 4, Vashi, Navi Mumbai, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Modern%20Montessori%20%26%20Kindergarten%20Sector%204%2C%20Vashi%2C%20Navi%20Mumbai%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790968627261_664",
+    "createdAt": "2026-10-02T19:17:07.261Z"
+  },
+  {
+    "name": "St. Xavier Junior Academy",
+    "company": "St. Xavier Junior Academy",
+    "email": "contact@stxavierjunioracademy.in",
+    "phone": "+91 99200 45678",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Church Road, Bandra West, Nallasopara",
+    "lat": 19.0543,
+    "lon": 72.8329,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:07.231Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Church Road, Bandra West. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=St.%20Xavier%20Junior%20Academy%20Church%20Road%2C%20Bandra%20West%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *St. Xavier Junior Academy* (SCHOOLS)\n📞 Phone: +91 99200 45678\n✉️ Email: contact@stxavierjunioracademy.in\n📍 Address: Church Road, Bandra West, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=St.%20Xavier%20Junior%20Academy%20Church%20Road%2C%20Bandra%20West%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790968627246_39",
+    "createdAt": "2026-10-02T19:17:07.246Z"
+  },
+  {
+    "name": "Greenwood Valley English High School",
+    "company": "Greenwood Valley English High School",
+    "email": "contact@greenwoodvalleyenglishhighschool.in",
+    "phone": "+91 98112 87654",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Model Town, Andheri East, Nallasopara",
+    "lat": 19.1172,
+    "lon": 72.8643,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:17:07.219Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Model Town, Andheri East. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Greenwood%20Valley%20English%20High%20School%20Model%20Town%2C%20Andheri%20East%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Greenwood Valley English High School* (SCHOOLS)\n📞 Phone: +91 98112 87654\n✉️ Email: contact@greenwoodvalleyenglishhighschool.in\n📍 Address: Model Town, Andheri East, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Greenwood%20Valley%20English%20High%20School%20Model%20Town%2C%20Andheri%20East%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790968627226_443",
+    "createdAt": "2026-10-02T19:17:07.226Z"
+  },
+  {
+    "name": "Ideal Shishu Niketan",
+    "company": "Ideal Shishu Niketan",
+    "email": "contact@idealshishuniketan.in",
+    "phone": "+91 98453 87889",
+    "industry": "SCHOOLS",
+    "city": "santosh bhavan",
+    "country": "India",
+    "address": "Subhash Nagar, Chembur East, santosh bhavan",
+    "lat": 19.0558,
+    "lon": 72.9012,
+    "source": "santosh bhavan (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:16:51.185Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in santosh bhavan: Verified local business with NO active website. Located at: Subhash Nagar, Chembur East. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ideal%20Shishu%20Niketan%20Subhash%20Nagar%2C%20Chembur%20East%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "shareText": "📍 *Ideal Shishu Niketan* (SCHOOLS)\n📞 Phone: +91 98453 87889\n✉️ Email: contact@idealshishuniketan.in\n📍 Address: Subhash Nagar, Chembur East, santosh bhavan, santosh bhavan\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Ideal%20Shishu%20Niketan%20Subhash%20Nagar%2C%20Chembur%20East%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "_id": "lead_1790968611189_688",
+    "createdAt": "2026-10-02T19:16:51.189Z"
+  },
+  {
+    "name": "Oxford English Medium School",
+    "company": "Oxford English Medium School",
+    "email": "contact@oxfordenglishmediumschool.in",
+    "phone": "+91 98194 76778",
+    "industry": "SCHOOLS",
+    "city": "santosh bhavan",
+    "country": "India",
+    "address": "Gandhi Chowk, Kalyan West, santosh bhavan",
+    "lat": 19.2432,
+    "lon": 73.1345,
+    "source": "santosh bhavan (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:16:51.172Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in santosh bhavan: Verified local business with NO active website. Located at: Gandhi Chowk, Kalyan West. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Oxford%20English%20Medium%20School%20Gandhi%20Chowk%2C%20Kalyan%20West%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "shareText": "📍 *Oxford English Medium School* (SCHOOLS)\n📞 Phone: +91 98194 76778\n✉️ Email: contact@oxfordenglishmediumschool.in\n📍 Address: Gandhi Chowk, Kalyan West, santosh bhavan, santosh bhavan\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Oxford%20English%20Medium%20School%20Gandhi%20Chowk%2C%20Kalyan%20West%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "_id": "lead_1790968611178_990",
+    "createdAt": "2026-10-02T19:16:51.178Z"
+  },
+  {
+    "name": "St. Jude Pre-Primary School",
+    "company": "St. Jude Pre-Primary School",
+    "email": "contact@stjudepreprimaryschool.in",
+    "phone": "+91 98930 65667",
+    "industry": "SCHOOLS",
+    "city": "santosh bhavan",
+    "country": "India",
+    "address": "Navpada Lane, Thane West, santosh bhavan",
+    "lat": 19.1963,
+    "lon": 72.9734,
+    "source": "santosh bhavan (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:16:51.160Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in santosh bhavan: Verified local business with NO active website. Located at: Navpada Lane, Thane West. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=St.%20Jude%20Pre-Primary%20School%20Navpada%20Lane%2C%20Thane%20West%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "shareText": "📍 *St. Jude Pre-Primary School* (SCHOOLS)\n📞 Phone: +91 98930 65667\n✉️ Email: contact@stjudepreprimaryschool.in\n📍 Address: Navpada Lane, Thane West, santosh bhavan, santosh bhavan\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=St.%20Jude%20Pre-Primary%20School%20Navpada%20Lane%2C%20Thane%20West%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "_id": "lead_1790968611169_712",
+    "createdAt": "2026-10-02T19:16:51.169Z"
+  },
+  {
+    "name": "Dr. Radhakrishnan Memorial School",
+    "company": "Dr. Radhakrishnan Memorial School",
+    "email": "contact@drradhakrishnanmemorialschool.in",
+    "phone": "+91 98209 54556",
+    "industry": "SCHOOLS",
+    "city": "santosh bhavan",
+    "country": "India",
+    "address": "Teachers Colony, Santacruz East, santosh bhavan",
+    "lat": 19.0812,
+    "lon": 72.8465,
+    "source": "santosh bhavan (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:16:51.147Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in santosh bhavan: Verified local business with NO active website. Located at: Teachers Colony, Santacruz East. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Dr.%20Radhakrishnan%20Memorial%20School%20Teachers%20Colony%2C%20Santacruz%20East%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "shareText": "📍 *Dr. Radhakrishnan Memorial School* (SCHOOLS)\n📞 Phone: +91 98209 54556\n✉️ Email: contact@drradhakrishnanmemorialschool.in\n📍 Address: Teachers Colony, Santacruz East, santosh bhavan, santosh bhavan\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Dr.%20Radhakrishnan%20Memorial%20School%20Teachers%20Colony%2C%20Santacruz%20East%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "_id": "lead_1790968611155_265",
+    "createdAt": "2026-10-02T19:16:51.155Z"
+  },
+  {
+    "name": "Sunrise Model English School",
+    "company": "Sunrise Model English School",
+    "email": "contact@sunrisemodelenglishschool.in",
+    "phone": "+91 97692 43445",
+    "industry": "SCHOOLS",
+    "city": "santosh bhavan",
+    "country": "India",
+    "address": "Station Road, Kandivali West, santosh bhavan",
+    "lat": 19.2081,
+    "lon": 72.8491,
+    "source": "santosh bhavan (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:16:51.130Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in santosh bhavan: Verified local business with NO active website. Located at: Station Road, Kandivali West. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sunrise%20Model%20English%20School%20Station%20Road%2C%20Kandivali%20West%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "shareText": "📍 *Sunrise Model English School* (SCHOOLS)\n📞 Phone: +91 97692 43445\n✉️ Email: contact@sunrisemodelenglishschool.in\n📍 Address: Station Road, Kandivali West, santosh bhavan, santosh bhavan\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Sunrise%20Model%20English%20School%20Station%20Road%2C%20Kandivali%20West%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "_id": "lead_1790968611142_738",
+    "createdAt": "2026-10-02T19:16:51.142Z"
+  },
+  {
+    "name": "Blooming Buds Elementary School",
+    "company": "Blooming Buds Elementary School",
+    "email": "contact@bloomingbudselementaryschool.in",
+    "phone": "+91 98340 32334",
+    "industry": "SCHOOLS",
+    "city": "santosh bhavan",
+    "country": "India",
+    "address": "Lokhandwala, Andheri West, santosh bhavan",
+    "lat": 19.1392,
+    "lon": 72.8258,
+    "source": "santosh bhavan (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:16:51.120Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in santosh bhavan: Verified local business with NO active website. Located at: Lokhandwala, Andheri West. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Blooming%20Buds%20Elementary%20School%20Lokhandwala%2C%20Andheri%20West%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "shareText": "📍 *Blooming Buds Elementary School* (SCHOOLS)\n📞 Phone: +91 98340 32334\n✉️ Email: contact@bloomingbudselementaryschool.in\n📍 Address: Lokhandwala, Andheri West, santosh bhavan, santosh bhavan\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Blooming%20Buds%20Elementary%20School%20Lokhandwala%2C%20Andheri%20West%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "_id": "lead_1790968611125_404",
+    "createdAt": "2026-10-02T19:16:51.126Z"
+  },
+  {
+    "name": "Noble Mission Secondary School",
+    "company": "Noble Mission Secondary School",
+    "email": "contact@noblemissionsecondaryschool.in",
+    "phone": "+91 98116 21223",
+    "industry": "SCHOOLS",
+    "city": "santosh bhavan",
+    "country": "India",
+    "address": "Link Road, Goregaon West, santosh bhavan",
+    "lat": 19.1648,
+    "lon": 72.8412,
+    "source": "santosh bhavan (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:16:51.106Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in santosh bhavan: Verified local business with NO active website. Located at: Link Road, Goregaon West. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Noble%20Mission%20Secondary%20School%20Link%20Road%2C%20Goregaon%20West%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "shareText": "📍 *Noble Mission Secondary School* (SCHOOLS)\n📞 Phone: +91 98116 21223\n✉️ Email: contact@noblemissionsecondaryschool.in\n📍 Address: Link Road, Goregaon West, santosh bhavan, santosh bhavan\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Noble%20Mission%20Secondary%20School%20Link%20Road%2C%20Goregaon%20West%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "_id": "lead_1790968611117_457",
+    "createdAt": "2026-10-02T19:16:51.117Z"
+  },
+  {
+    "name": "Little Angels Day School",
+    "company": "Little Angels Day School",
+    "email": "contact@littleangelsdayschool.in",
+    "phone": "+91 98704 10112",
+    "industry": "SCHOOLS",
+    "city": "santosh bhavan",
+    "country": "India",
+    "address": "Pali Hill, Bandra West, santosh bhavan",
+    "lat": 19.0641,
+    "lon": 72.8272,
+    "source": "santosh bhavan (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:16:51.097Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in santosh bhavan: Verified local business with NO active website. Located at: Pali Hill, Bandra West. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Little%20Angels%20Day%20School%20Pali%20Hill%2C%20Bandra%20West%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "shareText": "📍 *Little Angels Day School* (SCHOOLS)\n📞 Phone: +91 98704 10112\n✉️ Email: contact@littleangelsdayschool.in\n📍 Address: Pali Hill, Bandra West, santosh bhavan, santosh bhavan\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Little%20Angels%20Day%20School%20Pali%20Hill%2C%20Bandra%20West%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "_id": "lead_1790968611104_840",
+    "createdAt": "2026-10-02T19:16:51.104Z"
+  },
+  {
+    "name": "Bright Horizons Public School",
+    "company": "Bright Horizons Public School",
+    "email": "contact@brighthorizonspublicschool.in",
+    "phone": "+91 99203 99001",
+    "industry": "SCHOOLS",
+    "city": "santosh bhavan",
+    "country": "India",
+    "address": "Nehru Nagar, Kurla East, santosh bhavan",
+    "lat": 19.0629,
+    "lon": 72.8834,
+    "source": "santosh bhavan (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:16:51.088Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in santosh bhavan: Verified local business with NO active website. Located at: Nehru Nagar, Kurla East. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bright%20Horizons%20Public%20School%20Nehru%20Nagar%2C%20Kurla%20East%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "shareText": "📍 *Bright Horizons Public School* (SCHOOLS)\n📞 Phone: +91 99203 99001\n✉️ Email: contact@brighthorizonspublicschool.in\n📍 Address: Nehru Nagar, Kurla East, santosh bhavan, santosh bhavan\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Bright%20Horizons%20Public%20School%20Nehru%20Nagar%2C%20Kurla%20East%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "_id": "lead_1790968611092_586",
+    "createdAt": "2026-10-02T19:16:51.092Z"
+  },
+  {
+    "name": "Holy Trinity Nursery & Primary",
+    "company": "Holy Trinity Nursery & Primary",
+    "email": "contact@holytrinitynurseryprimary.in",
+    "phone": "+91 98672 88990",
+    "industry": "SCHOOLS",
+    "city": "santosh bhavan",
+    "country": "India",
+    "address": "Mission Compound, Byculla, santosh bhavan",
+    "lat": 18.9772,
+    "lon": 72.8339,
+    "source": "santosh bhavan (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:16:51.078Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in santosh bhavan: Verified local business with NO active website. Located at: Mission Compound, Byculla. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Holy%20Trinity%20Nursery%20%26%20Primary%20Mission%20Compound%2C%20Byculla%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "shareText": "📍 *Holy Trinity Nursery & Primary* (SCHOOLS)\n📞 Phone: +91 98672 88990\n✉️ Email: contact@holytrinitynurseryprimary.in\n📍 Address: Mission Compound, Byculla, santosh bhavan, santosh bhavan\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Holy%20Trinity%20Nursery%20%26%20Primary%20Mission%20Compound%2C%20Byculla%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "_id": "lead_1790968611085_524",
+    "createdAt": "2026-10-02T19:16:51.085Z"
+  },
+  {
+    "name": "Saraswati Shishu Mandir",
+    "company": "Saraswati Shishu Mandir",
+    "email": "contact@saraswatishishumandir.in",
+    "phone": "+91 98451 77889",
+    "industry": "SCHOOLS",
+    "city": "santosh bhavan",
+    "country": "India",
+    "address": "Ram Krishna Colony, Ghatkopar, santosh bhavan",
+    "lat": 19.0864,
+    "lon": 72.9081,
+    "source": "santosh bhavan (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:16:51.073Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in santosh bhavan: Verified local business with NO active website. Located at: Ram Krishna Colony, Ghatkopar. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Saraswati%20Shishu%20Mandir%20Ram%20Krishna%20Colony%2C%20Ghatkopar%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "shareText": "📍 *Saraswati Shishu Mandir* (SCHOOLS)\n📞 Phone: +91 98451 77889\n✉️ Email: contact@saraswatishishumandir.in\n📍 Address: Ram Krishna Colony, Ghatkopar, santosh bhavan, santosh bhavan\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Saraswati%20Shishu%20Mandir%20Ram%20Krishna%20Colony%2C%20Ghatkopar%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "_id": "lead_1790968611076_256",
+    "createdAt": "2026-10-02T19:16:51.076Z"
+  },
+  {
+    "name": "Vidya Mandir Secondary School",
+    "company": "Vidya Mandir Secondary School",
+    "email": "contact@vidyamandirsecondaryschool.in",
+    "phone": "+91 98205 66778",
+    "industry": "SCHOOLS",
+    "city": "santosh bhavan",
+    "country": "India",
+    "address": "Shivaji Nagar, Dadar East, santosh bhavan",
+    "lat": 19.0221,
+    "lon": 72.8492,
+    "source": "santosh bhavan (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:16:51.061Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in santosh bhavan: Verified local business with NO active website. Located at: Shivaji Nagar, Dadar East. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Vidya%20Mandir%20Secondary%20School%20Shivaji%20Nagar%2C%20Dadar%20East%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "shareText": "📍 *Vidya Mandir Secondary School* (SCHOOLS)\n📞 Phone: +91 98205 66778\n✉️ Email: contact@vidyamandirsecondaryschool.in\n📍 Address: Shivaji Nagar, Dadar East, santosh bhavan, santosh bhavan\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Vidya%20Mandir%20Secondary%20School%20Shivaji%20Nagar%2C%20Dadar%20East%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "_id": "lead_1790968611070_486",
+    "createdAt": "2026-10-02T19:16:51.070Z"
+  },
+  {
+    "name": "Modern Montessori & Kindergarten",
+    "company": "Modern Montessori & Kindergarten",
+    "email": "contact@modernmontessorikindergarten.in",
+    "phone": "+91 98199 55667",
+    "industry": "SCHOOLS",
+    "city": "santosh bhavan",
+    "country": "India",
+    "address": "Sector 4, Vashi, Navi Mumbai, santosh bhavan",
+    "lat": 19.0768,
+    "lon": 72.9972,
+    "source": "santosh bhavan (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:16:51.053Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in santosh bhavan: Verified local business with NO active website. Located at: Sector 4, Vashi, Navi Mumbai. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Modern%20Montessori%20%26%20Kindergarten%20Sector%204%2C%20Vashi%2C%20Navi%20Mumbai%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "shareText": "📍 *Modern Montessori & Kindergarten* (SCHOOLS)\n📞 Phone: +91 98199 55667\n✉️ Email: contact@modernmontessorikindergarten.in\n📍 Address: Sector 4, Vashi, Navi Mumbai, santosh bhavan, santosh bhavan\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Modern%20Montessori%20%26%20Kindergarten%20Sector%204%2C%20Vashi%2C%20Navi%20Mumbai%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "_id": "lead_1790968611057_455",
+    "createdAt": "2026-10-02T19:16:51.057Z"
+  },
+  {
+    "name": "St. Xavier Junior Academy",
+    "company": "St. Xavier Junior Academy",
+    "email": "contact@stxavierjunioracademy.in",
+    "phone": "+91 99200 45678",
+    "industry": "SCHOOLS",
+    "city": "santosh bhavan",
+    "country": "India",
+    "address": "Church Road, Bandra West, santosh bhavan",
+    "lat": 19.0543,
+    "lon": 72.8329,
+    "source": "santosh bhavan (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:16:51.044Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in santosh bhavan: Verified local business with NO active website. Located at: Church Road, Bandra West. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=St.%20Xavier%20Junior%20Academy%20Church%20Road%2C%20Bandra%20West%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "shareText": "📍 *St. Xavier Junior Academy* (SCHOOLS)\n📞 Phone: +91 99200 45678\n✉️ Email: contact@stxavierjunioracademy.in\n📍 Address: Church Road, Bandra West, santosh bhavan, santosh bhavan\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=St.%20Xavier%20Junior%20Academy%20Church%20Road%2C%20Bandra%20West%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "_id": "lead_1790968611048_635",
+    "createdAt": "2026-10-02T19:16:51.048Z"
+  },
+  {
+    "name": "Greenwood Valley English High School",
+    "company": "Greenwood Valley English High School",
+    "email": "contact@greenwoodvalleyenglishhighschool.in",
+    "phone": "+91 98112 87654",
+    "industry": "SCHOOLS",
+    "city": "santosh bhavan",
+    "country": "India",
+    "address": "Model Town, Andheri East, santosh bhavan",
+    "lat": 19.1172,
+    "lon": 72.8643,
+    "source": "santosh bhavan (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:16:51.038Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in santosh bhavan: Verified local business with NO active website. Located at: Model Town, Andheri East. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Greenwood%20Valley%20English%20High%20School%20Model%20Town%2C%20Andheri%20East%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "shareText": "📍 *Greenwood Valley English High School* (SCHOOLS)\n📞 Phone: +91 98112 87654\n✉️ Email: contact@greenwoodvalleyenglishhighschool.in\n📍 Address: Model Town, Andheri East, santosh bhavan, santosh bhavan\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Greenwood%20Valley%20English%20High%20School%20Model%20Town%2C%20Andheri%20East%2C%20santosh%20bhavan%20santosh%20bhavan",
+    "_id": "lead_1790968611042_373",
+    "createdAt": "2026-10-02T19:16:51.042Z"
+  },
+  {
+    "name": "Web Visitor (Nagpur)",
+    "company": "Reliance Jio Infocomm Limited",
+    "email": "visitor@nagpur_4_79.inbound",
+    "phone": "Contact via live chat/email",
+    "industry": "WEBSITE INBOUND LEAD",
+    "city": "Nagpur",
+    "country": "India",
+    "source": "Website Visitor (Nagpur, India)",
+    "address": "Nagpur, Maharashtra, India",
+    "lat": 21.1463,
+    "lon": 79.0849,
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T19:07:51.086Z",
+        "action": "CONVERTED_FROM_VISITOR",
+        "type": "SYSTEM",
+        "details": "Automated Inbound Hit: Visitor landed from https://google.com on Windows 10/11 • Chrome (Desktop). IP: 49.36.xx.xx. Viewed pages: /index.html"
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Web%20Visitor%20(Nagpur)%20Nagpur%2C%20Maharashtra%2C%20India%20Nagpur",
+    "shareText": "📍 *Web Visitor (Nagpur)* (WEBSITE INBOUND LEAD)\n📞 Phone: Contact via live chat/email\n✉️ Email: visitor@nagpur_4_79.inbound\n📍 Address: Nagpur, Maharashtra, India, Nagpur\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Web%20Visitor%20(Nagpur)%20Nagpur%2C%20Maharashtra%2C%20India%20Nagpur",
+    "_id": "lead_1790968071090_831",
+    "createdAt": "2026-10-02T19:07:51.090Z"
+  },
+  {
+    "name": "Chanakya IAS & Civil Service Study Circle",
+    "company": "Chanakya IAS & Civil Service Study Circle",
+    "email": "contact@chanakyaiascivilservicestudycircle.in",
+    "phone": "+91 98195 12389",
+    "industry": "CLINIC",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Fort Commercial Complex, Fort, Nallasopara",
+    "lat": 18.9328,
+    "lon": 72.8341,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:57:09.885Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Fort Commercial Complex, Fort. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Chanakya%20IAS%20%26%20Civil%20Service%20Study%20Circle%20Fort%20Commercial%20Complex%2C%20Fort%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Chanakya IAS & Civil Service Study Circle* (CLINIC)\n📞 Phone: +91 98195 12389\n✉️ Email: contact@chanakyaiascivilservicestudycircle.in\n📍 Address: Fort Commercial Complex, Fort, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Chanakya%20IAS%20%26%20Civil%20Service%20Study%20Circle%20Fort%20Commercial%20Complex%2C%20Fort%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790967429891_607",
+    "createdAt": "2026-10-02T18:57:09.891Z"
+  },
+  {
+    "name": "Pragati Vidyapeeth Classes",
+    "company": "Pragati Vidyapeeth Classes",
+    "email": "contact@pragatividyapeethclasses.in",
+    "phone": "+91 98931 01278",
+    "industry": "CLINIC",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Azad Chowk, Sion West, Nallasopara",
+    "lat": 19.0412,
+    "lon": 72.8631,
+    "source": "Nallasopara (No Website)",
+    "status": "REPLIED",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:57:09.868Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Azad Chowk, Sion West. Ideal candidate for custom website & attendance software."
+      },
+      {
+        "date": "2026-10-02T18:57:27.652Z",
+        "action": "STATUS_CHANGED_TO_REPLIED",
+        "type": "SYSTEM",
+        "details": "Lead status updated to REPLIED via admin dashboard."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Pragati%20Vidyapeeth%20Classes%20Azad%20Chowk%2C%20Sion%20West%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Pragati Vidyapeeth Classes* (CLINIC)\n📞 Phone: +91 98931 01278\n✉️ Email: contact@pragatividyapeethclasses.in\n📍 Address: Azad Chowk, Sion West, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Pragati%20Vidyapeeth%20Classes%20Azad%20Chowk%2C%20Sion%20West%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790967429881_775",
+    "createdAt": "2026-10-02T18:57:09.881Z",
+    "nextFollowUpDate": null,
+    "updatedAt": "2026-10-02T18:57:27.655Z"
+  },
+  {
+    "name": "Prime Achievers Academy (Std 8-12)",
+    "company": "Prime Achievers Academy (Std 8-12)",
+    "email": "contact@primeachieversacademystd812.in",
+    "phone": "+91 98210 90167",
+    "industry": "CLINIC",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Main Market, Santacruz West, Nallasopara",
+    "lat": 19.0821,
+    "lon": 72.8391,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:57:09.856Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Main Market, Santacruz West. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Prime%20Achievers%20Academy%20(Std%208-12)%20Main%20Market%2C%20Santacruz%20West%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Prime Achievers Academy (Std 8-12)* (CLINIC)\n📞 Phone: +91 98210 90167\n✉️ Email: contact@primeachieversacademystd812.in\n📍 Address: Main Market, Santacruz West, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Prime%20Achievers%20Academy%20(Std%208-12)%20Main%20Market%2C%20Santacruz%20West%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790967429860_840",
+    "createdAt": "2026-10-02T18:57:09.860Z"
+  },
+  {
+    "name": "Mastermind Computer & Coding Classes",
+    "company": "Mastermind Computer & Coding Classes",
+    "email": "contact@mastermindcomputercodingclasses.in",
+    "phone": "+91 97693 89056",
+    "industry": "CLINIC",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Cyber Square, Powai Plaza, Nallasopara",
+    "lat": 19.1215,
+    "lon": 72.9092,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:57:09.850Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Cyber Square, Powai Plaza. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Mastermind%20Computer%20%26%20Coding%20Classes%20Cyber%20Square%2C%20Powai%20Plaza%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Mastermind Computer & Coding Classes* (CLINIC)\n📞 Phone: +91 97693 89056\n✉️ Email: contact@mastermindcomputercodingclasses.in\n📍 Address: Cyber Square, Powai Plaza, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Mastermind%20Computer%20%26%20Coding%20Classes%20Cyber%20Square%2C%20Powai%20Plaza%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790967429852_86",
+    "createdAt": "2026-10-02T18:57:09.852Z"
+  },
+  {
+    "name": "Shree Ganesh Coaching Institute",
+    "company": "Shree Ganesh Coaching Institute",
+    "email": "contact@shreeganeshcoachinginstitute.in",
+    "phone": "+91 98341 78945",
+    "industry": "CLINIC",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Tilak Road, Dombivli East, Nallasopara",
+    "lat": 19.2173,
+    "lon": 73.0882,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:57:09.845Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Tilak Road, Dombivli East. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Shree%20Ganesh%20Coaching%20Institute%20Tilak%20Road%2C%20Dombivli%20East%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Shree Ganesh Coaching Institute* (CLINIC)\n📞 Phone: +91 98341 78945\n✉️ Email: contact@shreeganeshcoachinginstitute.in\n📍 Address: Tilak Road, Dombivli East, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Shree%20Ganesh%20Coaching%20Institute%20Tilak%20Road%2C%20Dombivli%20East%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790967429848_48",
+    "createdAt": "2026-10-02T18:57:09.848Z"
+  },
+  {
+    "name": "Gurukul Foundation Tuition Classes",
+    "company": "Gurukul Foundation Tuition Classes",
+    "email": "contact@gurukulfoundationtuitionclasses.in",
+    "phone": "+91 98117 67834",
+    "industry": "CLINIC",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Near Bus Terminal, Malad East, Nallasopara",
+    "lat": 19.1824,
+    "lon": 72.8532,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:57:09.841Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Near Bus Terminal, Malad East. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Gurukul%20Foundation%20Tuition%20Classes%20Near%20Bus%20Terminal%2C%20Malad%20East%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Gurukul Foundation Tuition Classes* (CLINIC)\n📞 Phone: +91 98117 67834\n✉️ Email: contact@gurukulfoundationtuitionclasses.in\n📍 Address: Near Bus Terminal, Malad East, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Gurukul%20Foundation%20Tuition%20Classes%20Near%20Bus%20Terminal%2C%20Malad%20East%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790967429844_934",
+    "createdAt": "2026-10-02T18:57:09.844Z"
+  },
+  {
+    "name": "Spectrum Competitive Exam Hub",
+    "company": "Spectrum Competitive Exam Hub",
+    "email": "contact@spectrumcompetitiveexamhub.in",
+    "phone": "+91 98705 56723",
+    "industry": "CLINIC",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "City Center B-Wing, Ghatkopar East, Nallasopara",
+    "lat": 19.0832,
+    "lon": 72.9114,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:57:09.826Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: City Center B-Wing, Ghatkopar East. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Spectrum%20Competitive%20Exam%20Hub%20City%20Center%20B-Wing%2C%20Ghatkopar%20East%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Spectrum Competitive Exam Hub* (CLINIC)\n📞 Phone: +91 98705 56723\n✉️ Email: contact@spectrumcompetitiveexamhub.in\n📍 Address: City Center B-Wing, Ghatkopar East, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Spectrum%20Competitive%20Exam%20Hub%20City%20Center%20B-Wing%2C%20Ghatkopar%20East%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790967429829_511",
+    "createdAt": "2026-10-02T18:57:09.830Z"
+  },
+  {
+    "name": "Target Spoken English & IELTS Prep",
+    "company": "Target Spoken English & IELTS Prep",
+    "email": "contact@targetspokenenglishieltsprep.in",
+    "phone": "+91 99204 45612",
+    "industry": "CLINIC",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Hill Road, Bandra West, Nallasopara",
+    "lat": 19.0531,
+    "lon": 72.8335,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:57:09.818Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Hill Road, Bandra West. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Target%20Spoken%20English%20%26%20IELTS%20Prep%20Hill%20Road%2C%20Bandra%20West%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Target Spoken English & IELTS Prep* (CLINIC)\n📞 Phone: +91 99204 45612\n✉️ Email: contact@targetspokenenglishieltsprep.in\n📍 Address: Hill Road, Bandra West, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Target%20Spoken%20English%20%26%20IELTS%20Prep%20Hill%20Road%2C%20Bandra%20West%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790967429823_372",
+    "createdAt": "2026-10-02T18:57:09.823Z"
+  },
+  {
+    "name": "Excel Commerce & Accounts Classes",
+    "company": "Excel Commerce & Accounts Classes",
+    "email": "contact@excelcommerceaccountsclasses.in",
+    "phone": "+91 98673 34501",
+    "industry": "CLINIC",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Vikas Complex, Mulund West, Nallasopara",
+    "lat": 19.1764,
+    "lon": 72.9512,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:57:09.813Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Vikas Complex, Mulund West. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Excel%20Commerce%20%26%20Accounts%20Classes%20Vikas%20Complex%2C%20Mulund%20West%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Excel Commerce & Accounts Classes* (CLINIC)\n📞 Phone: +91 98673 34501\n✉️ Email: contact@excelcommerceaccountsclasses.in\n📍 Address: Vikas Complex, Mulund West, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Excel%20Commerce%20%26%20Accounts%20Classes%20Vikas%20Complex%2C%20Mulund%20West%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790967429816_284",
+    "createdAt": "2026-10-02T18:57:09.816Z"
+  },
+  {
+    "name": "Pioneer Maths & Physics Institute",
+    "company": "Pioneer Maths & Physics Institute",
+    "email": "contact@pioneermathsphysicsinstitute.in",
+    "phone": "+91 98452 23490",
+    "industry": "CLINIC",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Sector 17 Market, Vashi, Nallasopara",
+    "lat": 19.0743,
+    "lon": 73.0031,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:57:09.807Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Sector 17 Market, Vashi. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Pioneer%20Maths%20%26%20Physics%20Institute%20Sector%2017%20Market%2C%20Vashi%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Pioneer Maths & Physics Institute* (CLINIC)\n📞 Phone: +91 98452 23490\n✉️ Email: contact@pioneermathsphysicsinstitute.in\n📍 Address: Sector 17 Market, Vashi, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Pioneer%20Maths%20%26%20Physics%20Institute%20Sector%2017%20Market%2C%20Vashi%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790967429812_535",
+    "createdAt": "2026-10-02T18:57:09.812Z"
+  },
+  {
+    "name": "Toppers Point Tutorials",
+    "company": "Toppers Point Tutorials",
+    "email": "contact@topperspointtutorials.in",
+    "phone": "+91 98191 12389",
+    "industry": "CLINIC",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Shree Ram Plaza, Borivali West, Nallasopara",
+    "lat": 19.2315,
+    "lon": 72.8572,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:57:09.792Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Shree Ram Plaza, Borivali West. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Toppers%20Point%20Tutorials%20Shree%20Ram%20Plaza%2C%20Borivali%20West%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Toppers Point Tutorials* (CLINIC)\n📞 Phone: +91 98191 12389\n✉️ Email: contact@topperspointtutorials.in\n📍 Address: Shree Ram Plaza, Borivali West, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Toppers%20Point%20Tutorials%20Shree%20Ram%20Plaza%2C%20Borivali%20West%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790967429795_129",
+    "createdAt": "2026-10-02T18:57:09.795Z"
+  },
+  {
+    "name": "Metro Study Hub & Self-Study Library",
+    "company": "Metro Study Hub & Self-Study Library",
+    "email": "contact@metrostudyhubselfstudylibrary.in",
+    "phone": "+91 98765 98765",
+    "industry": "CLINIC",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "College Circle, Vile Parle East, Nallasopara",
+    "lat": 19.0991,
+    "lon": 72.8494,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:57:09.784Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: College Circle, Vile Parle East. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Metro%20Study%20Hub%20%26%20Self-Study%20Library%20College%20Circle%2C%20Vile%20Parle%20East%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Metro Study Hub & Self-Study Library* (CLINIC)\n📞 Phone: +91 98765 98765\n✉️ Email: contact@metrostudyhubselfstudylibrary.in\n📍 Address: College Circle, Vile Parle East, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Metro%20Study%20Hub%20%26%20Self-Study%20Library%20College%20Circle%2C%20Vile%20Parle%20East%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790967429789_980",
+    "createdAt": "2026-10-02T18:57:09.789Z"
+  },
+  {
+    "name": "Apex Career & Board Exam Academy",
+    "company": "Apex Career & Board Exam Academy",
+    "email": "contact@apexcareerboardexamacademy.in",
+    "phone": "+91 98222 33445",
+    "industry": "CLINIC",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Gokhale Road, Naupada, Thane, Nallasopara",
+    "lat": 19.1912,
+    "lon": 72.9715,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:57:09.778Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Gokhale Road, Naupada, Thane. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Apex%20Career%20%26%20Board%20Exam%20Academy%20Gokhale%20Road%2C%20Naupada%2C%20Thane%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Apex Career & Board Exam Academy* (CLINIC)\n📞 Phone: +91 98222 33445\n✉️ Email: contact@apexcareerboardexamacademy.in\n📍 Address: Gokhale Road, Naupada, Thane, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Apex%20Career%20%26%20Board%20Exam%20Academy%20Gokhale%20Road%2C%20Naupada%2C%20Thane%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790967429781_291",
+    "createdAt": "2026-10-02T18:57:09.781Z"
+  },
+  {
+    "name": "Royal Science & Commerce Academy",
+    "company": "Royal Science & Commerce Academy",
+    "email": "contact@royalsciencecommerceacademy.in",
+    "phone": "+91 98201 54321",
+    "industry": "CLINIC",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Opp. Railway Station, Andheri East, Nallasopara",
+    "lat": 19.1194,
+    "lon": 72.8483,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:57:09.765Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Opp. Railway Station, Andheri East. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Royal%20Science%20%26%20Commerce%20Academy%20Opp.%20Railway%20Station%2C%20Andheri%20East%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Royal Science & Commerce Academy* (CLINIC)\n📞 Phone: +91 98201 54321\n✉️ Email: contact@royalsciencecommerceacademy.in\n📍 Address: Opp. Railway Station, Andheri East, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Royal%20Science%20%26%20Commerce%20Academy%20Opp.%20Railway%20Station%2C%20Andheri%20East%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790967429777_188",
+    "createdAt": "2026-10-02T18:57:09.777Z"
+  },
+  {
+    "name": "Cornerstone IIT & NEET Coaching Center",
+    "company": "Cornerstone IIT & NEET Coaching Center",
+    "email": "contact@cornerstoneiitneetcoachingcenter.in",
+    "phone": "+91 97654 32109",
+    "industry": "CLINIC",
+    "city": "Nallasopara",
+    "country": "India",
+    "address": "Coaching Hub, 2nd Floor, Dadar West, Nallasopara",
+    "lat": 19.0188,
+    "lon": 72.8441,
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:57:09.757Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Coaching Hub, 2nd Floor, Dadar West. Ideal candidate for custom website & attendance software."
+      }
+    ],
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cornerstone%20IIT%20%26%20NEET%20Coaching%20Center%20Coaching%20Hub%2C%202nd%20Floor%2C%20Dadar%20West%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Cornerstone IIT & NEET Coaching Center* (CLINIC)\n📞 Phone: +91 97654 32109\n✉️ Email: contact@cornerstoneiitneetcoachingcenter.in\n📍 Address: Coaching Hub, 2nd Floor, Dadar West, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Cornerstone%20IIT%20%26%20NEET%20Coaching%20Center%20Coaching%20Hub%2C%202nd%20Floor%2C%20Dadar%20West%2C%20Nallasopara%20Nallasopara",
+    "_id": "lead_1790967429761_98",
+    "createdAt": "2026-10-02T18:57:09.761Z"
+  },
+  {
+    "name": "Ideal Shishu Niketan (Branch 2)",
+    "company": "Ideal Shishu Niketan (Branch 2)",
+    "email": "contact@idealshishuniketanbranch2.in",
+    "phone": "+91 98453 87889",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.461Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Subhash Nagar. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112471_516",
+    "createdAt": "2026-10-02T18:51:52.471Z",
+    "address": "Ideal Shishu Niketan (Branch 2), Nallasopara",
+    "lat": 19.076,
+    "lon": 72.8907,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ideal%20Shishu%20Niketan%20(Branch%202)%20Ideal%20Shishu%20Niketan%20(Branch%202)%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Ideal Shishu Niketan (Branch 2)* (SCHOOLS)\n📞 Phone: +91 98453 87889\n✉️ Email: contact@idealshishuniketanbranch2.in\n📍 Address: Ideal Shishu Niketan (Branch 2), Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Ideal%20Shishu%20Niketan%20(Branch%202)%20Ideal%20Shishu%20Niketan%20(Branch%202)%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "Oxford English Medium School (Branch 2)",
+    "company": "Oxford English Medium School (Branch 2)",
+    "email": "contact@oxfordenglishmediumschoolbranch2.in",
+    "phone": "+91 98194 76778",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.458Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Gandhi Chowk. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112460_704",
+    "createdAt": "2026-10-02T18:51:52.460Z",
+    "address": "Oxford English Medium School (Branch 2), Nallasopara",
+    "lat": 19.073,
+    "lon": 72.8727,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Oxford%20English%20Medium%20School%20(Branch%202)%20Oxford%20English%20Medium%20School%20(Branch%202)%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Oxford English Medium School (Branch 2)* (SCHOOLS)\n📞 Phone: +91 98194 76778\n✉️ Email: contact@oxfordenglishmediumschoolbranch2.in\n📍 Address: Oxford English Medium School (Branch 2), Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Oxford%20English%20Medium%20School%20(Branch%202)%20Oxford%20English%20Medium%20School%20(Branch%202)%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "St. Jude Pre-Primary & Primary School (Branch 2)",
+    "company": "St. Jude Pre-Primary & Primary School (Branch 2)",
+    "email": "contact@stjudepreprimaryprimaryschoolbranch2.in",
+    "phone": "+91 98930 65667",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.453Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Navpada Lane. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112457_381",
+    "createdAt": "2026-10-02T18:51:52.457Z",
+    "address": "St. Jude Pre-Primary & Primary School (Branch 2), Nallasopara",
+    "lat": 19.06,
+    "lon": 72.8797,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=St.%20Jude%20Pre-Primary%20%26%20Primary%20School%20(Branch%202)%20St.%20Jude%20Pre-Primary%20%26%20Primary%20School%20(Branch%202)%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *St. Jude Pre-Primary & Primary School (Branch 2)* (SCHOOLS)\n📞 Phone: +91 98930 65667\n✉️ Email: contact@stjudepreprimaryprimaryschoolbranch2.in\n📍 Address: St. Jude Pre-Primary & Primary School (Branch 2), Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=St.%20Jude%20Pre-Primary%20%26%20Primary%20School%20(Branch%202)%20St.%20Jude%20Pre-Primary%20%26%20Primary%20School%20(Branch%202)%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "Dr. Radhakrishnan Memorial School (Branch 2)",
+    "company": "Dr. Radhakrishnan Memorial School (Branch 2)",
+    "email": "contact@drradhakrishnanmemorialschoolbranch2.in",
+    "phone": "+91 98209 54556",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.448Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Teachers Colony. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112451_87",
+    "createdAt": "2026-10-02T18:51:52.451Z",
+    "address": "Dr. Radhakrishnan Memorial School (Branch 2), Nallasopara",
+    "lat": 19.081,
+    "lon": 72.8907,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Dr.%20Radhakrishnan%20Memorial%20School%20(Branch%202)%20Dr.%20Radhakrishnan%20Memorial%20School%20(Branch%202)%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Dr. Radhakrishnan Memorial School (Branch 2)* (SCHOOLS)\n📞 Phone: +91 98209 54556\n✉️ Email: contact@drradhakrishnanmemorialschoolbranch2.in\n📍 Address: Dr. Radhakrishnan Memorial School (Branch 2), Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Dr.%20Radhakrishnan%20Memorial%20School%20(Branch%202)%20Dr.%20Radhakrishnan%20Memorial%20School%20(Branch%202)%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "Sunrise Model English School (Branch 2)",
+    "company": "Sunrise Model English School (Branch 2)",
+    "email": "contact@sunrisemodelenglishschoolbranch2.in",
+    "phone": "+91 97692 43445",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.442Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Station Road West. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112446_902",
+    "createdAt": "2026-10-02T18:51:52.446Z",
+    "address": "Sunrise Model English School (Branch 2), Nallasopara",
+    "lat": 19.047,
+    "lon": 72.8957,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sunrise%20Model%20English%20School%20(Branch%202)%20Sunrise%20Model%20English%20School%20(Branch%202)%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Sunrise Model English School (Branch 2)* (SCHOOLS)\n📞 Phone: +91 97692 43445\n✉️ Email: contact@sunrisemodelenglishschoolbranch2.in\n📍 Address: Sunrise Model English School (Branch 2), Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Sunrise%20Model%20English%20School%20(Branch%202)%20Sunrise%20Model%20English%20School%20(Branch%202)%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "Blooming Buds Elementary School (Branch 2)",
+    "company": "Blooming Buds Elementary School (Branch 2)",
+    "email": "contact@bloomingbudselementaryschoolbranch2.in",
+    "phone": "+91 98340 32334",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.438Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Civil Lines. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112441_488",
+    "createdAt": "2026-10-02T18:51:52.441Z",
+    "address": "Blooming Buds Elementary School (Branch 2), Nallasopara",
+    "lat": 19.061,
+    "lon": 72.9057,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Blooming%20Buds%20Elementary%20School%20(Branch%202)%20Blooming%20Buds%20Elementary%20School%20(Branch%202)%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Blooming Buds Elementary School (Branch 2)* (SCHOOLS)\n📞 Phone: +91 98340 32334\n✉️ Email: contact@bloomingbudselementaryschoolbranch2.in\n📍 Address: Blooming Buds Elementary School (Branch 2), Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Blooming%20Buds%20Elementary%20School%20(Branch%202)%20Blooming%20Buds%20Elementary%20School%20(Branch%202)%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "Noble Mission Secondary School (Branch 2)",
+    "company": "Noble Mission Secondary School (Branch 2)",
+    "email": "contact@noblemissionsecondaryschoolbranch2.in",
+    "phone": "+91 98116 21223",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.434Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Ring Road. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112436_636",
+    "createdAt": "2026-10-02T18:51:52.436Z",
+    "address": "Noble Mission Secondary School (Branch 2), Nallasopara",
+    "lat": 19.07,
+    "lon": 72.8637,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Noble%20Mission%20Secondary%20School%20(Branch%202)%20Noble%20Mission%20Secondary%20School%20(Branch%202)%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Noble Mission Secondary School (Branch 2)* (SCHOOLS)\n📞 Phone: +91 98116 21223\n✉️ Email: contact@noblemissionsecondaryschoolbranch2.in\n📍 Address: Noble Mission Secondary School (Branch 2), Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Noble%20Mission%20Secondary%20School%20(Branch%202)%20Noble%20Mission%20Secondary%20School%20(Branch%202)%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "Little Angels Day School (Branch 2)",
+    "company": "Little Angels Day School (Branch 2)",
+    "email": "contact@littleangelsdayschoolbranch2.in",
+    "phone": "+91 98704 10112",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.431Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Vasant Vihar. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112433_484",
+    "createdAt": "2026-10-02T18:51:52.433Z",
+    "address": "Little Angels Day School (Branch 2), Nallasopara",
+    "lat": 19.088,
+    "lon": 72.8917,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Little%20Angels%20Day%20School%20(Branch%202)%20Little%20Angels%20Day%20School%20(Branch%202)%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Little Angels Day School (Branch 2)* (SCHOOLS)\n📞 Phone: +91 98704 10112\n✉️ Email: contact@littleangelsdayschoolbranch2.in\n📍 Address: Little Angels Day School (Branch 2), Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Little%20Angels%20Day%20School%20(Branch%202)%20Little%20Angels%20Day%20School%20(Branch%202)%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "Bright Horizons Public School (Branch 2)",
+    "company": "Bright Horizons Public School (Branch 2)",
+    "email": "contact@brighthorizonspublicschoolbranch2.in",
+    "phone": "+91 99203 99001",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.428Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Nehru Nagar. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112430_254",
+    "createdAt": "2026-10-02T18:51:52.430Z",
+    "address": "Bright Horizons Public School (Branch 2), Nallasopara",
+    "lat": 19.07,
+    "lon": 72.8897,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bright%20Horizons%20Public%20School%20(Branch%202)%20Bright%20Horizons%20Public%20School%20(Branch%202)%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Bright Horizons Public School (Branch 2)* (SCHOOLS)\n📞 Phone: +91 99203 99001\n✉️ Email: contact@brighthorizonspublicschoolbranch2.in\n📍 Address: Bright Horizons Public School (Branch 2), Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Bright%20Horizons%20Public%20School%20(Branch%202)%20Bright%20Horizons%20Public%20School%20(Branch%202)%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "Holy Trinity Nursery & Primary (Branch 2)",
+    "company": "Holy Trinity Nursery & Primary (Branch 2)",
+    "email": "contact@holytrinitynurseryprimarybranch2.in",
+    "phone": "+91 98672 88990",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.425Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Mission Compound. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112427_750",
+    "createdAt": "2026-10-02T18:51:52.427Z",
+    "address": "Holy Trinity Nursery & Primary (Branch 2), Nallasopara",
+    "lat": 19.057,
+    "lon": 72.8967,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Holy%20Trinity%20Nursery%20%26%20Primary%20(Branch%202)%20Holy%20Trinity%20Nursery%20%26%20Primary%20(Branch%202)%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Holy Trinity Nursery & Primary (Branch 2)* (SCHOOLS)\n📞 Phone: +91 98672 88990\n✉️ Email: contact@holytrinitynurseryprimarybranch2.in\n📍 Address: Holy Trinity Nursery & Primary (Branch 2), Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Holy%20Trinity%20Nursery%20%26%20Primary%20(Branch%202)%20Holy%20Trinity%20Nursery%20%26%20Primary%20(Branch%202)%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "Saraswati Shishu Mandir (Branch 2)",
+    "company": "Saraswati Shishu Mandir (Branch 2)",
+    "email": "contact@saraswatishishumandirbranch2.in",
+    "phone": "+91 98451 77889",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.420Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Ram Krishna Colony. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112424_386",
+    "createdAt": "2026-10-02T18:51:52.424Z",
+    "address": "Saraswati Shishu Mandir (Branch 2), Nallasopara",
+    "lat": 19.059,
+    "lon": 72.8887,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Saraswati%20Shishu%20Mandir%20(Branch%202)%20Saraswati%20Shishu%20Mandir%20(Branch%202)%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Saraswati Shishu Mandir (Branch 2)* (SCHOOLS)\n📞 Phone: +91 98451 77889\n✉️ Email: contact@saraswatishishumandirbranch2.in\n📍 Address: Saraswati Shishu Mandir (Branch 2), Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Saraswati%20Shishu%20Mandir%20(Branch%202)%20Saraswati%20Shishu%20Mandir%20(Branch%202)%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "Vidya Mandir Secondary School (Branch 2)",
+    "company": "Vidya Mandir Secondary School (Branch 2)",
+    "email": "contact@vidyamandirsecondaryschoolbranch2.in",
+    "phone": "+91 98205 66778",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.411Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Shivaji Nagar. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112415_149",
+    "createdAt": "2026-10-02T18:51:52.416Z",
+    "address": "Vidya Mandir Secondary School (Branch 2), Nallasopara",
+    "lat": 19.066,
+    "lon": 72.8887,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Vidya%20Mandir%20Secondary%20School%20(Branch%202)%20Vidya%20Mandir%20Secondary%20School%20(Branch%202)%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Vidya Mandir Secondary School (Branch 2)* (SCHOOLS)\n📞 Phone: +91 98205 66778\n✉️ Email: contact@vidyamandirsecondaryschoolbranch2.in\n📍 Address: Vidya Mandir Secondary School (Branch 2), Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Vidya%20Mandir%20Secondary%20School%20(Branch%202)%20Vidya%20Mandir%20Secondary%20School%20(Branch%202)%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "Modern Montessori & Kindergarten (Branch 2)",
+    "company": "Modern Montessori & Kindergarten (Branch 2)",
+    "email": "contact@modernmontessorikindergartenbranch2.in",
+    "phone": "+91 98199 55667",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.408Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Sector 4. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112410_421",
+    "createdAt": "2026-10-02T18:51:52.410Z",
+    "address": "Modern Montessori & Kindergarten (Branch 2), Nallasopara",
+    "lat": 19.094,
+    "lon": 72.9097,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Modern%20Montessori%20%26%20Kindergarten%20(Branch%202)%20Modern%20Montessori%20%26%20Kindergarten%20(Branch%202)%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Modern Montessori & Kindergarten (Branch 2)* (SCHOOLS)\n📞 Phone: +91 98199 55667\n✉️ Email: contact@modernmontessorikindergartenbranch2.in\n📍 Address: Modern Montessori & Kindergarten (Branch 2), Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Modern%20Montessori%20%26%20Kindergarten%20(Branch%202)%20Modern%20Montessori%20%26%20Kindergarten%20(Branch%202)%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "St. Xavier Junior Academy (Branch 2)",
+    "company": "St. Xavier Junior Academy (Branch 2)",
+    "email": "contact@stxavierjunioracademybranch2.in",
+    "phone": "+91 99200 45678",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.402Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Church Road. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112407_948",
+    "createdAt": "2026-10-02T18:51:52.407Z",
+    "address": "St. Xavier Junior Academy (Branch 2), Nallasopara",
+    "lat": 19.084,
+    "lon": 72.8567,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=St.%20Xavier%20Junior%20Academy%20(Branch%202)%20St.%20Xavier%20Junior%20Academy%20(Branch%202)%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *St. Xavier Junior Academy (Branch 2)* (SCHOOLS)\n📞 Phone: +91 99200 45678\n✉️ Email: contact@stxavierjunioracademybranch2.in\n📍 Address: St. Xavier Junior Academy (Branch 2), Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=St.%20Xavier%20Junior%20Academy%20(Branch%202)%20St.%20Xavier%20Junior%20Academy%20(Branch%202)%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "Greenwood Valley English High School (Branch 2)",
+    "company": "Greenwood Valley English High School (Branch 2)",
+    "email": "contact@greenwoodvalleyenglishhighschoolbranch2.in",
+    "phone": "+91 98112 87654",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.394Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Model Town. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112399_702",
+    "createdAt": "2026-10-02T18:51:52.399Z",
+    "address": "Greenwood Valley English High School (Branch 2), Nallasopara",
+    "lat": 19.072,
+    "lon": 72.8547,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Greenwood%20Valley%20English%20High%20School%20(Branch%202)%20Greenwood%20Valley%20English%20High%20School%20(Branch%202)%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Greenwood Valley English High School (Branch 2)* (SCHOOLS)\n📞 Phone: +91 98112 87654\n✉️ Email: contact@greenwoodvalleyenglishhighschoolbranch2.in\n📍 Address: Greenwood Valley English High School (Branch 2), Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Greenwood%20Valley%20English%20High%20School%20(Branch%202)%20Greenwood%20Valley%20English%20High%20School%20(Branch%202)%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "Ideal Shishu Niketan",
+    "company": "Ideal Shishu Niketan",
+    "email": "contact@idealshishuniketan.in",
+    "phone": "+91 98453 87889",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.391Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Subhash Nagar. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112393_681",
+    "createdAt": "2026-10-02T18:51:52.393Z",
+    "address": "Ideal Shishu Niketan, Nallasopara",
+    "lat": 19.062,
+    "lon": 72.8447,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ideal%20Shishu%20Niketan%20Ideal%20Shishu%20Niketan%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Ideal Shishu Niketan* (SCHOOLS)\n📞 Phone: +91 98453 87889\n✉️ Email: contact@idealshishuniketan.in\n📍 Address: Ideal Shishu Niketan, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Ideal%20Shishu%20Niketan%20Ideal%20Shishu%20Niketan%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "Oxford English Medium School",
+    "company": "Oxford English Medium School",
+    "email": "contact@oxfordenglishmediumschool.in",
+    "phone": "+91 98194 76778",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.384Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Gandhi Chowk. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112390_885",
+    "createdAt": "2026-10-02T18:51:52.390Z",
+    "address": "Oxford English Medium School, Nallasopara",
+    "lat": 19.065,
+    "lon": 72.8457,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Oxford%20English%20Medium%20School%20Oxford%20English%20Medium%20School%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Oxford English Medium School* (SCHOOLS)\n📞 Phone: +91 98194 76778\n✉️ Email: contact@oxfordenglishmediumschool.in\n📍 Address: Oxford English Medium School, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Oxford%20English%20Medium%20School%20Oxford%20English%20Medium%20School%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "St. Jude Pre-Primary & Primary School",
+    "company": "St. Jude Pre-Primary & Primary School",
+    "email": "contact@stjudepreprimaryprimaryschool.in",
+    "phone": "+91 98930 65667",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.376Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Navpada Lane. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112382_935",
+    "createdAt": "2026-10-02T18:51:52.382Z",
+    "address": "St. Jude Pre-Primary & Primary School, Nallasopara",
+    "lat": 19.062,
+    "lon": 72.8627,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=St.%20Jude%20Pre-Primary%20%26%20Primary%20School%20St.%20Jude%20Pre-Primary%20%26%20Primary%20School%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *St. Jude Pre-Primary & Primary School* (SCHOOLS)\n📞 Phone: +91 98930 65667\n✉️ Email: contact@stjudepreprimaryprimaryschool.in\n📍 Address: St. Jude Pre-Primary & Primary School, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=St.%20Jude%20Pre-Primary%20%26%20Primary%20School%20St.%20Jude%20Pre-Primary%20%26%20Primary%20School%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "Dr. Radhakrishnan Memorial School",
+    "company": "Dr. Radhakrishnan Memorial School",
+    "email": "contact@drradhakrishnanmemorialschool.in",
+    "phone": "+91 98209 54556",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.372Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Teachers Colony. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112376_191",
+    "createdAt": "2026-10-02T18:51:52.376Z",
+    "address": "Dr. Radhakrishnan Memorial School, Nallasopara",
+    "lat": 19.099,
+    "lon": 72.9107,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Dr.%20Radhakrishnan%20Memorial%20School%20Dr.%20Radhakrishnan%20Memorial%20School%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Dr. Radhakrishnan Memorial School* (SCHOOLS)\n📞 Phone: +91 98209 54556\n✉️ Email: contact@drradhakrishnanmemorialschool.in\n📍 Address: Dr. Radhakrishnan Memorial School, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Dr.%20Radhakrishnan%20Memorial%20School%20Dr.%20Radhakrishnan%20Memorial%20School%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "Sunrise Model English School",
+    "company": "Sunrise Model English School",
+    "email": "contact@sunrisemodelenglishschool.in",
+    "phone": "+91 97692 43445",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.365Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Station Road West. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112369_916",
+    "createdAt": "2026-10-02T18:51:52.369Z",
+    "address": "Sunrise Model English School, Nallasopara",
+    "lat": 19.096,
+    "lon": 72.8577,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sunrise%20Model%20English%20School%20Sunrise%20Model%20English%20School%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Sunrise Model English School* (SCHOOLS)\n📞 Phone: +91 97692 43445\n✉️ Email: contact@sunrisemodelenglishschool.in\n📍 Address: Sunrise Model English School, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Sunrise%20Model%20English%20School%20Sunrise%20Model%20English%20School%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "Blooming Buds Elementary School",
+    "company": "Blooming Buds Elementary School",
+    "email": "contact@bloomingbudselementaryschool.in",
+    "phone": "+91 98340 32334",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.360Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Civil Lines. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112362_400",
+    "createdAt": "2026-10-02T18:51:52.362Z",
+    "address": "Blooming Buds Elementary School, Nallasopara",
+    "lat": 19.077,
+    "lon": 72.8817,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Blooming%20Buds%20Elementary%20School%20Blooming%20Buds%20Elementary%20School%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Blooming Buds Elementary School* (SCHOOLS)\n📞 Phone: +91 98340 32334\n✉️ Email: contact@bloomingbudselementaryschool.in\n📍 Address: Blooming Buds Elementary School, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Blooming%20Buds%20Elementary%20School%20Blooming%20Buds%20Elementary%20School%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "Noble Mission Secondary School",
+    "company": "Noble Mission Secondary School",
+    "email": "contact@noblemissionsecondaryschool.in",
+    "phone": "+91 98116 21223",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.350Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Ring Road. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112358_772",
+    "createdAt": "2026-10-02T18:51:52.358Z",
+    "address": "Noble Mission Secondary School, Nallasopara",
+    "lat": 19.104,
+    "lon": 72.8767,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Noble%20Mission%20Secondary%20School%20Noble%20Mission%20Secondary%20School%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Noble Mission Secondary School* (SCHOOLS)\n📞 Phone: +91 98116 21223\n✉️ Email: contact@noblemissionsecondaryschool.in\n📍 Address: Noble Mission Secondary School, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Noble%20Mission%20Secondary%20School%20Noble%20Mission%20Secondary%20School%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "Little Angels Day School",
+    "company": "Little Angels Day School",
+    "email": "contact@littleangelsdayschool.in",
+    "phone": "+91 98704 10112",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.346Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Vasant Vihar. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112349_492",
+    "createdAt": "2026-10-02T18:51:52.349Z",
+    "address": "Little Angels Day School, Nallasopara",
+    "lat": 19.103,
+    "lon": 72.8497,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Little%20Angels%20Day%20School%20Little%20Angels%20Day%20School%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Little Angels Day School* (SCHOOLS)\n📞 Phone: +91 98704 10112\n✉️ Email: contact@littleangelsdayschool.in\n📍 Address: Little Angels Day School, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Little%20Angels%20Day%20School%20Little%20Angels%20Day%20School%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "Bright Horizons Public School",
+    "company": "Bright Horizons Public School",
+    "email": "contact@brighthorizonspublicschool.in",
+    "phone": "+91 99203 99001",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.344Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Nehru Nagar. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112345_862",
+    "createdAt": "2026-10-02T18:51:52.345Z",
+    "address": "Bright Horizons Public School, Nallasopara",
+    "lat": 19.1,
+    "lon": 72.8587,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bright%20Horizons%20Public%20School%20Bright%20Horizons%20Public%20School%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Bright Horizons Public School* (SCHOOLS)\n📞 Phone: +91 99203 99001\n✉️ Email: contact@brighthorizonspublicschool.in\n📍 Address: Bright Horizons Public School, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Bright%20Horizons%20Public%20School%20Bright%20Horizons%20Public%20School%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "Holy Trinity Nursery & Primary",
+    "company": "Holy Trinity Nursery & Primary",
+    "email": "contact@holytrinitynurseryprimary.in",
+    "phone": "+91 98672 88990",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.336Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Mission Compound. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112342_57",
+    "createdAt": "2026-10-02T18:51:52.342Z",
+    "address": "Holy Trinity Nursery & Primary, Nallasopara",
+    "lat": 19.097,
+    "lon": 72.8497,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Holy%20Trinity%20Nursery%20%26%20Primary%20Holy%20Trinity%20Nursery%20%26%20Primary%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Holy Trinity Nursery & Primary* (SCHOOLS)\n📞 Phone: +91 98672 88990\n✉️ Email: contact@holytrinitynurseryprimary.in\n📍 Address: Holy Trinity Nursery & Primary, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Holy%20Trinity%20Nursery%20%26%20Primary%20Holy%20Trinity%20Nursery%20%26%20Primary%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "Saraswati Shishu Mandir",
+    "company": "Saraswati Shishu Mandir",
+    "email": "contact@saraswatishishumandir.in",
+    "phone": "+91 98451 77889",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.328Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Ram Krishna Colony. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112334_275",
+    "createdAt": "2026-10-02T18:51:52.334Z",
+    "address": "Saraswati Shishu Mandir, Nallasopara",
+    "lat": 19.106,
+    "lon": 72.8677,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Saraswati%20Shishu%20Mandir%20Saraswati%20Shishu%20Mandir%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Saraswati Shishu Mandir* (SCHOOLS)\n📞 Phone: +91 98451 77889\n✉️ Email: contact@saraswatishishumandir.in\n📍 Address: Saraswati Shishu Mandir, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Saraswati%20Shishu%20Mandir%20Saraswati%20Shishu%20Mandir%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "Vidya Mandir Secondary School",
+    "company": "Vidya Mandir Secondary School",
+    "email": "contact@vidyamandirsecondaryschool.in",
+    "phone": "+91 98205 66778",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.324Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Shivaji Nagar. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112327_37",
+    "createdAt": "2026-10-02T18:51:52.327Z",
+    "address": "Vidya Mandir Secondary School, Nallasopara",
+    "lat": 19.078,
+    "lon": 72.8907,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Vidya%20Mandir%20Secondary%20School%20Vidya%20Mandir%20Secondary%20School%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Vidya Mandir Secondary School* (SCHOOLS)\n📞 Phone: +91 98205 66778\n✉️ Email: contact@vidyamandirsecondaryschool.in\n📍 Address: Vidya Mandir Secondary School, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Vidya%20Mandir%20Secondary%20School%20Vidya%20Mandir%20Secondary%20School%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "Modern Montessori & Kindergarten",
+    "company": "Modern Montessori & Kindergarten",
+    "email": "contact@modernmontessorikindergarten.in",
+    "phone": "+91 98199 55667",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.316Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Sector 4. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112320_1",
+    "createdAt": "2026-10-02T18:51:52.320Z",
+    "address": "Modern Montessori & Kindergarten, Nallasopara",
+    "lat": 19.082,
+    "lon": 72.8657,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Modern%20Montessori%20%26%20Kindergarten%20Modern%20Montessori%20%26%20Kindergarten%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Modern Montessori & Kindergarten* (SCHOOLS)\n📞 Phone: +91 98199 55667\n✉️ Email: contact@modernmontessorikindergarten.in\n📍 Address: Modern Montessori & Kindergarten, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Modern%20Montessori%20%26%20Kindergarten%20Modern%20Montessori%20%26%20Kindergarten%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "St. Xavier Junior Academy",
+    "company": "St. Xavier Junior Academy",
+    "email": "contact@stxavierjunioracademy.in",
+    "phone": "+91 99200 45678",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.311Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Church Road. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112315_205",
+    "createdAt": "2026-10-02T18:51:52.315Z",
+    "address": "St. Xavier Junior Academy, Nallasopara",
+    "lat": 19.058,
+    "lon": 72.8527,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=St.%20Xavier%20Junior%20Academy%20St.%20Xavier%20Junior%20Academy%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *St. Xavier Junior Academy* (SCHOOLS)\n📞 Phone: +91 99200 45678\n✉️ Email: contact@stxavierjunioracademy.in\n📍 Address: St. Xavier Junior Academy, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=St.%20Xavier%20Junior%20Academy%20St.%20Xavier%20Junior%20Academy%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "Greenwood Valley English High School",
+    "company": "Greenwood Valley English High School",
+    "email": "contact@greenwoodvalleyenglishhighschool.in",
+    "phone": "+91 98112 87654",
+    "industry": "SCHOOLS",
+    "city": "Nallasopara",
+    "country": "India",
+    "source": "Nallasopara (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:51:52.309Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Nallasopara: Verified local business with NO active website. Located at: Model Town. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790967112310_24",
+    "createdAt": "2026-10-02T18:51:52.310Z",
+    "address": "Greenwood Valley English High School, Nallasopara",
+    "lat": 19.096,
+    "lon": 72.8487,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Greenwood%20Valley%20English%20High%20School%20Greenwood%20Valley%20English%20High%20School%2C%20Nallasopara%20Nallasopara",
+    "shareText": "📍 *Greenwood Valley English High School* (SCHOOLS)\n📞 Phone: +91 98112 87654\n✉️ Email: contact@greenwoodvalleyenglishhighschool.in\n📍 Address: Greenwood Valley English High School, Nallasopara, Nallasopara\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Greenwood%20Valley%20English%20High%20School%20Greenwood%20Valley%20English%20High%20School%2C%20Nallasopara%20Nallasopara"
+  },
+  {
+    "name": "St. George High School",
+    "company": "St. George High School",
+    "email": "contact@stgeorgehighschool.in",
+    "phone": "+91 8960463258",
+    "industry": "SCHOOLS",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:49:00.650Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter: Business operates without an official website. Area: Mumbai Central"
+      }
+    ],
+    "_id": "lead_1790966940652_52",
+    "createdAt": "2026-10-02T18:49:00.652Z",
+    "address": "Mumbai Central, Mumbai",
+    "lat": 19.06,
+    "lon": 72.8807,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=St.%20George%20High%20School%20Mumbai%20Central%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *St. George High School* (SCHOOLS)\n📞 Phone: +91 8960463258\n✉️ Email: contact@stgeorgehighschool.in\n📍 Address: Mumbai Central, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=St.%20George%20High%20School%20Mumbai%20Central%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "St. Joseph High School",
+    "company": "St. Joseph High School",
+    "email": "contact@stjosephhighschool.in",
+    "phone": "+91 8393207748",
+    "industry": "SCHOOLS",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:49:00.642Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter: Business operates without an official website. Area: Mumbai Central"
+      }
+    ],
+    "_id": "lead_1790966940649_274",
+    "createdAt": "2026-10-02T18:49:00.649Z",
+    "address": "Mumbai Central, Mumbai",
+    "lat": 19.072,
+    "lon": 72.8737,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=St.%20Joseph%20High%20School%20Mumbai%20Central%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *St. Joseph High School* (SCHOOLS)\n📞 Phone: +91 8393207748\n✉️ Email: contact@stjosephhighschool.in\n📍 Address: Mumbai Central, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=St.%20Joseph%20High%20School%20Mumbai%20Central%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "Sharda Gyanpeeth International School",
+    "company": "Sharda Gyanpeeth International School",
+    "email": "contact@shardagyanpeethinternationalschool.in",
+    "phone": "+91 9472179076",
+    "industry": "SCHOOLS",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:49:00.639Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter: Business operates without an official website. Area: Mumbai Central"
+      }
+    ],
+    "_id": "lead_1790966940641_614",
+    "createdAt": "2026-10-02T18:49:00.641Z",
+    "address": "Mumbai Central, Mumbai",
+    "lat": 19.072,
+    "lon": 72.8467,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sharda%20Gyanpeeth%20International%20School%20Mumbai%20Central%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *Sharda Gyanpeeth International School* (SCHOOLS)\n📞 Phone: +91 9472179076\n✉️ Email: contact@shardagyanpeethinternationalschool.in\n📍 Address: Mumbai Central, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Sharda%20Gyanpeeth%20International%20School%20Mumbai%20Central%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "Ajmera Global School",
+    "company": "Ajmera Global School",
+    "email": "contact@ajmeraglobalschool.in",
+    "phone": "+91 8154183436",
+    "industry": "SCHOOLS",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:49:00.636Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter: Business operates without an official website. Area: Mumbai Central"
+      }
+    ],
+    "_id": "lead_1790966940638_42",
+    "createdAt": "2026-10-02T18:49:00.638Z",
+    "address": "Mumbai Central, Mumbai",
+    "lat": 19.077,
+    "lon": 72.8917,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ajmera%20Global%20School%20Mumbai%20Central%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *Ajmera Global School* (SCHOOLS)\n📞 Phone: +91 8154183436\n✉️ Email: contact@ajmeraglobalschool.in\n📍 Address: Mumbai Central, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Ajmera%20Global%20School%20Mumbai%20Central%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "Municipal Corporation Liberty Garden School",
+    "company": "Municipal Corporation Liberty Garden School",
+    "email": "contact@municipalcorporationlibertygardenschool.in",
+    "phone": "+91 9825868439",
+    "industry": "SCHOOLS",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:49:00.632Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter: Business operates without an official website. Area: Mumbai Central"
+      }
+    ],
+    "_id": "lead_1790966940635_370",
+    "createdAt": "2026-10-02T18:49:00.635Z",
+    "address": "Mumbai Central, Mumbai",
+    "lat": 19.06,
+    "lon": 72.8977,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Municipal%20Corporation%20Liberty%20Garden%20School%20Mumbai%20Central%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *Municipal Corporation Liberty Garden School* (SCHOOLS)\n📞 Phone: +91 9825868439\n✉️ Email: contact@municipalcorporationlibertygardenschool.in\n📍 Address: Mumbai Central, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Municipal%20Corporation%20Liberty%20Garden%20School%20Mumbai%20Central%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "NL High School",
+    "company": "NL High School",
+    "email": "contact@nlhighschool.in",
+    "phone": "+91 9990200968",
+    "industry": "SCHOOLS",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:49:00.618Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter: Business operates without an official website. Area: Mumbai Central"
+      }
+    ],
+    "_id": "lead_1790966940625_814",
+    "createdAt": "2026-10-02T18:49:00.625Z",
+    "address": "Mumbai Central, Mumbai",
+    "lat": 19.048,
+    "lon": 72.8437,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=NL%20High%20School%20Mumbai%20Central%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *NL High School* (SCHOOLS)\n📞 Phone: +91 9990200968\n✉️ Email: contact@nlhighschool.in\n📍 Address: Mumbai Central, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=NL%20High%20School%20Mumbai%20Central%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "St. Thomas School Ground",
+    "company": "St. Thomas School Ground",
+    "email": "contact@stthomasschoolground.in",
+    "phone": "+91 7600043768",
+    "industry": "SCHOOLS",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:49:00.609Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter: Business operates without an official website. Area: Mumbai Central"
+      }
+    ],
+    "_id": "lead_1790966940618_126",
+    "createdAt": "2026-10-02T18:49:00.618Z",
+    "address": "Mumbai Central, Mumbai",
+    "lat": 19.05,
+    "lon": 72.8447,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=St.%20Thomas%20School%20Ground%20Mumbai%20Central%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *St. Thomas School Ground* (SCHOOLS)\n📞 Phone: +91 7600043768\n✉️ Email: contact@stthomasschoolground.in\n📍 Address: Mumbai Central, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=St.%20Thomas%20School%20Ground%20Mumbai%20Central%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "St. Thomas School",
+    "company": "St. Thomas School",
+    "email": "contact@stthomasschool.in",
+    "phone": "+91 8015285717",
+    "industry": "SCHOOLS",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:49:00.606Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter: Business operates without an official website. Area: Mumbai Central"
+      }
+    ],
+    "_id": "lead_1790966940608_598",
+    "createdAt": "2026-10-02T18:49:00.608Z",
+    "address": "Mumbai Central, Mumbai",
+    "lat": 19.108,
+    "lon": 72.8607,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=St.%20Thomas%20School%20Mumbai%20Central%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *St. Thomas School* (SCHOOLS)\n📞 Phone: +91 8015285717\n✉️ Email: contact@stthomasschool.in\n📍 Address: Mumbai Central, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=St.%20Thomas%20School%20Mumbai%20Central%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "Nandadeep Vidyalay",
+    "company": "Nandadeep Vidyalay",
+    "email": "contact@nandadeepvidyalay.in",
+    "phone": "+91 7892399473",
+    "industry": "SCHOOLS",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:49:00.598Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter: Business operates without an official website. Area: Mumbai Central"
+      }
+    ],
+    "_id": "lead_1790966940605_730",
+    "createdAt": "2026-10-02T18:49:00.605Z",
+    "address": "Mumbai Central, Mumbai",
+    "lat": 19.093,
+    "lon": 72.8847,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Nandadeep%20Vidyalay%20Mumbai%20Central%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *Nandadeep Vidyalay* (SCHOOLS)\n📞 Phone: +91 7892399473\n✉️ Email: contact@nandadeepvidyalay.in\n📍 Address: Mumbai Central, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Nandadeep%20Vidyalay%20Mumbai%20Central%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "Don Bosco High School",
+    "company": "Don Bosco High School",
+    "email": "contact@donboscohighschool.in",
+    "phone": "+91 7348445494",
+    "industry": "SCHOOLS",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:49:00.590Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter: Business operates without an official website. Area: Chandavarkar Lane"
+      }
+    ],
+    "_id": "lead_1790966940591_593",
+    "createdAt": "2026-10-02T18:49:00.591Z",
+    "address": "Chandavarkar Lane, Mumbai",
+    "lat": 19.066,
+    "lon": 72.8807,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Don%20Bosco%20High%20School%20Chandavarkar%20Lane%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *Don Bosco High School* (SCHOOLS)\n📞 Phone: +91 7348445494\n✉️ Email: contact@donboscohighschool.in\n📍 Address: Chandavarkar Lane, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Don%20Bosco%20High%20School%20Chandavarkar%20Lane%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "Don Bosco Primary School",
+    "company": "Don Bosco Primary School",
+    "email": "contact@donboscoprimaryschool.in",
+    "phone": "+91 8488040922",
+    "industry": "SCHOOLS",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:49:00.578Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter: Business operates without an official website. Area: Mumbai Central"
+      }
+    ],
+    "_id": "lead_1790966940588_358",
+    "createdAt": "2026-10-02T18:49:00.588Z",
+    "address": "Mumbai Central, Mumbai",
+    "lat": 19.071,
+    "lon": 72.8727,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Don%20Bosco%20Primary%20School%20Mumbai%20Central%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *Don Bosco Primary School* (SCHOOLS)\n📞 Phone: +91 8488040922\n✉️ Email: contact@donboscoprimaryschool.in\n📍 Address: Mumbai Central, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Don%20Bosco%20Primary%20School%20Mumbai%20Central%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "Modern English School",
+    "company": "Modern English School",
+    "email": "contact@modernenglishschool.in",
+    "phone": "+91 7124474594",
+    "industry": "SCHOOLS",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:49:00.574Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter: Business operates without an official website. Area: Mumbai Central"
+      }
+    ],
+    "_id": "lead_1790966940577_541",
+    "createdAt": "2026-10-02T18:49:00.577Z",
+    "address": "Mumbai Central, Mumbai",
+    "lat": 19.063,
+    "lon": 72.8537,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Modern%20English%20School%20Mumbai%20Central%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *Modern English School* (SCHOOLS)\n📞 Phone: +91 7124474594\n✉️ Email: contact@modernenglishschool.in\n📍 Address: Mumbai Central, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Modern%20English%20School%20Mumbai%20Central%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "Apostolic Carmel Convent (Girl's School)",
+    "company": "Apostolic Carmel Convent (Girl's School)",
+    "email": "contact@apostoliccarmelconventgirlsschool.in",
+    "phone": "+91 9910838567",
+    "industry": "SCHOOLS",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:49:00.571Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter: Business operates without an official website. Area: Mumbai Central"
+      }
+    ],
+    "_id": "lead_1790966940573_764",
+    "createdAt": "2026-10-02T18:49:00.573Z",
+    "address": "Mumbai Central, Mumbai",
+    "lat": 19.046,
+    "lon": 72.8517,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Apostolic%20Carmel%20Convent%20(Girl's%20School)%20Mumbai%20Central%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *Apostolic Carmel Convent (Girl's School)* (SCHOOLS)\n📞 Phone: +91 9910838567\n✉️ Email: contact@apostoliccarmelconventgirlsschool.in\n📍 Address: Mumbai Central, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Apostolic%20Carmel%20Convent%20(Girl's%20School)%20Mumbai%20Central%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "Home for mental deficient childern",
+    "company": "Home for mental deficient childern",
+    "email": "contact@homeformentaldeficientchildern.in",
+    "phone": "+91 9532684019",
+    "industry": "SCHOOLS",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:49:00.564Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter: Business operates without an official website. Area: Mumbai Central"
+      }
+    ],
+    "_id": "lead_1790966940570_692",
+    "createdAt": "2026-10-02T18:49:00.570Z",
+    "address": "Mumbai Central, Mumbai",
+    "lat": 19.053,
+    "lon": 72.8527,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Home%20for%20mental%20deficient%20childern%20Mumbai%20Central%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *Home for mental deficient childern* (SCHOOLS)\n📞 Phone: +91 9532684019\n✉️ Email: contact@homeformentaldeficientchildern.in\n📍 Address: Mumbai Central, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Home%20for%20mental%20deficient%20childern%20Mumbai%20Central%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "Classic",
+    "company": "Classic",
+    "email": "contact@classic.in",
+    "phone": "+91 8941776043",
+    "industry": "SCHOOLS",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:49:00.555Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter: Business operates without an official website. Area: Mumbai Central"
+      }
+    ],
+    "_id": "lead_1790966940562_696",
+    "createdAt": "2026-10-02T18:49:00.562Z",
+    "address": "Mumbai Central, Mumbai",
+    "lat": 19.088,
+    "lon": 72.9097,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Classic%20Mumbai%20Central%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *Classic* (SCHOOLS)\n📞 Phone: +91 8941776043\n✉️ Email: contact@classic.in\n📍 Address: Mumbai Central, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Classic%20Mumbai%20Central%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "Toppers Point Tutorials",
+    "company": "Toppers Point Tutorials",
+    "email": "contact@topperspointtutorials.in",
+    "phone": "+91 98191 12389",
+    "industry": "COACHING CLASSES",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "STEP_1_SENT",
+    "step": 1,
+    "history": [
+      {
+        "date": "2026-10-02T18:45:54.869Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Mumbai: Verified local business with NO active website. Located at: Shree Ram Plaza. Ideal candidate for Evolvia website + attendance software."
+      },
+      {
+        "date": "2026-10-02T18:46:26.407Z",
+        "action": "MANUAL_STEP_1_SENT",
+        "type": "EMAIL",
+        "subject": "Quick question regarding lead follow-up at Toppers Point Tutorials",
+        "details": "Manual outreach step 1 triggered from admin panel."
+      }
+    ],
+    "_id": "lead_1790966754874_120",
+    "createdAt": "2026-10-02T18:45:54.874Z",
+    "lastContactDate": "2026-10-02T18:46:26.407Z",
+    "nextFollowUpDate": "2026-10-05T18:46:26.407Z",
+    "updatedAt": "2026-10-02T18:46:26.409Z",
+    "address": "Toppers Point Tutorials, Mumbai",
+    "lat": 19.061,
+    "lon": 72.8977,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Toppers%20Point%20Tutorials%20Toppers%20Point%20Tutorials%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *Toppers Point Tutorials* (COACHING CLASSES)\n📞 Phone: +91 98191 12389\n✉️ Email: contact@topperspointtutorials.in\n📍 Address: Toppers Point Tutorials, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Toppers%20Point%20Tutorials%20Toppers%20Point%20Tutorials%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "Metro Study Hub & Self-Study Library",
+    "company": "Metro Study Hub & Self-Study Library",
+    "email": "contact@metrostudyhubselfstudylibrary.in",
+    "phone": "+91 98765 98765",
+    "industry": "COACHING CLASSES",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:45:54.864Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Mumbai: Verified local business with NO active website. Located at: College Circle. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790966754867_884",
+    "createdAt": "2026-10-02T18:45:54.867Z",
+    "address": "Metro Study Hub & Self-Study Library, Mumbai",
+    "lat": 19.09,
+    "lon": 72.8487,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Metro%20Study%20Hub%20%26%20Self-Study%20Library%20Metro%20Study%20Hub%20%26%20Self-Study%20Library%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *Metro Study Hub & Self-Study Library* (COACHING CLASSES)\n📞 Phone: +91 98765 98765\n✉️ Email: contact@metrostudyhubselfstudylibrary.in\n📍 Address: Metro Study Hub & Self-Study Library, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Metro%20Study%20Hub%20%26%20Self-Study%20Library%20Metro%20Study%20Hub%20%26%20Self-Study%20Library%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "Apex Career & Board Exam Academy",
+    "company": "Apex Career & Board Exam Academy",
+    "email": "contact@apexcareerboardexamacademy.in",
+    "phone": "+91 98222 33445",
+    "industry": "COACHING CLASSES",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:45:54.861Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Mumbai: Verified local business with NO active website. Located at: Gokhale Road. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790966754863_451",
+    "createdAt": "2026-10-02T18:45:54.863Z",
+    "address": "Apex Career & Board Exam Academy, Mumbai",
+    "lat": 19.096,
+    "lon": 72.8757,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Apex%20Career%20%26%20Board%20Exam%20Academy%20Apex%20Career%20%26%20Board%20Exam%20Academy%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *Apex Career & Board Exam Academy* (COACHING CLASSES)\n📞 Phone: +91 98222 33445\n✉️ Email: contact@apexcareerboardexamacademy.in\n📍 Address: Apex Career & Board Exam Academy, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Apex%20Career%20%26%20Board%20Exam%20Academy%20Apex%20Career%20%26%20Board%20Exam%20Academy%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "Royal Science & Commerce Academy",
+    "company": "Royal Science & Commerce Academy",
+    "email": "contact@royalsciencecommerceacademy.in",
+    "phone": "+91 98201 54321",
+    "industry": "COACHING CLASSES",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:45:54.859Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Mumbai: Verified local business with NO active website. Located at: Opp. Railway Station. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790966754860_582",
+    "createdAt": "2026-10-02T18:45:54.860Z",
+    "address": "Royal Science & Commerce Academy, Mumbai",
+    "lat": 19.068,
+    "lon": 72.9067,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Royal%20Science%20%26%20Commerce%20Academy%20Royal%20Science%20%26%20Commerce%20Academy%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *Royal Science & Commerce Academy* (COACHING CLASSES)\n📞 Phone: +91 98201 54321\n✉️ Email: contact@royalsciencecommerceacademy.in\n📍 Address: Royal Science & Commerce Academy, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Royal%20Science%20%26%20Commerce%20Academy%20Royal%20Science%20%26%20Commerce%20Academy%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "Cornerstone IIT & NEET Coaching Center",
+    "company": "Cornerstone IIT & NEET Coaching Center",
+    "email": "contact@cornerstoneiitneetcoachingcenter.in",
+    "phone": "+91 97654 32109",
+    "industry": "COACHING CLASSES",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:45:54.856Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter in Mumbai: Verified local business with NO active website. Located at: Coaching Hub, 2nd Floor. Ideal candidate for Evolvia website + attendance software."
+      }
+    ],
+    "_id": "lead_1790966754858_47",
+    "createdAt": "2026-10-02T18:45:54.858Z",
+    "address": "Cornerstone IIT & NEET Coaching Center, Mumbai",
+    "lat": 19.045,
+    "lon": 72.8787,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cornerstone%20IIT%20%26%20NEET%20Coaching%20Center%20Cornerstone%20IIT%20%26%20NEET%20Coaching%20Center%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *Cornerstone IIT & NEET Coaching Center* (COACHING CLASSES)\n📞 Phone: +91 97654 32109\n✉️ Email: contact@cornerstoneiitneetcoachingcenter.in\n📍 Address: Cornerstone IIT & NEET Coaching Center, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Cornerstone%20IIT%20%26%20NEET%20Coaching%20Center%20Cornerstone%20IIT%20%26%20NEET%20Coaching%20Center%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "Don Bosco Primary School",
+    "company": "Don Bosco Primary School",
+    "email": "contact@donboscoprimaryschool.in",
+    "phone": "+91 9776417417",
+    "industry": "HIGH SCHOOL",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:45:53.873Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter: Business operates without an official website. Area: Mumbai Central"
+      }
+    ],
+    "_id": "lead_1790966753875_353",
+    "createdAt": "2026-10-02T18:45:53.875Z",
+    "address": "Mumbai Central, Mumbai",
+    "lat": 19.057,
+    "lon": 72.8977,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Don%20Bosco%20Primary%20School%20Mumbai%20Central%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *Don Bosco Primary School* (HIGH SCHOOL)\n📞 Phone: +91 9776417417\n✉️ Email: contact@donboscoprimaryschool.in\n📍 Address: Mumbai Central, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Don%20Bosco%20Primary%20School%20Mumbai%20Central%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "Modern English School",
+    "company": "Modern English School",
+    "email": "contact@modernenglishschool.in",
+    "phone": "+91 8496778280",
+    "industry": "HIGH SCHOOL",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:45:53.868Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter: Business operates without an official website. Area: Mumbai Central"
+      }
+    ],
+    "_id": "lead_1790966753871_354",
+    "createdAt": "2026-10-02T18:45:53.871Z",
+    "address": "Mumbai Central, Mumbai",
+    "lat": 19.1,
+    "lon": 72.8677,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Modern%20English%20School%20Mumbai%20Central%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *Modern English School* (HIGH SCHOOL)\n📞 Phone: +91 8496778280\n✉️ Email: contact@modernenglishschool.in\n📍 Address: Mumbai Central, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Modern%20English%20School%20Mumbai%20Central%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "Apostolic Carmel Convent (Girl's School)",
+    "company": "Apostolic Carmel Convent (Girl's School)",
+    "email": "contact@apostoliccarmelconventgirlsschool.in",
+    "phone": "+91 8937058820",
+    "industry": "HIGH SCHOOL",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:45:53.862Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter: Business operates without an official website. Area: Mumbai Central"
+      }
+    ],
+    "_id": "lead_1790966753866_691",
+    "createdAt": "2026-10-02T18:45:53.866Z",
+    "address": "Mumbai Central, Mumbai",
+    "lat": 19.042,
+    "lon": 72.8957,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Apostolic%20Carmel%20Convent%20(Girl's%20School)%20Mumbai%20Central%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *Apostolic Carmel Convent (Girl's School)* (HIGH SCHOOL)\n📞 Phone: +91 8937058820\n✉️ Email: contact@apostoliccarmelconventgirlsschool.in\n📍 Address: Mumbai Central, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Apostolic%20Carmel%20Convent%20(Girl's%20School)%20Mumbai%20Central%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "Home for mental deficient childern",
+    "company": "Home for mental deficient childern",
+    "email": "contact@homeformentaldeficientchildern.in",
+    "phone": "+91 8412287907",
+    "industry": "HIGH SCHOOL",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:45:53.858Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter: Business operates without an official website. Area: Mumbai Central"
+      }
+    ],
+    "_id": "lead_1790966753859_840",
+    "createdAt": "2026-10-02T18:45:53.859Z",
+    "address": "Mumbai Central, Mumbai",
+    "lat": 19.054,
+    "lon": 72.8887,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Home%20for%20mental%20deficient%20childern%20Mumbai%20Central%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *Home for mental deficient childern* (HIGH SCHOOL)\n📞 Phone: +91 8412287907\n✉️ Email: contact@homeformentaldeficientchildern.in\n📍 Address: Mumbai Central, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Home%20for%20mental%20deficient%20childern%20Mumbai%20Central%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "Classic",
+    "company": "Classic",
+    "email": "contact@classic.in",
+    "phone": "+91 7571184479",
+    "industry": "HIGH SCHOOL",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:45:53.855Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter: Business operates without an official website. Area: Mumbai Central"
+      }
+    ],
+    "_id": "lead_1790966753857_495",
+    "createdAt": "2026-10-02T18:45:53.857Z",
+    "address": "Mumbai Central, Mumbai",
+    "lat": 19.05,
+    "lon": 72.8797,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Classic%20Mumbai%20Central%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *Classic* (HIGH SCHOOL)\n📞 Phone: +91 7571184479\n✉️ Email: contact@classic.in\n📍 Address: Mumbai Central, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Classic%20Mumbai%20Central%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "210 C",
+    "company": "210 C",
+    "email": "contact@210c.in",
+    "phone": "+91 8515147445",
+    "industry": "CAFE",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:45:43.335Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter: Business operates without an official website. Area: Mumbai Central"
+      }
+    ],
+    "_id": "lead_1790966743337_130",
+    "createdAt": "2026-10-02T18:45:43.337Z",
+    "address": "Mumbai Central, Mumbai",
+    "lat": 19.1,
+    "lon": 72.8937,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=210%20C%20Mumbai%20Central%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *210 C* (CAFE)\n📞 Phone: +91 8515147445\n✉️ Email: contact@210c.in\n📍 Address: Mumbai Central, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=210%20C%20Mumbai%20Central%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "Cafe Coffee Day",
+    "company": "Cafe Coffee Day",
+    "email": "contact@cafecoffeeday.in",
+    "phone": "+91 7910155723",
+    "industry": "CAFE",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:45:43.330Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter: Business operates without an official website. Area: Essel World"
+      }
+    ],
+    "_id": "lead_1790966743332_597",
+    "createdAt": "2026-10-02T18:45:43.332Z",
+    "address": "Essel World, Mumbai",
+    "lat": 19.2467,
+    "lon": 72.8367,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cafe%20Coffee%20Day%20Essel%20World%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *Cafe Coffee Day* (CAFE)\n📞 Phone: +91 7910155723\n✉️ Email: contact@cafecoffeeday.in\n📍 Address: Essel World, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Cafe%20Coffee%20Day%20Essel%20World%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "Cafe Coffee Day",
+    "company": "Cafe Coffee Day",
+    "email": "contact@cafecoffeeday.in",
+    "phone": "+91 9877066603",
+    "industry": "CAFE",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:45:43.324Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter: Business operates without an official website. Area: Mumbai Central"
+      }
+    ],
+    "_id": "lead_1790966743328_393",
+    "createdAt": "2026-10-02T18:45:43.328Z",
+    "address": "Mumbai Central, Mumbai",
+    "lat": 19.061,
+    "lon": 72.8537,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cafe%20Coffee%20Day%20Mumbai%20Central%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *Cafe Coffee Day* (CAFE)\n📞 Phone: +91 9877066603\n✉️ Email: contact@cafecoffeeday.in\n📍 Address: Mumbai Central, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Cafe%20Coffee%20Day%20Mumbai%20Central%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "A1 Bakery",
+    "company": "A1 Bakery",
+    "email": "contact@a1bakery.in",
+    "phone": "+91 8625137601",
+    "industry": "CAFE",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:45:43.321Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter: Business operates without an official website. Area: Mumbai Central"
+      }
+    ],
+    "_id": "lead_1790966743323_190",
+    "createdAt": "2026-10-02T18:45:43.323Z",
+    "address": "Mumbai Central, Mumbai",
+    "lat": 19.041,
+    "lon": 72.8427,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=A1%20Bakery%20Mumbai%20Central%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *A1 Bakery* (CAFE)\n📞 Phone: +91 8625137601\n✉️ Email: contact@a1bakery.in\n📍 Address: Mumbai Central, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=A1%20Bakery%20Mumbai%20Central%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "name": "Cafe Andora",
+    "company": "Cafe Andora",
+    "email": "contact@cafeandora.in",
+    "phone": "+91 7190043137",
+    "industry": "CAFE",
+    "city": "Mumbai",
+    "country": "India",
+    "source": "Mumbai (No Website)",
+    "status": "NEW",
+    "step": 0,
+    "history": [
+      {
+        "date": "2026-10-02T18:45:43.316Z",
+        "action": "EXTRACTED_NO_WEBSITE",
+        "type": "SYSTEM",
+        "details": "Identified by LeadHunter: Business operates without an official website. Area: St. Dominic Street"
+      }
+    ],
+    "_id": "lead_1790966743319_508",
+    "createdAt": "2026-10-02T18:45:43.319Z",
+    "address": "St, Mumbai",
+    "lat": 19.049,
+    "lon": 72.8957,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cafe%20Andora%20St%2C%20Mumbai%20Mumbai",
+    "shareText": "📍 *Cafe Andora* (CAFE)\n📞 Phone: +91 7190043137\n✉️ Email: contact@cafeandora.in\n📍 Address: St, Mumbai, Mumbai\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Cafe%20Andora%20St%2C%20Mumbai%20Mumbai"
+  },
+  {
+    "_id": "lead_1",
+    "name": "Dr. Michael Vance",
+    "company": "Miami Premier Dental Care",
+    "email": "contact@miamipremierdental.com",
+    "phone": "+1-305-555-0142",
+    "industry": "Dental",
+    "city": "Miami",
+    "country": "USA",
+    "source": "Google Maps (Miami, FL)",
+    "status": "STEP_1_SENT",
+    "step": 1,
+    "lastContactDate": "2026-10-01T18:30:36.591Z",
+    "nextFollowUpDate": "2026-10-04T18:30:36.596Z",
+    "history": [
+      {
+        "date": "2026-09-30T18:30:36.596Z",
+        "action": "BOT_EXTRACTED",
+        "type": "SYSTEM",
+        "details": "Extracted via Google Maps scraper"
+      },
+      {
+        "date": "2026-10-01T18:30:36.596Z",
+        "action": "PITCH_SENT",
+        "type": "EMAIL",
+        "subject": "Quick question regarding lead follow-up at Miami Premier Dental Care"
+      }
+    ],
+    "createdAt": "2026-10-02T18:30:36.596Z",
+    "address": "Dr. Michael Vance, Miami",
+    "lat": 25.7427,
+    "lon": -80.1978,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Dr.%20Michael%20Vance%20Dr.%20Michael%20Vance%2C%20Miami%20Miami",
+    "shareText": "📍 *Dr. Michael Vance* (Dental)\n📞 Phone: +1-305-555-0142\n✉️ Email: contact@miamipremierdental.com\n📍 Address: Dr. Michael Vance, Miami, Miami\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Dr.%20Michael%20Vance%20Dr.%20Michael%20Vance%2C%20Miami%20Miami"
+  },
+  {
+    "_id": "lead_2",
+    "name": "Sarah Jenkins",
+    "company": "Apex Roofing & Solar",
+    "email": "info@apexroofingsolar.com",
+    "phone": "+1-512-555-0199",
+    "industry": "Roofing",
+    "city": "Austin",
+    "country": "USA",
+    "source": "Apollo.io B2B Export",
+    "status": "REPLIED",
+    "step": 2,
+    "lastContactDate": "2026-10-02T06:30:36.596Z",
+    "nextFollowUpDate": null,
+    "history": [
+      {
+        "date": "2026-09-29T18:30:36.596Z",
+        "action": "BOT_EXTRACTED",
+        "type": "SYSTEM",
+        "details": "Imported from Apollo"
+      },
+      {
+        "date": "2026-10-02T06:30:36.596Z",
+        "action": "REPLIED",
+        "type": "EMAIL",
+        "details": "Owner replied: \"Send me the 2-minute video\""
+      }
+    ],
+    "createdAt": "2026-10-02T18:30:36.596Z",
+    "address": "Sarah Jenkins, Austin",
+    "lat": 30.2472,
+    "lon": -97.7491,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sarah%20Jenkins%20Sarah%20Jenkins%2C%20Austin%20Austin",
+    "shareText": "📍 *Sarah Jenkins* (Roofing)\n📞 Phone: +1-512-555-0199\n✉️ Email: info@apexroofingsolar.com\n📍 Address: Sarah Jenkins, Austin, Austin\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Sarah%20Jenkins%20Sarah%20Jenkins%2C%20Austin%20Austin"
+  },
+  {
+    "_id": "lead_3",
+    "name": "Elena Torres",
+    "company": "Horizon Aesthetic Clinic",
+    "email": "elena@horizonaesthetic.com",
+    "phone": "+1-415-555-0188",
+    "industry": "Med Spa",
+    "city": "San Francisco",
+    "country": "USA",
+    "source": "Website Inbound Form",
+    "status": "NEW",
+    "step": 0,
+    "lastContactDate": null,
+    "nextFollowUpDate": null,
+    "history": [
+      {
+        "date": "2026-10-02T18:30:36.596Z",
+        "action": "INBOUND_WEBHOOK",
+        "type": "SYSTEM",
+        "details": "Submitted contact form on Evolvia site"
+      }
+    ],
+    "createdAt": "2026-10-02T18:30:36.596Z",
+    "address": "Elena Torres, San Francisco",
+    "lat": 37.7539,
+    "lon": -122.4264,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Elena%20Torres%20Elena%20Torres%2C%20San%20Francisco%20San%20Francisco",
+    "shareText": "📍 *Elena Torres* (Med Spa)\n📞 Phone: +1-415-555-0188\n✉️ Email: elena@horizonaesthetic.com\n📍 Address: Elena Torres, San Francisco, San Francisco\n🌐 Website: None (Unclaimed Business)\n🗺️ Google Maps: https://www.google.com/maps/search/?api=1&query=Elena%20Torres%20Elena%20Torres%2C%20San%20Francisco%20San%20Francisco"
+  }
+]

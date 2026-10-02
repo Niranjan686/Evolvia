@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  evolvia-app:
+    build: .
+    container_name: evolvia_production
+    restart: always
+    ports:
+      - "4000:4000"
+    environment:
+      - PORT=4000
+      - NODE_ENV=production
+      - MONGODB_URI=mongodb://mongo:27017/evolvia_crm
+    depends_on:
+      - mongo
+    volumes:
+      - ./backend/data:/app/backend/data
+
+  mongo:
+    image: mongo:6.0
+    container_name: evolvia_mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:

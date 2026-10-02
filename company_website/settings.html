@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolvia Settings • Cold Email, WhatsApp & System Configurations</title>
+    <!-- Clean Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='50,15 85,35 85,75 50,95 15,75 15,35' stroke='%2338bdf8' stroke-width='8' fill='%230f172a'/><path d='M50,28 L28,78 M50,28 L72,78 M38,60 L62,60' stroke='white' stroke-width='8'/></svg>">
+    <!-- Silence Tailwind CDN warning -->
+    <script>
+        const originalWarn = console.warn;
+        console.warn = (...args) => {
+            if (typeof args[0] === 'string' && args[0].includes('Tailwind CSS in production')) return;
+            originalWarn.apply(console, args);
+        };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            accent: '#0284c7'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+    <div id="app" class="pb-24">
+        <!-- TOP NAVIGATION BAR -->
+        <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
+            <div class="max-w-6xl mx-auto px-6 h-18 py-3.5 flex items-center justify-between">
+                <div class="flex items-center space-x-3.5">
+                    <img src="evolvia_logo.png" alt="EVOLVIA" class="h-10 w-auto rounded-xl object-contain bg-slate-950 p-1.5 shadow-sm border border-slate-200">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xl font-bold tracking-tight text-slate-900 leading-tight">EVOL<span class="text-cyan-500">VIA</span></span>
+                            <span class="text-[10px] font-bold uppercase tracking-wider bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full border border-slate-200">Settings</span>
+                        </div>
+                        <span class="text-[10px] font-semibold text-slate-400">Outreach, SMTP, WhatsApp & Security Configuration</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <!-- BACK TO ADMIN PANEL -->
+                    <a href="admin.html" class="px-3.5 py-2 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition shadow-sm">
+                        <span>←</span>
+                        <span>Back to Admin CRM</span>
+                    </a>
+
+                    <!-- LOGOUT -->
+                    <button @click="logout" class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-rose-50 text-slate-600 hover:text-rose-600 border border-slate-200 text-xs font-semibold transition flex items-center gap-1.5" title="Sign Out">
+                        <span>🔒</span>
+                        <span>Sign Out</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN CONTAINER -->
+        <main class="max-w-6xl mx-auto px-6 pt-8 space-y-6">
+            <!-- Toast Banner -->
+            <div v-if="bannerMessage" :class="bannerType === 'error' ? 'bg-rose-50 border-rose-200 text-rose-800' : 'bg-emerald-50 border-emerald-200 text-emerald-800'" class="p-4 rounded-2xl border text-xs font-semibold flex items-center justify-between transition-all shadow-sm">
+                <div class="flex items-center gap-2">
+                    <span>{{ bannerType === 'error' ? '⚠️' : '✅' }}</span>
+                    <span>{{ bannerMessage }}</span>
+                </div>
+                <button @click="bannerMessage = ''" class="uppercase text-[10px] font-bold opacity-75 hover:opacity-100">Dismiss</button>
+            </div>
+
+            <!-- Page Title -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                    <h1 class="text-2xl font-extrabold text-slate-900 tracking-tight">System & Integration Settings</h1>
+                    <p class="text-xs text-slate-500 mt-1">Configure your cold email server, WhatsApp dialing defaults, scraping parameters, and credentials.</p>
+                </div>
+
+                <button @click="saveAllSettings" :disabled="isSaving" class="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs shadow-md transition flex items-center gap-2 disabled:opacity-50">
+                    <span v-if="isSaving" class="animate-spin">⏳</span>
+                    <span v-else>💾</span>
+                    <span>{{ isSaving ? 'Saving Changes...' : 'Save Settings' }}</span>
+                </button>
+            </div>
+
+            <!-- Settings Layout: Sidebar Tabs + Content -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Navigation Tabs Sidebar -->
+                <div class="glass-card p-3 rounded-2xl border border-slate-200 space-y-1.5 h-fit">
+                    <button @click="activeTab = 'EMAIL'" :class="activeTab === 'EMAIL' ? 'bg-slate-900 text-white font-bold shadow' : 'text-slate-600 hover:bg-slate-100 font-semibold'" class="w-full text-left px-3.5 py-2.5 rounded-xl text-xs transition flex items-center gap-2.5">
+                        <span>✉️</span>
+                        <span>Cold Email & SMTP</span>
+                    </button>
+
+                    <button @click="activeTab = 'WHATSAPP'" :class="activeTab === 'WHATSAPP' ? 'bg-slate-900 text-white font-bold shadow' : 'text-slate-600 hover:bg-slate-100 font-semibold'" class="w-full text-left px-3.5 py-2.5 rounded-xl text-xs transition flex items-center gap-2.5">
+                        <span>💬</span>
+                        <span>WhatsApp Outreach</span>
+                    </button>
+
+                    <button @click="activeTab = 'BRAND'" :class="activeTab === 'BRAND' ? 'bg-slate-900 text-white font-bold shadow' : 'text-slate-600 hover:bg-slate-100 font-semibold'" class="w-full text-left px-3.5 py-2.5 rounded-xl text-xs transition flex items-center gap-2.5">
+                        <span>🏢</span>
+                        <span>Company & Brand</span>
+                    </button>
+
+                    <button @click="activeTab = 'HUNTER'" :class="activeTab === 'HUNTER' ? 'bg-slate-900 text-white font-bold shadow' : 'text-slate-600 hover:bg-slate-100 font-semibold'" class="w-full text-left px-3.5 py-2.5 rounded-xl text-xs transition flex items-center gap-2.5">
+                        <span>🎯</span>
+                        <span>Lead Hunter Defaults</span>
+                    </button>
+
+                    <button @click="activeTab = 'SECURITY'" :class="activeTab === 'SECURITY' ? 'bg-slate-900 text-white font-bold shadow' : 'text-slate-600 hover:bg-slate-100 font-semibold'" class="w-full text-left px-3.5 py-2.5 rounded-xl text-xs transition flex items-center gap-2.5">
+                        <span>🔒</span>
+                        <span>Admin Security</span>
+                    </button>
+                </div>
+
+                <!-- Tab Content Panel -->
+                <div class="md:col-span-3 space-y-6">
+                    <!-- ========================================== -->
+                    <!-- 1. COLD EMAIL & SMTP SETTINGS -->
+                    <!-- ========================================== -->
+                    <div v-if="activeTab === 'EMAIL'" class="glass-card p-6 sm:p-8 rounded-3xl border border-slate-200 space-y-6 shadow-sm">
+                        <div class="border-b border-slate-200 pb-4 flex items-center justify-between">
+                            <div>
+                                <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                                    <span>✉️ Cold Email & SMTP Configuration</span>
+                                    <span v-if="settings.smtp.configured" class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-mono font-bold">Active</span>
+                                    <span v-else class="text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-mono font-bold">Simulation Mode</span>
+                                </h2>
+                                <p class="text-xs text-slate-500 mt-0.5">Configure live outbound email delivery for pitch sequences. When unconfigured, emails operate in realistic simulation mode.</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Sender Display Name</label>
+                                <input v-model="settings.smtp.senderName" type="text" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:bg-white focus:border-brand-accent focus:outline-none">
+                            </div>
+
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">SMTP Host</label>
+                                <input v-model="settings.smtp.host" type="text" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 font-mono focus:bg-white focus:border-brand-accent focus:outline-none">
+                            </div>
+
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">SMTP Port</label>
+                                <input v-model="settings.smtp.port" type="number" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 font-mono focus:bg-white focus:border-brand-accent focus:outline-none">
+                            </div>
+
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">SMTP Username / Email</label>
+                                <input v-model="settings.smtp.user" type="email" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 font-mono focus:bg-white focus:border-brand-accent focus:outline-none">
+                            </div>
+
+                            <div class="sm:col-span-2">
+                                <label class="block font-bold text-slate-700 mb-1.5">SMTP Password / App Password</label>
+                                <input v-model="settings.smtp.pass" type="password" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 font-mono focus:bg-white focus:border-brand-accent focus:outline-none">
+                                <p class="text-[11px] text-slate-400 mt-1">For Gmail, use a 16-character <strong>Google App Password</strong> (Security → 2-Step Verification → App passwords).</p>
+                            </div>
+                        </div>
+
+                        <!-- Test SMTP Section -->
+                        <div class="p-4 rounded-2xl bg-blue-50/50 border border-blue-200 space-y-3">
+                            <div class="font-bold text-blue-900 text-xs flex items-center gap-1.5">
+                                <span>⚡</span>
+                                <span>Test Email Connection</span>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-2">
+                                <input v-model="testEmailAddress" type="email" placeholder="Enter recipient email (e.g. your@email.com)" class="flex-1 px-3.5 py-2 rounded-xl bg-white border border-slate-200 text-xs focus:outline-none focus:border-brand-accent">
+                                <button @click="testSmtpConnection" :disabled="isTestingEmail" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs transition flex items-center justify-center gap-2 disabled:opacity-50">
+                                    <span v-if="isTestingEmail" class="animate-spin">⏳</span>
+                                    <span>{{ isTestingEmail ? 'Testing...' : 'Send Test Email' }}</span>
+                                </button>
+                            </div>
+                            <p v-if="smtpTestResult" :class="smtpTestResult.success ? 'text-emerald-700' : 'text-rose-700'" class="text-xs font-semibold">
+                                {{ smtpTestResult.message }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ========================================== -->
+                    <!-- 2. WHATSAPP OUTREACH SETTINGS -->
+                    <!-- ========================================== -->
+                    <div v-if="activeTab === 'WHATSAPP'" class="glass-card p-6 sm:p-8 rounded-3xl border border-slate-200 space-y-6 shadow-sm">
+                        <div class="border-b border-slate-200 pb-4">
+                            <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                                <span>💬 WhatsApp Outreach Settings</span>
+                                <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-mono font-bold">Web & App</span>
+                            </h2>
+                            <p class="text-xs text-slate-500 mt-0.5">Control automatic international dialing codes and CRM synchronization for WhatsApp pitches.</p>
+                        </div>
+
+                        <div class="space-y-4 text-xs">
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Default Country Dialing Code</label>
+                                <input v-model="settings.whatsapp.defaultCountryCode" type="text" class="w-48 px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 font-mono focus:bg-white focus:border-emerald-500 focus:outline-none">
+                                <p class="text-[11px] text-slate-400 mt-1">Pre-appended to 10-digit numbers (e.g. <code>+91</code> for India, <code>+1</code> for US/Canada).</p>
+                            </div>
+
+                            <div class="pt-2">
+                                <label class="flex items-center gap-3 cursor-pointer">
+                                    <input v-model="settings.whatsapp.enableAutoLog" type="checkbox" class="w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500">
+                                    <div>
+                                        <div class="font-bold text-slate-800">Auto-Log to CRM on WhatsApp Launch</div>
+                                        <div class="text-[11px] text-slate-500">Automatically advance lead status to <code>STEP_1_SENT</code> and schedule follow-up when launching WhatsApp chat.</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ========================================== -->
+                    <!-- 3. BRAND & PROFILE SETTINGS -->
+                    <!-- ========================================== -->
+                    <div v-if="activeTab === 'BRAND'" class="glass-card p-6 sm:p-8 rounded-3xl border border-slate-200 space-y-6 shadow-sm">
+                        <div class="border-b border-slate-200 pb-4">
+                            <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                                <span>🏢 Brand & Identity</span>
+                            </h2>
+                            <p class="text-xs text-slate-500 mt-0.5">Brand name and details inserted automatically into email footers, WhatsApp pitches, and public headers.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Company Name</label>
+                                <input v-model="settings.brand.companyName" type="text" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:bg-white focus:border-brand-accent focus:outline-none">
+                            </div>
+
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Tagline / Motto</label>
+                                <input v-model="settings.brand.tagline" type="text" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:bg-white focus:border-brand-accent focus:outline-none">
+                            </div>
+
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Support / Inbound Email</label>
+                                <input v-model="settings.brand.supportEmail" type="email" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 font-mono focus:bg-white focus:border-brand-accent focus:outline-none">
+                            </div>
+
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">WhatsApp Business Contact</label>
+                                <input v-model="settings.brand.whatsappBusiness" type="text" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 font-mono focus:bg-white focus:border-brand-accent focus:outline-none">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ========================================== -->
+                    <!-- 4. LEAD HUNTER & SCRAPER DEFAULTS -->
+                    <!-- ========================================== -->
+                    <div v-if="activeTab === 'HUNTER'" class="glass-card p-6 sm:p-8 rounded-3xl border border-slate-200 space-y-6 shadow-sm">
+                        <div class="border-b border-slate-200 pb-4">
+                            <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                                <span>🎯 Lead Hunter & Automation Defaults</span>
+                            </h2>
+                            <p class="text-xs text-slate-500 mt-0.5">Parameters used during 1-click extractions and scheduled follow-up cron cycles.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Default Target City</label>
+                                <input v-model="settings.leadHunter.defaultCity" type="text" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:bg-white focus:border-brand-accent focus:outline-none">
+                            </div>
+
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Default Extraction Batch Size</label>
+                                <input v-model="settings.leadHunter.defaultBatchSize" type="number" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 font-mono focus:bg-white focus:border-brand-accent focus:outline-none">
+                            </div>
+
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Follow-Up Delay (Days)</label>
+                                <input v-model="settings.leadHunter.followUpIntervalDays" type="number" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 font-mono focus:bg-white focus:border-brand-accent focus:outline-none">
+                            </div>
+
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Daily Cron Schedule</label>
+                                <input v-model="settings.leadHunter.cronSchedule" type="text" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 font-mono focus:bg-white focus:border-brand-accent focus:outline-none">
+                                <p class="text-[11px] text-slate-400 mt-1">Default: <code>0 9 * * *</code> (Runs daily at 9:00 AM).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ========================================== -->
+                    <!-- 5. ADMIN SECURITY & PASSWORD -->
+                    <!-- ========================================== -->
+                    <div v-if="activeTab === 'SECURITY'" class="glass-card p-6 sm:p-8 rounded-3xl border border-slate-200 space-y-6 shadow-sm">
+                        <div class="border-b border-slate-200 pb-4">
+                            <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                                <span>🔒 Admin Security & Password</span>
+                            </h2>
+                            <p class="text-xs text-slate-500 mt-0.5">Manage administrator credentials for the management dashboard.</p>
+                        </div>
+
+                        <form @submit.prevent="changePassword" class="max-w-md space-y-4 text-xs">
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Current Password</label>
+                                <input v-model="passwordForm.currentPassword" type="password" required class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:bg-white focus:border-brand-accent focus:outline-none">
+                            </div>
+
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">New Password</label>
+                                <input v-model="passwordForm.newPassword" type="password" required class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:bg-white focus:border-brand-accent focus:outline-none">
+                            </div>
+
+                            <div>
+                                <label class="block font-bold text-slate-700 mb-1.5">Confirm New Password</label>
+                                <input v-model="passwordForm.confirmPassword" type="password" required class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:bg-white focus:border-brand-accent focus:outline-none">
+                            </div>
+
+                            <button type="submit" :disabled="isChangingPassword" class="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs transition disabled:opacity-50">
+                                {{ isChangingPassword ? 'Updating Password...' : 'Update Password' }}
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Vue App Script -->
+    <script>
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    activeTab: 'EMAIL',
+                    isSaving: false,
+                    isTestingEmail: false,
+                    isChangingPassword: false,
+                    testEmailAddress: '',
+                    smtpTestResult: null,
+                    bannerMessage: '',
+                    bannerType: 'success',
+                    apiBase: 'http://localhost:4000/api',
+                    settings: {
+                        brand: {
+                            companyName: 'Evolvia',
+                            tagline: 'Smart Software • Built on Logic',
+                            supportEmail: 'contact@evolvia.com',
+                            whatsappBusiness: '+91 98453 87889'
+                        },
+                        smtp: {
+                            configured: false,
+                            host: 'smtp.gmail.com',
+                            port: 587,
+                            user: '',
+                            pass: '',
+                            senderName: 'Evolvia Outreach Team'
+                        },
+                        whatsapp: {
+                            defaultCountryCode: '+91',
+                            enableAutoLog: true,
+                            defaultTemplate: 'no_website_audit'
+                        },
+                        leadHunter: {
+                            defaultCity: 'Mumbai',
+                            defaultBatchSize: 15,
+                            followUpIntervalDays: 3,
+                            cronSchedule: '0 9 * * *'
+                        },
+                        security: {
+                            adminUsername: 'admin'
+                        }
+                    },
+                    passwordForm: {
+                        currentPassword: '',
+                        newPassword: '',
+                        confirmPassword: ''
+                    }
+                }
+            },
+            mounted() {
+                // Ensure authentication
+                if (localStorage.getItem('evolvia_admin_auth') !== 'true') {
+                    window.location.href = 'admin.html';
+                    return;
+                }
+                this.loadSettings();
+            },
+            methods: {
+                async loadSettings() {
+                    try {
+                        const res = await fetch(`${this.apiBase}/settings`);
+                        const data = await res.json();
+                        if (data.success && data.settings) {
+                            this.settings = data.settings;
+                        }
+                    } catch (err) {
+                        console.error('Failed to load settings:', err);
+                    }
+                },
+                async saveAllSettings() {
+                    this.isSaving = true;
+                    try {
+                        const res = await fetch(`${this.apiBase}/settings`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(this.settings)
+                        });
+                        const data = await res.json();
+                        if (data.success) {
+                            this.bannerType = 'success';
+                            this.bannerMessage = 'Settings saved successfully!';
+                            this.settings = data.settings;
+                        } else {
+                            this.bannerType = 'error';
+                            this.bannerMessage = data.error || 'Failed to save settings.';
+                        }
+                    } catch (err) {
+                        this.bannerType = 'error';
+                        this.bannerMessage = 'Network error saving settings.';
+                    } finally {
+                        this.isSaving = false;
+                    }
+                },
+                async testSmtpConnection() {
+                    this.isTestingEmail = true;
+                    this.smtpTestResult = null;
+                    try {
+                        const res = await fetch(`${this.apiBase}/settings/test-email`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ testEmail: this.testEmailAddress })
+                        });
+                        const data = await res.json();
+                        this.smtpTestResult = data;
+                        if (data.success) {
+                            this.bannerType = 'success';
+                            this.bannerMessage = data.message;
+                        } else {
+                            this.bannerType = 'error';
+                            this.bannerMessage = data.error;
+                        }
+                    } catch (err) {
+                        this.smtpTestResult = { success: false, message: 'Server connection error during SMTP test.' };
+                    } finally {
+                        this.isTestingEmail = false;
+                    }
+                },
+                async changePassword() {
+                    if (this.passwordForm.newPassword !== this.passwordForm.confirmPassword) {
+                        alert('New password and confirm password do not match!');
+                        return;
+                    }
+                    this.isChangingPassword = true;
+                    try {
+                        const res = await fetch(`${this.apiBase}/settings/change-password`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                currentPassword: this.passwordForm.currentPassword,
+                                newPassword: this.passwordForm.newPassword
+                            })
+                        });
+                        const data = await res.json();
+                        if (data.success) {
+                            alert('Admin password changed successfully! Please log in with your new password.');
+                            this.logout();
+                        } else {
+                            alert(data.error || 'Failed to change password');
+                        }
+                    } catch (err) {
+                        alert('Server error changing password');
+                    } finally {
+                        this.isChangingPassword = false;
+                    }
+                },
+                logout() {
+                    localStorage.removeItem('evolvia_admin_auth');
+                    window.location.href = 'admin.html';
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
